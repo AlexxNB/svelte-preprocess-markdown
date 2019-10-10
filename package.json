@@ -1,0 +1,39 @@
+{
+  "name": "svelte-preprocess-markdown",
+  "version": "1.0.0",
+  "description": "Using markdown in Svelte components",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "scripts": {
+    "build": "rollup -c",
+    "pretest": "npm run build",
+    "test": "node ./test/runtest.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "marked": "^0.7.0"
+  },
+  "devDependencies": {
+    "rollup": "^1.23.1",
+    "rollup-plugin-terser": "^5.1.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexxNB/svelte-preprocess-markdown.git"
+  },
+  "keywords": [
+    "svelte",
+    "preprocessor",
+    "markdown",
+    "marked"
+  ],
+  "author": "Alexey Schebelev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexxNB/svelte-preprocess-markdown/issues"
+  },
+  "homepage": "https://github.com/AlexxNB/svelte-preprocess-markdown#readme"
+}

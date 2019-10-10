@@ -1,0 +1,43 @@
+{
+  "name": "svelte-preprocess-markdown",
+  "version": "1.0.0",
+  "description": "Bundles all svg icons from the speciefed folder to the single spritesheet svg file",
+  "main": "dist/index.min.js",
+  "module": "dist/index.esm.min.js",
+  "scripts": {
+    "build": "bili --format cjs-min --format es-min",
+    "pretest": "npm run build",
+    "test": "rollup -c test/rollup.config.js && open-cli http://localhost:5000 && sirv test --single",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexxNB/rollup-plugin-svg-icons.git"
+  },
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "svg",
+    "icons",
+    "sprite"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "Alexey Schebelev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexxNB/rollup-plugin-svg-icons/issues"
+  },
+  "homepage": "https://github.com/AlexxNB/rollup-plugin-svg-icons#readme",
+  "devDependencies": {
+    "bili": "^4.8.1",
+    "open-cli": "^5.0.0",
+    "rollup": "^1.23.1",
+    "sirv-cli": "^0.4.4"
+  },
+  "dependencies": {
+    "svgo": "^1.3.0",
+    "svgstore": "^3.0.0-2"
+  }
+}
