@@ -1,6 +1,8 @@
 # svelte-preprocess-markdown
 Allows to import `*.md` files as Svelte component. Very useful when your components have a lot of formatted texts and you doesn't want to write it in HTML. It is based on superfast [Marked](https://www.npmjs.com/package/marked) markdown parser.
 
+[![npm](https://img.shields.io/npm/v/svelte-preprocess-markdown)](https://www.npmjs.com/package/svelte-preprocess-markdown)   [![npm](https://img.shields.io/npm/dt/svelte-preprocess-markdown)](https://www.npmjs.com/package/svelte-preprocess-markdown)    [![](https://github.com/AlexxNB/svelte-preprocess-markdown/workflows/Publish%20on%20NPM/badge.svg)](https://github.com/AlexxNB/svelte-preprocess-markdown/actions?workflow=Publish+on+NPM)
+
 # Installation
 
 Install package:
@@ -21,7 +23,7 @@ export default {
   plugins: [
     svelte({
       // 2. add '.md', to the extensions  
-      extensions: ['.md'],
+      extensions: ['.svelte','.md'],
       // 3. add markdown preprocessor
       preprocess: markdown()
     })
@@ -78,6 +80,20 @@ export default {
 # Options
 
 You can pass any [options](https://marked.js.org/#/USING_ADVANCED.md#options) that accepts [Marked](https://www.npmjs.com/package/marked).
+
+```js
+...
+plugins: [
+    svelte({
+      ...
+      preprocess: markdown({
+          headerIds: false
+      })
+      ...
+    })
+  ]
+...
+```
 
 ## Renderer
 If you need `renderer` object for options, you can get it from the package:
