@@ -54,8 +54,13 @@ function tagsHandler(options) {
     let savedTags = [];
     let id = 0;
 
-    const tags_replacer = (text) => {
-        savedTags[id++] = text;
+    const tags_replacer = (text,tag,attrs,content) => {
+        content = retrieve(content);
+        content = content.replace(/^\s+/gm,'');
+        content = marked(content,options);
+        if(!content.trim().match(/[\r\n]/g)) content = content.replace(/<p>|<\/p>/g,'').trim();
+        const opentag = `${tag} ${attrs}`;
+        savedTags[id++] = `<${opentag.trim()}>${content}</${tag}>`;
         return '```svelte-md-tag-'+id+'```';
     }
 
@@ -64,14 +69,18 @@ function tagsHandler(options) {
     }
 
     const retrieve = (text) => {
-        const re = /<\/?[^]+?>/gm
-        text = text.replace(re,tags_replacer);
+        const re = /<([\w-:]+)([^>]*)>([\S\s]+?)<\/\1>/gm
+        if(text.match(re)) text = text.replace(re,tags_replacer);
+
+        
         return text;
     }
 
     const restore = (text) => {
         const re = /<code>svelte\-md\-tag\-(\d+)<\/code>/g;
-        text = text.replace(re,tags_restorator);
+        while(text.match(re)){
+            text = text.replace(re,tags_restorator);  
+        }
         return text;
     }
     return {retrieve,restore}
