@@ -54,28 +54,6 @@ export default {
     </style>
 ```
 
-## Extended usage
-
-```markdown
-    ```js script
-        import Child from './Child.svelte';
-        let name = 'world';
-    ```
-
-    # Hello {name}!
-
-    This is text in `markdown` **notation**
-
-    ```html svelte
-        <Child />
-    ```
-    
-    ```css style
-        h1{
-            color:red
-        }
-    ```
-```
 
 # Options
 

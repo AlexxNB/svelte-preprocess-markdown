@@ -123,7 +123,7 @@ function i11nHandler(options) {
 
 
 export function markdown(options={}) {
-     options = {renderer,...options};
+     options = {renderer,headerIds:false,...options};
    
     return {
         markup({ content, filename }) {
