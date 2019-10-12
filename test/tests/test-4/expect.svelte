@@ -1,3 +1,4 @@
+<!-- Test #4 -->
 <script>
     import Child from './Child.svelte'
     let name = 'world';
@@ -10,15 +11,14 @@
         'item1'
     ]
 </script>
-
-# Testing list
-
-{#each list as item}
-* {item}
-{/each}
-
-{#if name}
-    Hello, *{name}*!
+<h1>Testing list</h1>
+<p>{#each list as item}</p>
+<ul>
+<li>{item}
+{/each}</li>
+</ul>
+<p>{#if name}
+    Hello, <em>{name}</em>!
 {:else}
     Hello, stranger!
-{/if}
+{/if}</p>
