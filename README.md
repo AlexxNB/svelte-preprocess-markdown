@@ -35,23 +35,42 @@ export default {
 
 ## Common usage
 
-```html
-    <script>
-        import Child from './Child.svelte';
-        let name = 'world';
-    </script>
+```markdown
+<script>
+    import Child from './Child.svelte';
+    let name = 'world';
+</script>
 
-    # Hello {name}!
+# Hello {name}!
 
-    This is text in `markdown` **notation**
+This is text in `markdown` **notation**
 
-    <Child />
+<Child />
 
-    <style>
-        h1{
-            color:red
-        }
-    </style>
+<style>
+    h1{
+        color:red
+    }
+</style>
+```
+## MDSv usage
+
+The `MDSv` format is [MDX](https://mdxjs.com/)-like way to write documents using imported Svelte-components.
+
+```markdown
+import Block from './Block.svelte';
+import { data } from './my_data.js';
+
+# The MDSv example
+
+You can use *components* and a *logic* inside doc:
+
+<Block color="red">
+  My `data` list:
+  {#each data as item}
+    {item}
+  {/each}
+</Block>
 ```
 
 
