@@ -24,19 +24,19 @@ renderer.code = renderer_code
 
 export function markdown(options={}) {
      options = {renderer,headerIds:false,...options};
-
+     marked.setOptions(options);
     return {
         markup({ content, filename }) {
             if(extname(filename).startsWith('.md')){
 
                 for(let i=0; i<handlers.length; i++){
-                    content = handlers[i].before(content,options);
+                    content = handlers[i].before(content,marked);
                 }
                 
-                content = marked(content,options);
+                content = marked(content);
 
                 for(let i=(handlers.length-1); i>=0; i--){
-                    content = handlers[i].after(content,options);
+                    content = handlers[i].after(content,marked);
                 }
             }
             return { code: content };

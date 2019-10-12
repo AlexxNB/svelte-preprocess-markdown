@@ -12,7 +12,7 @@ export default function interpolation() {
         return savedI11ns[id-1];
     }
 
-    const before = (text,options) => {
+    const before = (text,marked) => {
         const re = /{[^{}]+}/mg;
         while(text.match(re)){
             text = text.replace(re,i11n_replacer);
@@ -20,7 +20,7 @@ export default function interpolation() {
         return text;
     }
 
-    const after = (text,options) => {
+    const after = (text,marked) => {
         const re = /\%svelte\-md\-i11n\-(\d+)\%/g;
         while(text.match(re)){
             text = text.replace(re,i11n_restorator);

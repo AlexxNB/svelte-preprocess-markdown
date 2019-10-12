@@ -3,6 +3,7 @@
     import Child from './Child.svelte'
     let name = 'world';
 </script>
+
 <h1>Hello {name}!</h1>
 <Child  /><Child></Child>
 <Child>Just a <strong>simple</strong> <code>text</code></Child>

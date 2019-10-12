@@ -11,6 +11,7 @@
         'item1'
     ]
 </script>
+
 <h1>Testing list</h1>
 {#each list as item}{#if item === 'alexxnb'}<ul>
 <li>Hello, <em>{item}</em>!</li>

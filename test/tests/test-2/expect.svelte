@@ -3,6 +3,7 @@
     import Child from './Child.svelte'
     let name = 'world';
 </script>
+
 <h1>Hello {name}!</h1>
 <p>Let&#39;s try the list:</p>
 <ul>

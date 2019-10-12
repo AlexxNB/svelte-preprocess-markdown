@@ -37,7 +37,7 @@ function runTest(number) {
     }
 
     const test_content = fs.readFileSync(test.source,{encoding: 'utf-8'});
-    const processed_content = markdown(require(test.options)).markup({content:test_content,filename:'Helloworld.md'});
+    const processed_content = markdown(require(test.options).options).markup({content:test_content,filename:'Helloworld.md'});
 
     if(mode.generate) {
         fs.writeFileSync(test.expect,processed_content.code);

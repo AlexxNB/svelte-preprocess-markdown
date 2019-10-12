@@ -1,20 +1,18 @@
-import marked from 'marked'
-
 export default function logic() {
     let savedLogic = [];
     let id = 0;
 
-    let marked_options = {};
+    let marked;
 
     const logic_replacer = (text,open,type,content,close) => {
         const re_else = /{:.+?}/gm
 
-        content = before(content);
+        content = before(content,marked);
         content = content.replace(/^\s+/gm,'');
         
         if(content.match(re_else)) content = content.replace(/{:.+?}/gm,logic_else_replacer);
 
-        content = marked(content,marked_options);
+        content = marked(content);
         //if(!content.trim().match(/[\r\n]/g)) content = content.replace(/<p>|<\/p>/g,'').trim();
         
         savedLogic[id++] = `${open}${content}${close}`;
@@ -30,8 +28,8 @@ export default function logic() {
         return savedLogic[id-1];
     }
 
-    const before = (text,options) => {
-        marked_options = options;
+    const before = (text,processor) => {
+        marked = processor;
         const re = /({\#(\w+).+})([\s\S]+?)({\/\2})/gm
         if(text.match(re)) text = text.replace(re,logic_replacer);
         
@@ -40,8 +38,7 @@ export default function logic() {
         return text;
     }
 
-    const after = (text,options) => {
-        marked_options = options;
+    const after = (text,processor) => {
         const re = /<h5.*?>svelte\-md\-logic\-(\d+)<\/h5>/g;
         while(text.match(re)){
             text = text.replace(re,logic_restorator);  

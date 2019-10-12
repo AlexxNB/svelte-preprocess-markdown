@@ -26,14 +26,14 @@ export default function systemTags() {
         return text;
     }
 
-    const before = (text,options) => {
+    const before = (text,processor) => {
         text = mds_parser(text);
         const re = /^[\s]*<(?:script|style)[^>]*>[\S\s]*?<\/.+>[\s]*$/gmi
         text = text.replace(re,systags_replacer);
         return text;
     }
 
-    const after = (text,options) => {
+    const after = (text,processor) => {
         const re = /(?:##### |<h5.*?>)svelte\-md\-systag\-(\d+)(?: #####|<\/h5>)/g;
         text = text.replace(re,systags_restorator);
         return text;
