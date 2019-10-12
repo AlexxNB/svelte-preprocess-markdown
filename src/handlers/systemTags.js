@@ -3,8 +3,9 @@ export default function systemTags() {
     let id = 0;
 
     const systags_replacer = (text) => {
+        console.log(text);
         savedSystags[id++] = text;
-        return '```svelte-md-systag-'+id+'```';
+        return '##### svelte-md-systag-'+id+' #####';
     }
 
     const systags_restorator = (text,id) => {
@@ -28,13 +29,13 @@ export default function systemTags() {
 
     const before = (text,options) => {
         text = mds_parser(text);
-        const re = /<(?:script|style)[^>]*>[^]*?<\/.+>/gmi
+        const re = /^[\s]*<(?:script|style)[^>]*>[\S\s]*?<\/.+>[\s]*$/gmi
         text = text.replace(re,systags_replacer);
         return text;
     }
 
     const after = (text,options) => {
-        const re = /<.+>svelte\-md\-systag\-(\d+)<\/.+>/g;
+        const re = /(?:##### |<h5.*?>)svelte\-md\-systag\-(\d+)(?: #####|<\/h5>)/g;
         text = text.replace(re,systags_restorator);
         return text;
     }
