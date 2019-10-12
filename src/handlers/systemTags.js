@@ -3,7 +3,6 @@ export default function systemTags() {
     let id = 0;
 
     const systags_replacer = (text) => {
-        console.log(text);
         savedSystags[id++] = text;
         return '##### svelte-md-systag-'+id+' #####';
     }
