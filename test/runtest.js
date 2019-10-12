@@ -1,10 +1,10 @@
 const fs = require('fs');
 const {markdown} = require('./../dist');
 
-const mode = 'testing';
-//const mode = 'produce';
+//const mode = 'testing';
+const mode = 'produce';
 
-const testnum = 3;
+const testnum = 4;
 
 for(let i = 1; i <= testnum; i++) {
     const testfile = `./test/tests/test-${i}.md`;

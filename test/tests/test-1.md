@@ -2,4 +2,4 @@
     let name = 'world';
 </script>
 
-# Hello {name}!
+# Hello *{name}*!
