@@ -5,6 +5,7 @@ import marked from 'marked'
 import systemTags from './handlers/systemTags'
 import interpolation from './handlers/interpolation'
 import tags from './handlers/tags'
+import logic from './handlers/logic'
 
 //renderers
 import renderer_code from './renderers/code'
@@ -13,6 +14,7 @@ import renderer_code from './renderers/code'
 //order is important
 const handlers = [
     systemTags(),
+    logic(),
     interpolation(),
     tags(),
 ]

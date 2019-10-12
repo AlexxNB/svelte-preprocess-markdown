@@ -13,8 +13,7 @@
 <Child>Just a **simple** `text`</Child>
 <Child 
     props={1}
-    use:someaction
-    class:active={true}
+    on:click={e => console.log(e)}
 >Just a **simple** `text`</Child>
 
 <Child>
@@ -28,8 +27,6 @@
 
 <Child 
     props={1}
-    use:someaction
-    class:active={true}
 >
     Just a **simple** `text`
 
