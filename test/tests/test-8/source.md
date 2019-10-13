@@ -33,3 +33,9 @@
                 }
             ```
         </div>
+
+```js
+<script>
+    import "chota";
+</script>
+```

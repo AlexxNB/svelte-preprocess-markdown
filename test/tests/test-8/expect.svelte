@@ -31,3 +31,6 @@
         ...
     &#125;</code></pre>
 </div>
+<pre><code class="language-js">&lt;script&gt;
+    import &quot;chota&quot;;
+&lt;/script&gt;</code></pre>

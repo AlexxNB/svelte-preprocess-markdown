@@ -15,7 +15,7 @@ export default function interpolation() {
     }
 
     const before = (text,marked) => {
-        const ch = codehider(/(```[\w]+((?!```[\w])[\S\s])*)[{}](((?!```[\w])[\S\s])*```(?![\w]))/gmi);
+        const ch = codehider('[{}]');
         text = ch.hide(text);
 
         const re = /{[^{}]+}/mg;

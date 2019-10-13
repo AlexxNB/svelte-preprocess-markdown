@@ -27,9 +27,6 @@ export default function systemTags() {
     const mdsv_parser = (text) => {
         if(!text.match(/<script[\S\s]*?>[\S\s]*?<\/script>/gmi)){
             
-            const ch = codehider(/(```[\w]+((?!```[\w])[\S\s])*)((import .* from .*)+)(((?!```[\w])[\S\s])*```(?![\w]))/gmi);
-            text = ch.hide(text);
-
             const re = /^[\s]*(import .+ from .+)[\s]*$/gmi
             const imports = [];
             let res;
@@ -40,15 +37,17 @@ export default function systemTags() {
                 text = `<script>\n  ${imports.join("\n  ")}\n</script>\n${text}`;
             }
 
-            text = ch.unhide(text);
         }
         return text;
     }
 
     const before = (text,processor) => {
+        const ch = codehider('(import|script)');
+        text = ch.hide(text);
         text = mdsv_parser(text);
         const re = /^[\s]*<(?:script|style)[^>]*>[\S\s]*?<\/.+>[\s]*$/gmi
         text = text.replace(re,systags_replacer);
+        text = ch.unhide(text);
         return text;
     }
 

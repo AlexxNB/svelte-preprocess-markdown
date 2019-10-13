@@ -1,6 +1,8 @@
-export default function codehider(regexp) {
+export default function codehider(regexp='.') {
     let savedCode = [];
     let code_id = 0;
+
+    let re = new RegExp('(```[\\w]+((?!```[\\w])[\\S\\s])*)('+regexp+'+)(((?!```[\\w])[\\S\\s])*```(?![\\w]))', "gmi");
 
     const code_replacer = (text) => {
         savedCode[code_id++] = text;
@@ -12,13 +14,17 @@ export default function codehider(regexp) {
     }
 
     const hide = (text,processor) => {
-        return text.replace(regexp,code_replacer);
+        return text.replace(re,code_replacer);
+    }
+
+    const replace = (text,callback) => {
+        return text.replace(re,callback);
     }
 
 
     const unhide = (text) => {
-        const re_uncode = /##### svelte\-md\-codehider-(\d+) #####/gmi
+        const re_uncode = /##### svelte\-md\-codehider\-(\d+) #####/gmi
         return text.replace(re_uncode,code_restorator);
     }
-    return {hide,unhide}
+    return {hide,unhide,replace}
 }
