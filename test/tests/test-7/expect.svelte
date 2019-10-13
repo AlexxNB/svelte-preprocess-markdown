@@ -13,8 +13,8 @@
             svelte(&#123;
                 ...
                 // REPLACE
-                //   css: css => &#123;
-                //      css.write('public/bundle.css');
+                //   css: css =&gt; &#123;
+                //      css.write(&#39;public/bundle.css&#39;);
                 //   &#125;
                 // BY:
                 emitCss:true

@@ -1,3 +1,5 @@
+import codehider from './_codehider';
+
 export default function systemTags() {
     let savedSystags = [];
     let savedCode = [];
@@ -24,8 +26,9 @@ export default function systemTags() {
 
     const mdsv_parser = (text) => {
         if(!text.match(/<script[\S\s]*?>[\S\s]*?<\/script>/gmi)){
-            const re_code = /(```[\w]+((?!```[\w])[\S\s])*)((import .* from .*)+)(((?!```[\w])[\S\s])*```(?![\w]))/gmi
-            text = text.replace(re_code,code_replacer);
+            
+            const ch = codehider(/(```[\w]+((?!```[\w])[\S\s])*)((import .* from .*)+)(((?!```[\w])[\S\s])*```(?![\w]))/gmi);
+            text = ch.hide(text);
 
             const re = /^[\s]*(import .+ from .+)[\s]*$/gmi
             const imports = [];
@@ -37,8 +40,7 @@ export default function systemTags() {
                 text = `<script>\n  ${imports.join("\n  ")}\n</script>\n${text}`;
             }
 
-            const re_uncode = /##### svelte\-md\-code-(\d+) #####/gmi
-            text = text.replace(re_uncode,code_restorator);
+            text = ch.unhide(text);
         }
         return text;
     }
