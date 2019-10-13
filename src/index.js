@@ -6,6 +6,7 @@ import systemTags from './handlers/systemTags'
 import interpolation from './handlers/interpolation'
 import tags from './handlers/tags'
 import logic from './handlers/logic'
+import code from './handlers/code'
 
 //renderers
 import renderer_code from './renderers/code'
@@ -14,6 +15,7 @@ import renderer_code from './renderers/code'
 //order is important
 const handlers = [
     systemTags(),
+    code(),
     logic(),
     interpolation(),
     tags(),
@@ -23,8 +25,9 @@ const renderer = new marked.Renderer();
 renderer.code = renderer_code
 
 export function markdown(options={}) {
-     options = {renderer,headerIds:false,...options};
-     marked.setOptions(options);
+    options = {renderer,headerIds:false,...options};
+    marked.setOptions(marked.getDefaults());
+    marked.setOptions(options);
     return {
         markup({ content, filename }) {
             if(extname(filename).startsWith('.md')){

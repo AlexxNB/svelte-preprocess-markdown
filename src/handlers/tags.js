@@ -2,7 +2,7 @@ export default function tags() {
     let savedTags = [];
     let id = 0;
 
-    let marked = () => console.log('oooops');
+    let marked = () => {};
 
     const tags_replacer = (text,tag,attrs,content) => {
         content = before(content,marked);
