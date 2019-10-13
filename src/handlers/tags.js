@@ -6,7 +6,7 @@ export default function tags() {
 
     const tags_replacer = (text,space1,open,tag,content,space2,close) => {
         content = before(content,marked);
-        content = content.replace(new RegExp(`^[\\t ]{0,${space1.length+space2.length}}`, "gm"),'');
+        content = content.replace(new RegExp(`^[\\t ]{0,${space2.length}}`, "gm"),'');
         content = marked(content);
         if(!content.trim().match(/[\r\n]/g)) content = content.replace(/<p>|<\/p>/g,'').trim();
         savedTags[id++] = `${open}${content}${close}`;
