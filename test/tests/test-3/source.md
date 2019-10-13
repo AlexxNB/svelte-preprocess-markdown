@@ -23,6 +23,7 @@
 
     * Item 1
     * Item 2
+
 </Child>
 
 <Child 
@@ -32,6 +33,7 @@
 
     Let's try the list:
 
-    * Item 1
-    * Item 2
+* Item 1
+* Item 2
+
 </Child>

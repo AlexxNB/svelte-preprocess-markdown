@@ -33,3 +33,8 @@
     ```js
         console.log()
     ```</code></pre>
+<div><pre><code class="language-js">    if(true)
+        doit();
+    else
+        donot();</code></pre>
+</div>

@@ -4,13 +4,12 @@ export default function tags() {
 
     let marked = () => {};
 
-    const tags_replacer = (text,tag,attrs,content) => {
+    const tags_replacer = (text,space1,open,tag,content,space2,close) => {
         content = before(content,marked);
-        content = content.replace(/^\s+/gm,'');
+        content = content.replace(new RegExp(`^[\\t ]{0,${space1.length+space2.length}}`, "gm"),'');
         content = marked(content);
         if(!content.trim().match(/[\r\n]/g)) content = content.replace(/<p>|<\/p>/g,'').trim();
-        const opentag = `${tag} ${attrs}`;
-        savedTags[id++] = `<${opentag.trim()}>${content}</${tag}>`;
+        savedTags[id++] = `${open}${content}${close}`;
         return "\n##### svelte-md-tag-"+id+" #####\n";
     }
 
@@ -20,7 +19,7 @@ export default function tags() {
 
     const before = (text,processor) => {
         marked = processor;
-        const re = /<([\w-:]+)([^>]*)>([\S\s]+?)<\/\1>/gm
+        const re = /([\t ]*)(<([\w-:]+)[^>]*>)\n?(([\s]*)[\S\s]+?)(<\/\3>)/gm
         if(text.match(re)) text = text.replace(re,tags_replacer);
 
         
