@@ -34,8 +34,16 @@
             ```
         </div>
 
-```js
-<script>
-    import "chota";
-</script>
-```
+        
+<Example>
+        <div slot="text">
+            3.&nbsp;Now you can import chota in the root `App.svelte` file
+        </div>
+        <div slot="code">
+        ```html
+            <script>
+                import "chota";
+            </script>
+        ```
+        </div>
+    </Example>

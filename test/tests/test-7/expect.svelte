@@ -1,4 +1,5 @@
 <!-- Test #7 -->
+
 <pre><code class="language-js">    ...
     // import css plugin at the top of the file
     import postcss from &#39;rollup-plugin-postcss&#39;;
@@ -6,33 +7,35 @@
 
     const production = !process.env.ROLLUP_WATCH;
 
-    export default &#123;
+    export default &amp;#123;
         ...
         plugins: [
             ...
-            svelte(&#123;
+            svelte(&amp;#123;
                 ...
                 // REPLACE
-                //   css: css =&gt; &#123;
+                //   css: css =&gt; &amp;#123;
                 //      css.write(&#39;public/bundle.css&#39;);
-                //   &#125;
+                //   &amp;#125;
                 // BY:
                 emitCss:true
-            &#125;),
+            &amp;#125;),
             // add the postccs plugin
-            postcss(&#123;
+            postcss(&amp;#123;
                 extract: true,
                 minimize: production,
                 sourceMap: !production
-            &#125;),
-            ...
+            &amp;#125;),
+            ... Русский текст
         ]</code></pre>
+
 <pre><code class="language-markdown">    ```js
         console.log()
     ```
     ```js
         console.log()
     ```</code></pre>
+
 <div><pre><code class="language-js">    if(true)
         doit();
     else

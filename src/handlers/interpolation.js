@@ -1,4 +1,3 @@
-import codehider from './_codehider';
 
 export default function interpolation() {
     let savedI11ns = [];
@@ -15,15 +14,12 @@ export default function interpolation() {
     }
 
     const before = (text,marked) => {
-        const ch = codehider('[{}]');
-        text = ch.hide(text);
 
         const re = /{[^{}]+}/mg;
         while(text.match(re)){
             text = text.replace(re,i11n_replacer);
         }
 
-        text = ch.unhide(text);
         return text;
     }
 

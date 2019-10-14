@@ -26,7 +26,7 @@
                 minimize: production,
                 sourceMap: !production
             }),
-            ...
+            ... Русский текст
         ]
 ```
 ```markdown

@@ -14,6 +14,7 @@
     "marked": "^0.7.0"
   },
   "devDependencies": {
+    "highlight.js": "^9.15.10",
     "rollup": "^1.23.1",
     "rollup-plugin-terser": "^5.1.2"
   },

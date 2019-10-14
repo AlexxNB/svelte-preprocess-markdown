@@ -1,36 +1,41 @@
 <!-- Test #8 -->
 
-<div><pre><code class="language-js">    ...
+<div><pre><code class="language-js">
+    ...
     // import css plugin at the top of the file
-    import postcss from &#39;rollup-plugin-postcss&#39;;
+    import postcss from 'rollup-plugin-postcss';
     ...
 
     const production = !process.env.ROLLUP_WATCH;
 
-    export default &#123;
+    export default &amp;#123;
         ...
         plugins: [
             ...
-            svelte(&#123;
+            svelte(&amp;#123;
                 ...
                 // REPLACE
-                //   css: css =&gt; &#123;
-                //      css.write(&#39;public/bundle.css&#39;);
-                //   &#125;
+                //   css: css =&gt; &amp;#123;
+                //      css.write('public/bundle.css');
+                //   &amp;#125;
                 // BY:
                 emitCss:true
-            &#125;),
+            &amp;#125;),
             // add the postccs plugin
-            postcss(&#123;
+            postcss(&amp;#123;
                 extract: true,
                 minimize: production,
                 sourceMap: !production
-            &#125;),
+            &amp;#125;),
             ...
         ]
         ...
-    &#125;</code></pre>
+    &amp;#125;</code></pre>
 </div>
-<pre><code class="language-js">&lt;script&gt;
-    import &quot;chota&quot;;
-&lt;/script&gt;</code></pre>
+<Example><div slot="text">3.&nbsp;Now you can import chota in the root <code>App.svelte</code> file</div>
+<div slot="code"><pre><code class="language-html">
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">import</span> <span class="hljs-string">"chota"</span>;
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+</div>
+</Example>
