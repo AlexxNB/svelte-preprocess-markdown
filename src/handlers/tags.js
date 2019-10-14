@@ -32,7 +32,7 @@ export default function tags() {
         const single_re = /([\t ]*)(<\w+[^>]*\/>)/g;
         text = text.replace(single_re,singletags_replacer);
         
-        const re = /([\t ]*)(<([\w-:]+)[^>]*>)\n?(([\s]*)[^<>]*?)(<\/\3>)/gm
+        const re = /([\t ]*)(<([\w-:]+)[^>]*>)\n?(([\s]*)[^<]*?)(<\/\3>)/gm
         while(text.match(re)) {
             text = text.replace(re,tags_replacer);
         }
