@@ -5,7 +5,8 @@
 </script>
 
 <h1>Hello {name}!</h1>
-<Child /><Child></Child>
+<Child />
+<Child></Child>
 <Child>Just a <strong>simple</strong> <code>text</code></Child>
 <Child 
     props={1}

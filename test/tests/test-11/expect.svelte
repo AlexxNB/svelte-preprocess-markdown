@@ -4,7 +4,8 @@
 <div class="is-full-width"></div>
 <Col class="grid_col">auto</Col>
 <Col class="grid_col">auto</Col>
-<Col/></Row></div></Example>
+<Col/>
+</Row></div></Example>
 <div><div><blockquote>
 <p>Blackquote in the tag</p>
 </blockquote>

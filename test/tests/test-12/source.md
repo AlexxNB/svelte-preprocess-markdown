@@ -33,3 +33,10 @@
         Selected: {radiovalue}
     </div>
 </Example>
+
+<div>
+    <Button primary icon={mdiAccountPlus}>Add User</Button> 
+    <Button outline primary iconRight={mdiSend}>Submit</Button> 
+    <Button error icon={mdiDelete} /> 
+    <Button secondary class="is-rounded" icon="icons/svelte.svg" />
+</div>
