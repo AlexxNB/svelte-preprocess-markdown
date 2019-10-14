@@ -12,7 +12,7 @@ export default function code() {
 
     const code_replacer = (code,spaces) => {
         code = code.replace(new RegExp(`^[\\t ]{0,${spaces}}`, "gm"),'');
-        code = marked(code_sanitizer(code));
+        code = code_sanitizer(marked(code));
         savedCode[id++] = code;
         return "\n##### svelte-md-code-"+id+" #####\n";
     }
@@ -24,7 +24,7 @@ export default function code() {
     const before = (text,processor) => {
         marked = processor;
 
-        const re = /^([\t ]*)(```[\w]*)[\t ]*$/mg
+        const re = /^([\t ]*)(```[\w ]*)[\t ]*$/mg
         let result;
         let level = 0;
         let map = [];
