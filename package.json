@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-markdown",
-  "version": "2.1.13",
+  "version": "2.1.14",
   "description": "Using markdown in Svelte components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
