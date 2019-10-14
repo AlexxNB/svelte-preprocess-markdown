@@ -12,6 +12,7 @@ hljs.registerLanguage('css', css_lang);
 
 
 exports.highlight = function (code, lang) {
+    if(!lang) console.log(code);
     let result = hljs.highlight(lang,"\n"+code);
     return result.value;
 }
