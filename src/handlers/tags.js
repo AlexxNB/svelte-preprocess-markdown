@@ -4,13 +4,21 @@ export default function tags() {
 
     let marked = () => {};
 
+    const renderer_p = (text) => {
+        if(text.match(/^([\t ]*<code>svelte\-md\-tag\-\d+<\/code>)+[\t ]*$/)){
+            return text;
+        }else{
+            return `<p>${text}</p>\n`;
+        }
+    }
+
     const singletags_replacer = (text,spaces,tag) => {
         savedTags[id++] = tag;
-        return spaces+"``` svelte-md-tag-"+id+" ```";
+        return spaces+" ``` svelte-md-tag-"+id+" ``` ";
     }
 
     const tags_replacer = (text,space1,open,tag,content,space2,close) => {
-        if(content.length > 0){
+         if(content.length > 0){
             content = before(content,marked);
             content = content.replace(new RegExp(`^[\\t ]{0,${space2.length}}`, "gm"),'');
             content = marked(content);
@@ -27,6 +35,9 @@ export default function tags() {
 
     const before = (text,processor) => {
         marked = processor;
+        const renderer = new marked.Renderer();
+        renderer.paragraph = renderer_p;
+        marked.setOptions({renderer});
 
         const single_re = /([\t ]*)(<\w+[^>]*\/>)/g;
         text = text.replace(single_re,singletags_replacer);
@@ -42,7 +53,7 @@ export default function tags() {
     }
 
     const after = (text,processor) => {
-        const re = /(?:##### |<h5.*?>|<code.*?>)svelte\-md\-tag\-(\d+)(?: #####|<\/h5>|<\/code>)/g;
+        const re = /(?:##### |<h5.*?>|[ ]*<code.*?>)svelte\-md\-tag\-(\d+)(?: #####|<\/h5>|<\/code>[ ]*)/g;
         while(text.match(re)){
             text = text.replace(re,tags_restorator);  
         }

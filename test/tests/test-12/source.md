@@ -10,7 +10,25 @@
 <Example>
     <div slot="text">
         <Radio value="first" bind:group={radiovalue}/> - first,
+        
         <Radio value="second" bind:group={radiovalue}/> - second
+
+        Selected: {radiovalue}
+    </div>
+</Example>
+
+<Example>
+    <div slot="text">
+        <Radio value="first" bind:group={radiovalue}/> - first, <Radio value="second" bind:group={radiovalue}/> - second
+
+        Selected: {radiovalue}
+    </div>
+</Example>
+
+<Example>
+    <div slot="text">
+        <Radio/> 
+        <Radio/><Radio/><Radio/> 
 
         Selected: {radiovalue}
     </div>
