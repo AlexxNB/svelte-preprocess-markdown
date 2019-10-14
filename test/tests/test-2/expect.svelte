@@ -11,4 +11,4 @@
 <li>Item 2</li>
 </ul>
 <p><a href="https://ya.ru">Link</a></p>
-<Child />
+<p><Child /></p>

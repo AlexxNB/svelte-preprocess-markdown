@@ -6,13 +6,12 @@ export default function tags() {
 
     const singletags_replacer = (text,spaces,tag) => {
         savedTags[id++] = tag;
-        return "##### svelte-md-tag-"+id+" #####";
+        return spaces+"``` svelte-md-tag-"+id+" ```";
     }
 
     const tags_replacer = (text,space1,open,tag,content,space2,close) => {
         if(content.length > 0){
             content = before(content,marked);
-            
             content = content.replace(new RegExp(`^[\\t ]{0,${space2.length}}`, "gm"),'');
             content = marked(content);
             if(!content.trim().match(/[\r\n]/g)) content = content.replace(/<p>|<\/p>/g,'').trim();
@@ -43,7 +42,7 @@ export default function tags() {
     }
 
     const after = (text,processor) => {
-        const re = /(?:##### |<h5.*?>)svelte\-md\-tag\-(\d+)(?: #####|<\/h5>)/g;
+        const re = /(?:##### |<h5.*?>|<code.*?>)svelte\-md\-tag\-(\d+)(?: #####|<\/h5>|<\/code>)/g;
         while(text.match(re)){
             text = text.replace(re,tags_restorator);  
         }

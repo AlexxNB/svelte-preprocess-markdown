@@ -5,7 +5,7 @@
 </script>
 
 <h1>Hello {name}!</h1>
-<Child />
+<p><Child /></p>
 <Child></Child>
 <Child>Just a <strong>simple</strong> <code>text</code></Child>
 <Child 
