@@ -1,4 +1,3 @@
-import {extname} from 'path'
 import marked from 'marked'
 
 //handlers
@@ -25,7 +24,7 @@ export function markdown(options={}) {
     marked.setOptions(options);
     return {
         markup({ content, filename }) {
-            if(extname(filename).startsWith('.md')){
+            if(filename.endsWith('.md')){
 
                 for(let i=0; i<handlers.length; i++){
                     content = handlers[i].before(content,marked);
