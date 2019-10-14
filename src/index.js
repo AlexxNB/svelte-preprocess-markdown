@@ -43,5 +43,5 @@ export function markdown(options={}) {
 }
 
 export function Renderer() {
-    return renderer;
+    return new marked.Renderer();
 }
