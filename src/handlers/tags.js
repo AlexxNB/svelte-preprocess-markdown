@@ -12,7 +12,7 @@ export default function tags() {
         content = marked(content);
         if(!content.trim().match(/[\r\n]/g)) content = content.replace(/<p>|<\/p>/g,'').trim();
         savedTags[id++] = `${open}${content}${close}`;
-        return "\n##### svelte-md-tag-"+id+" #####\n";
+        return " ##### svelte-md-tag-"+id+" ##### ";
     }
 
     const tags_restorator = (text,id) => {
@@ -29,7 +29,7 @@ export default function tags() {
     }
 
     const after = (text,processor) => {
-        const re = /<h5.*?>svelte\-md\-tag\-(\d+)<\/h5>/g;
+        const re = /(?:##### |<h5.*?>)svelte\-md\-tag\-(\d+)(?: #####|<\/h5>)/g;
         while(text.match(re)){
             text = text.replace(re,tags_restorator);  
         }

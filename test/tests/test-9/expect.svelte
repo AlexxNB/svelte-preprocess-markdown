@@ -6,13 +6,13 @@
 
 
 <h1>Tag</h1>
-<pre><code class="language-html">&lt;Snippet code={`
+<pre><code class="language-html">&lt;Snippet code=&#123;`
 &lt;Tag&gt;One&lt;/Tag&gt;
 &lt;Tag&gt;Two&lt;/Tag&gt;
 &lt;Tag&gt;Three&lt;/Tag&gt;
 &lt;Tag small&gt;Small&lt;/Tag&gt;
 &lt;Tag large&gt;Large&lt;/Tag&gt;
-`}&gt;
+`&#125;&gt;
     &lt;Tag&gt;One&lt;/Tag&gt;
     &lt;Tag&gt;Two&lt;/Tag&gt;
     &lt;Tag&gt;Three&lt;/Tag&gt;

@@ -7,25 +7,25 @@
 
     const production = !process.env.ROLLUP_WATCH;
 
-    export default &amp;#123;
+    export default &#123;
         ...
         plugins: [
             ...
-            svelte(&amp;#123;
+            svelte(&#123;
                 ...
                 // REPLACE
-                //   css: css =&gt; &amp;#123;
+                //   css: css =&gt; &#123;
                 //      css.write(&#39;public/bundle.css&#39;);
-                //   &amp;#125;
+                //   &#125;
                 // BY:
                 emitCss:true
-            &amp;#125;),
+            &#125;),
             // add the postccs plugin
-            postcss(&amp;#123;
+            postcss(&#123;
                 extract: true,
                 minimize: production,
                 sourceMap: !production
-            &amp;#125;),
+            &#125;),
             ... Русский текст
         ]</code></pre>
 
