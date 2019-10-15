@@ -59,7 +59,8 @@
 <style>
   .view-toggle {
     height: var(--pane-controls-h);
-    border-bottom: 1px solid rgba(95, 158, 160, 0.5);
+    border-bottom: 1px solid var(--dark);
+    border-left: none;
     white-space: nowrap;
     box-sizing: border-box;
   }
@@ -106,14 +107,6 @@
     color: cadetblue;
   }
 </style>
-
-<div class="view-toggle">
-  <button style="color: #333;" on:click={() => (view = 'result')}>
-    Result
-  </button>
-
-  <a class="linkylink" href="https://github.com/AlexxNB/svelte-preprocess-markdown">Github -></a>
-</div>
 
 <!-- component viewer -->
 <div class="tab-content" class:visible={view === 'result'}>

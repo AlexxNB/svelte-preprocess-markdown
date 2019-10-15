@@ -87,8 +87,9 @@
 <style>
   .component-selector {
     position: relative;
-    border-bottom: 1px solid rgba(95, 158, 160, 0.5);
+    border-bottom: 1px solid var(--dark);
     overflow: hidden;
+    margin-right:-1px;
   }
 
   .file-tabs {

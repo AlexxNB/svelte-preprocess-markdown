@@ -16,7 +16,9 @@
 	--code-w:      72em;
 	--side-nav:  3.2rem;
 	--side-page:   var(--side-nav);
-	--second: rgba(95, 158, 160, 0.5);
+	--second: rgba(255, 170, 59, 0.719);
+	--dark: rgba(146, 88, 13, 0.746);
+	--grey: #a3a3a3;
 	/* easings */
 	--in-cubic:    cubic-bezier(0.55, 0.055, 0.675, 0.19);
 	--out-cubic:   cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -27,9 +29,8 @@
 	--inout-back:  cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	--back:       	#ffffff;
 	--back-light: 	#fffbd6;
-	--back-api: 		#eff8ff;
+	--back-api: 		#fff8b9;
 	--prime:     	#f9ac00;
-	--second:     	#676778;
 	--flash:      	#40b3ff;
 	--heading:	var(--second);
 	--text:      		#444;
