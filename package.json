@@ -8,7 +8,12 @@
     "build": "rollup -c",
     "pretest": "npm run build",
     "test": "node ./test/runtest.js",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "docs-install": "cd docs_src && npm i",
+    "docs-dev": "cd docs_src && npm run dev",
+    "docs-export": "cd docs_src && npm run export",
+    "docs-build": "cd docs_src && npm run build",
+    "docs-start": "cd docs_src && npm run start"
   },
   "dependencies": {
     "marked": "^0.7.0"

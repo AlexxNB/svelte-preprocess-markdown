@@ -1,0 +1,8 @@
+{
+	"background_color": "#ffffff",
+	"theme_color": "#333333",
+	"name": "mdsv",
+	"short_name": "mdsv",
+	"display": "minimal-ui",
+	"start_url": "/"
+}
