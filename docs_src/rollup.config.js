@@ -7,6 +7,7 @@ import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 import {markdown} from './../dist/index.mjs';
+import {renderer,highlight,bugremover} from './utils'
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -26,7 +27,11 @@ export default {
 				hydratable: true,
 				emitCss: true,
 				extensions: ['.svelte','.md'],
-				preprocess: markdown()
+				preprocess: markdown({
+					renderer:renderer(),
+					highlight,
+					langPrefix:'hljs language-'
+				})
 			}),
 			resolve({preferBuiltins: false}),
 			commonjs(),
@@ -66,7 +71,11 @@ export default {
 				generate: 'ssr',
 				dev,
 				extensions: ['.svelte','.md'],
-				preprocess: markdown()
+				preprocess: markdown({
+					renderer:renderer(),
+					highlight,
+					langPrefix:'hljs language-'
+				})
 			}),
 			resolve(),
 			commonjs()

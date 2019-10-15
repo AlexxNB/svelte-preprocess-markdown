@@ -12,6 +12,11 @@
     }
 ];
 
+components = components.map(cmp => {
+  cmp.source = cmp.source.trim();
+  return cmp;
+})
+
   onMount(() => {
     repl.set({
       components

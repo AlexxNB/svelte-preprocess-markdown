@@ -1,6 +1,9 @@
 <nav>
-  <a class="logo" href="/">
+  <a class="logo show-lg" href="/">
     Svelte<span>-Preprocess-</span>Markdown
+  </a>
+  <a class="logo show-xs" href="/">
+    MD<span>Sv</span>
   </a>
 
   <ul class="links">
@@ -67,5 +70,25 @@
 
   .links li a:hover{
     color: var(--grey)
+  }
+
+  @media screen and (max-width: 599px) {
+    .show-xs{ 
+      display: auto;
+    }
+
+    .show-lg{ 
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .show-xs{ 
+      display: none;
+    }
+
+    .show-lg{ 
+      display: auto;
+    }
   }
 </style>

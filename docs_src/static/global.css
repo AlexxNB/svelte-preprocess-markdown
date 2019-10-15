@@ -72,7 +72,11 @@ body {
 	font-family: 'Overpass';
 	font-style: normal;
 	font-weight: 300;
-	
+	font-display: fallback;
+	src:
+		local('Overpass Light '),
+		local('Overpass-Light'),
+		url('fonts/overpass-400.woff2') format('woff2');
 }
 
 /* overpass-600normal - latin */
@@ -80,7 +84,11 @@ body {
 	font-family: 'Overpass';
 	font-style: normal;
 	font-weight: 600;
-	
+	font-display: fallback;
+	src:
+		local('Overpass Bold '),
+		local('Overpass-Bold'),
+		url('fonts/overpass-600.woff2') format('woff2');
 }
 
 /* fira-mono-400normal - latin */
@@ -88,7 +96,11 @@ body {
 	font-family: 'Fira Mono';
 	font-style: normal;
 	font-weight: 400;
-	
+	font-display: fallback;
+	src:
+		local('Fira Mono'),
+		local('Fira-Mono'),
+		url('fonts/fira-mono-400.woff2') format('woff2');
 }
 
 /*	base reset ----------------------------- */
@@ -121,7 +133,7 @@ a {
 	color: inherit;
 }
 
-a:hover, a:active { color: var(--flash) }
+a:hover, a:active { color: var(--dark) }
 a:focus { outline: none }
 
 /*
@@ -142,7 +154,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, blockquote {
 	position: relative;
-	margin: 0;
+	margin: 1rem 0;
 	color: var(--heading);
 }
 
@@ -162,27 +174,35 @@ h1, h2 {
 h3 { font-weight: 300 }
 
 p, ol, ul {
-	margin: 0 0 1em 0;
+	margin: 1rem  0 1rem 1rem;
 }
 
 .b, b, strong { font-weight: 600 }
 
 tt, code, kbd, samp {
 	font: 400 var(--code-fs)/1.7 var(--font-mono);
+	font-size: 1.7rem;
 }
 
 code {
 	position: relative;
-	border-radius: .3em;
-	white-space: nowrap;
-	color: #444;
-	-webkit-font-smoothing: initial;
+	padding: 0 0.4rem;
+	font-size: 90%;
+	white-space: pre-wrap;
+	border-radius: 4px;
+	color: var(--dark);
+	padding: 0.2em 0.4em;
+	background-color: #f3f3f6;
 }
 
-pre code {
+pre > code {
 	top: 0;
+	color: var(--grey);
 	white-space: inherit;
-	background-color: none;
+	background-color: transparent;
+	font-size: 1em;
+	padding: 1rem;
+	overflow-x: auto;
 }
 
 /* sync CodeMirror with prism  */
@@ -314,39 +334,6 @@ a.no-underline {
 	border-bottom: none;
 	padding: 0;
 }
-
-/* a:hover:not(.disabled) > .icon { stroke: var(--flash) } */
-
-/*  lists ---------------------------------- */
-.listify ol,
-.listify ul {
-	--list-padding: 2.9rem;
-
-	list-style: none;
-	color: currentColor;
-	margin-left: var(--list-padding);
-}
-
-.listify ol > li,
-.listify ul > li {
-	max-width: calc(var(--linemax) - var(--list-padding));
-	line-height: 1.5;
-	margin: 0 0 0.4rem 0;
-}
-
-.listify ul > li:before {
-	content: '';
-	position: absolute;
-	margin-top: 1.1rem;
-	margin-left: -1.8rem;
-	background-color: var(--second);
-	width: .6rem;
-	height: .6rem;
-	border-radius: 2px;
-	opacity: 0.7;
-}
-
-.listify ol { list-style: decimal }
 
 /*  tables --------------------------------- */
 table {
