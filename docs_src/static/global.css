@@ -28,7 +28,7 @@
 	--out-back:    cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	--inout-back:  cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	--back:       	#ffffff;
-	--back-light: 	#fffbd6;
+	--back-light: 	#fdf6e3;
 	--back-api: 		#fff8b9;
 	--prime:     	#f9ac00;
 	--flash:      	#40b3ff;
@@ -174,7 +174,7 @@ h1, h2 {
 h3 { font-weight: 300 }
 
 p, ol, ul {
-	margin: 1rem  0 1rem 1rem;
+	margin: 1rem  0 1rem 1.6rem;
 }
 
 .b, b, strong { font-weight: 600 }
@@ -222,13 +222,10 @@ li:not(.white) > h2 {
 }
 
 blockquote {
-	position: relative;
-	margin: 1.6rem 0 2.4rem;
-	padding: 2rem 2.4rem 1.8rem 2.4rem;
-	border-radius: var(--border-r);
-	font-family: var(--font);
-	max-width: var(--linemax);
-}
+	background-color: #f3f3f6;
+	padding: 1.5rem 2rem;
+	border-left: 3px solid var(--grey);
+  }
 
 blockquote p {
 	font-size: var(--h5);

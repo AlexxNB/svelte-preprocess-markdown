@@ -2,6 +2,8 @@
   import { getContext, createEventDispatcher } from "svelte";
 
   export let handle_select;
+  export let readonly;
+  export let embedded=null;
 
   const { components, selected, request_focus, rebundle } = getContext("REPL");
 
@@ -74,11 +76,6 @@
 
     editing = component;
 
-    setTimeout(() => {
-      // TODO we can do this without IDs
-      document.getElementById(component.name).scrollIntoView(false);
-    });
-
     components.update(components => components.concat(component));
     handle_select(component);
   }
@@ -89,8 +86,10 @@
     position: relative;
     border-bottom: 1px solid var(--dark);
     overflow: hidden;
-    margin-right:-1px;
   }
+
+ 
+
 
   .file-tabs {
     border: none;
@@ -131,7 +130,6 @@
   input {
     display: inline-block;
     position: relative;
-    line-height: 1;
   }
 
   .input-sizer {
@@ -208,8 +206,8 @@
     fill: none;
   }
 </style>
-
-<div class="component-selector">
+{#if !readonly}
+<div class="component-selector" class:embedded>
   {#if $components.length}
     <div class="file-tabs" on:dblclick={addNew}>
       {#each $components as component}
@@ -262,3 +260,4 @@
     </div>
   {/if}
 </div>
+{/if}

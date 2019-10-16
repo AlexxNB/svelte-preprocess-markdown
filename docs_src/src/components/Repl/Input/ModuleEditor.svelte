@@ -6,6 +6,7 @@
 	const { bundle, selected, handle_change, navigate, register_module_editor } = getContext('REPL');
 
 	export let errorLoc;
+	export let readonly;
 
 	let editor;
 	onMount(() => {
@@ -13,7 +14,7 @@
 	});
 
 	export function focus() {
-		editor.focus();
+		if(!readonly) editor.focus();
 	}
 </script>
 
@@ -43,6 +44,7 @@
 		<CodeMirror
 			bind:this={editor}
 			{errorLoc}
+			{readonly}
 			on:change={handle_change}
 		/>
 	</div>

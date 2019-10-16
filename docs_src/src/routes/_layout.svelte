@@ -8,7 +8,7 @@
 
   <ul class="links">
     <li><a href="/">Docs</a></li>
-    <li><a href="/repl" class="active">REPL</a></li>
+    <li><a href="/playground" class="active">Playground</a></li>
     <li><a href="https://github.com/AlexxNB/svelte-preprocess-markdown" target="blank">GitHub</a></li>
   </ul>
 </nav>

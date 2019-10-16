@@ -15,6 +15,7 @@
   export let embedded = false;
   export let orientation = "columns";
   export let relaxed = false;
+  export let readonly = false;
   export let fixed = false;
   export let fixedPos = 50;
   export let injectedJS = "";
@@ -221,10 +222,11 @@
     pos={fixed ? fixedPos : orientation === 'rows' ? 50 : 60}
     {fixed}>
     <section slot="a">
-      <ComponentSelector {handle_select} />
+      <ComponentSelector {handle_select} {readonly} {embedded}/>
       <ModuleEditor
         bind:this={input}
-        errorLoc={sourceErrorLoc || runtimeErrorLoc} />
+        errorLoc={sourceErrorLoc || runtimeErrorLoc} {readonly}/>
+        
     </section>
 
     <section slot="b" style="height: 100%;">

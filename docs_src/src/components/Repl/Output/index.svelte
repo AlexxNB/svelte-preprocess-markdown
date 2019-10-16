@@ -57,28 +57,6 @@
 </script>
 
 <style>
-  .view-toggle {
-    height: var(--pane-controls-h);
-    border-bottom: 1px solid var(--dark);
-    border-left: none;
-    white-space: nowrap;
-    box-sizing: border-box;
-  }
-
-  button {
-    /* width: 50%;
-		height: 100%; */
-    background: white;
-    text-align: left;
-    position: relative;
-    font: 400 12px/1.5 var(--font);
-    border: none;
-    border-bottom: 3px solid transparent;
-    padding: 12px 12px 8px 12px;
-    color: #999;
-    border-radius: 0;
-    cursor: unset;
-  }
 
   .tab-content {
     position: absolute;
@@ -94,18 +72,6 @@
     pointer-events: all;
   }
 
-  .linkylink {
-    float: right;
-    margin: 10px 20px;
-    font-size: 14px;
-    font-family: "Fira Mono";
-    border-bottom: none;
-  }
-
-  .linkylink:hover {
-    border-bottom: 1px solid cadetblue;
-    color: cadetblue;
-  }
 </style>
 
 <!-- component viewer -->
