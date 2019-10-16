@@ -1,0 +1,465 @@
+/*
+-----------------------------------------------
+	vars – css custom-properties
+	NOTE
+	- some vars change inside media-queries!
+	- under normal conditions, there's no need to touch these
+-----------------------------------------------
+*/
+:root {
+	--nav-h:       6rem;
+	--top-offset:  6rem;
+	--sidebar-w:  30rem;
+	--sidebar-mid-w: 36rem;
+	--sidebar-large-w: 48rem;
+	--main-width: 80rem;
+	--code-w:      72em;
+	--side-nav:  3.2rem;
+	--side-page:   var(--side-nav);
+	--second: rgba(255, 170, 59, 0.719);
+	--dark: rgba(146, 88, 13, 0.746);
+	--grey: #a3a3a3;
+	/* easings */
+	--in-cubic:    cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	--out-cubic:   cubic-bezier(0.215, 0.61, 0.355, 1);
+	--inout-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+	--in-back:     cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	--out-back:    cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	--inout-back:  cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	--back:       	#ffffff;
+	--back-light: 	#fdf6e3;
+	--back-api: 		#fff8b9;
+	--prime:     	#f9ac00;
+	--flash:      	#40b3ff;
+	--heading:	var(--second);
+	--text:      		#444;
+	--sidebar-text: rgba(255, 255, 255, .75);
+	--border-w:  		.3rem; /* border-width  */
+	--border-r:  		.4rem; /* border-radius */
+	--unit:     .8rem;
+	--code-fs: 1.4rem;
+	--h6:      1.4rem;
+	--h5:      1.6rem;
+	--h4:      1.8rem; /* default font-size */
+	--h3:      2.6rem;
+	--h2:        3rem;
+	--h1:      3.2rem;
+	--linemax:   42em; /* max line-length */
+	--lh:  		 	  1.5; /* base line-height */
+}
+
+@media screen and (min-width: 768px) {
+	:root {
+		--side-page:  14vw;
+		--top-offset: 10rem;
+		--side-nav: 4.8rem;
+	}
+}
+
+
+body {
+	--font: 'Overpass', sans-serif;
+	--font-mono: 'Fira Mono', monospace;
+	--font-ui: var(--font-mono);
+	--font-system: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+
+/*	fonts ---------------------------------- */
+/* overpass-300normal - latin */
+@font-face {
+	font-family: 'Overpass';
+	font-style: normal;
+	font-weight: 300;
+	font-display: fallback;
+	src:
+		local('Overpass Light '),
+		local('Overpass-Light'),
+		url('fonts/overpass-400.woff2') format('woff2');
+}
+
+/* overpass-600normal - latin */
+@font-face {
+	font-family: 'Overpass';
+	font-style: normal;
+	font-weight: 600;
+	font-display: fallback;
+	src:
+		local('Overpass Bold '),
+		local('Overpass-Bold'),
+		url('fonts/overpass-600.woff2') format('woff2');
+}
+
+/* fira-mono-400normal - latin */
+@font-face {
+	font-family: 'Fira Mono';
+	font-style: normal;
+	font-weight: 400;
+	font-display: fallback;
+	src:
+		local('Fira Mono'),
+		local('Fira-Mono'),
+		url('fonts/fira-mono-400.woff2') format('woff2');
+}
+
+/*	base reset ----------------------------- */
+html {
+	font-size: 62.5%;
+	-ms-text-size-adjust: 62.5%;
+	-webkit-text-size-adjust: 62.5%;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	box-sizing: border-box;
+	border-collapse: collapse;
+}
+
+html,
+body,
+#sapper {
+	width: 100%;
+	height: 100%;
+}
+
+* {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+/*	link reset ----------------------------- */
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: inherit;
+}
+
+a:hover, a:active { color: var(--dark) }
+a:focus { outline: none }
+
+/*
+-----------------------------------------------
+	global styles
+-----------------------------------------------
+*/
+
+/*	typography ----------------------------- */
+body {
+	font: 300 var(--h4)/var(--lh) var(--font);
+	background-color: var(--back);
+	color: var(--text);
+
+	/* default spacing of Overpass is a bit too airy */
+	/* letter-spacing: -.013em; */
+}
+
+h1, h2, h3, h4, h5, h6, blockquote {
+	position: relative;
+	margin: 1rem 0;
+	color: var(--heading);
+}
+
+/* h1, h2, h3, h4, h5, h6 { font-weight: 600 } */
+h6 { font-size: var(--h6) }
+h5 { font-size: var(--h5) }
+h4 { font-size: var(--h4) }
+h3 { font-size: var(--h3) }
+h2 { font-size: var(--h2) }
+h1 { font-size: var(--h1) }
+
+h1, h2 {
+	font-family: var(--font);
+	line-height: 1.25;
+}
+
+h3 { font-weight: 300 }
+
+p, ol, ul {
+	margin: 1rem  0 1rem 1.6rem;
+}
+
+.b, b, strong { font-weight: 600 }
+
+tt, code, kbd, samp {
+	font: 400 var(--code-fs)/1.7 var(--font-mono);
+	font-size: 1.7rem;
+}
+
+code {
+	position: relative;
+	padding: 0 0.4rem;
+	font-size: 90%;
+	white-space: pre-wrap;
+	border-radius: 4px;
+	color: var(--dark);
+	padding: 0.2em 0.4em;
+	background-color: #f3f3f6;
+}
+
+pre > code {
+	top: 0;
+	color: var(--grey);
+	white-space: inherit;
+	background-color: transparent;
+	font-size: 1em;
+	padding: 1rem;
+	overflow-x: auto;
+}
+
+/* sync CodeMirror with prism  */
+.CodeMirror {
+	font-size: var(--code-fs) !important;
+}
+
+::selection {
+	background: var(--flash);
+	color: white;
+}
+
+/*	opinionated styles --------------------- */
+
+li:not(.white) > h2 {
+	color: var(--second)
+}
+
+blockquote {
+	background-color: #f3f3f6;
+	padding: 1.5rem 2rem;
+	border-left: 3px solid var(--grey);
+  }
+
+blockquote p {
+	font-size: var(--h5);
+}
+
+blockquote :last-child {
+	margin: 0;
+}
+
+/*  buttons -------------------------------- */
+button {
+	font-family: inherit;
+	font-size: inherit;
+	background-color: transparent;
+	border: none;
+	color: currentColor;
+	cursor: pointer;
+}
+
+button:focus,
+.btn:focus { outline: 0 }
+
+button[disabled],
+.btn[disabled],
+.btn:hover[disabled] {
+	opacity: .55;
+	pointer-events: none;
+}
+
+button > svg,
+.btn > svg {
+	position: relative;
+	top: -.1rem;
+	width: 2rem !important;
+	height: 2rem !important;
+	stroke: currentColor !important;
+}
+
+/*  reset ------- */
+.btn {
+  --btn-h: 4rem;
+  --btn-outline: .2rem;
+  --btn-font: var(--font);
+  --btn-calc-h: calc(var(--btn-h) - var(--btn-outline) * 2);
+  --btn-hover: linear-gradient(to top, rgba(0,0,0,.07), rgba(0,0,0,.07));
+
+  position: relative;
+  margin: 0 .8rem .8rem 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+  zoom: 1;
+  border: none transparent;
+	font: var(--h4) var(--btn-font);
+	border-radius: var(--border-r);
+  color: currentColor;
+  cursor: pointer;
+}
+
+/*  default */
+.btn {
+	line-height: var(--btn-h);
+  height: var(--btn-h);
+  padding: 0 1.6rem;
+	transition: all .1s;
+}
+
+.btn:hover  {
+	transform: scale(.98);
+	mix-blend-mode: multiply;
+	background-image: var(--btn-hover);
+}
+
+/*  optional */
+.btn[outline] {
+	line-height: var(--btn-calc-h);
+  height: var(--btn-calc-h);
+  border: var(--btn-outline) solid currentColor;
+  background-color: white;
+  color: currentColor;
+}
+
+/*  links ------------------------------------- */
+a {
+	position: relative;
+	padding: 0 0 1px 0;
+	border-bottom: 1px solid currentColor;
+	user-select: none;
+	color: var(--prime);
+	transition: color .2s, border .2s, padding .2s;
+}
+
+a:hover  {
+	color: var(--flash);
+}
+
+a:hover {
+	padding: 0;
+	border-bottom: 2px solid currentColor;
+}
+
+a.no-underline {
+	border-bottom: none;
+	padding: 0;
+}
+
+/*  tables --------------------------------- */
+table {
+	width: 100%;
+	font-size: var(--h5);
+}
+
+td, th {
+	text-align: left;
+	border-bottom: 1px solid #eee;
+	padding: 0.4rem 0.8rem 0.4rem 0;
+}
+
+table code, table span {
+	white-space: pre;
+}
+
+/*	grid ----------------------------------- */
+.grid, .grid.half {
+	display: grid;
+	grid-gap: 2.4rem;
+	grid-template-columns: 1fr;
+	align-items: center;
+}
+
+.grid.stretch { align-items: stretch }
+
+.grid > .cols-2,
+.grid > .cols-3 { grid-column: span 1 }
+
+@media screen and (min-width: 840px) {
+	.grid.half,
+	.grid { grid-template-columns: repeat(2, 1fr) }
+	.grid > .cols-2,
+	.grid > .cols-3 { grid-column: span 2 }
+}
+
+@media screen and (min-width: 1100px) {
+	.grid { grid-template-columns: repeat(3, 1fr) }
+	.grid > .cols-2 { grid-column: span 2 }
+	.grid > .cols-3 { grid-column: span 3 }
+}
+
+/*	helper styles -------------------------- */
+.flex-auto { flex: 1 0 auto }
+
+.py0 {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.legend, figcaption, .post aside {
+	max-width: none;
+	margin: 0 auto;
+	padding: 1.6rem 0 0 .8rem;
+	font: 1.2rem/1.6 var(--font-ui);
+}
+
+.filename {
+	display: inline-block;
+	padding: 1.6rem 0 0 1rem;
+	font: var(--h6) var(--font-ui);
+}
+
+.box {
+	padding: 2.4rem 3.2rem;
+	border-radius: var(--border-r);
+}
+
+/*	theme colors --------------------------- */
+.prime      { color: var(--prime) !important }
+.second     { color: var(--second) !important }
+.flash      { color: var(--flash) !important }
+.black      { color: black !important }
+.white      { color: white !important }
+
+.back       { background-color: var(--back) !important }
+.back-light { background-color: var(--back-light) !important }
+.bg-prime   { background-color: var(--prime) !important }
+.bg-second  { background-color: var(--second) !important }
+.bg-flash   { background-color: var(--flash) !important }
+
+/*	inputs --------------------------------- */
+input[type="checkbox"] {
+	/* display: block; */
+	position: relative;
+	height: 1em;
+	width: calc(100% - 0.6em);
+	max-width: 2em;
+	top: -2px;
+	border-radius: 0.5em;
+	-webkit-appearance: none;
+	outline: none;
+	margin: 0 0.6em 0 0;
+}
+
+input[type="checkbox"]::before {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 100%;
+	width: 100%;
+	padding: 2px;
+	border-radius: 1em;
+	top: 0;
+	left: 0;
+	background: var(--second);
+	/* box-sizing: border-box; */
+	box-sizing: content-box;
+}
+
+input[type="checkbox"]:checked::before {
+	background: var(--prime);
+}
+
+input[type="checkbox"]::after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 1em;
+	width: 1em;
+	top: 2px;
+	left: 2px;
+	border-radius: 1em;
+	background: white;
+	box-shadow: 0 0px 1px rgba(0,0,0,.4), 0 4px 2px rgba(0,0,0,.1);
+	-webkit-transition: background .2s ease-out, left .2s ease-out;
+}
+
+input[type="checkbox"]:checked::after {
+	left: calc(100% - 9px);
+}
