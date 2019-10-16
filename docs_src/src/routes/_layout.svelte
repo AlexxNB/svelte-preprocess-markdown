@@ -1,14 +1,14 @@
 <nav>
-  <a class="logo show-lg" href="/">
+  <a class="logo show-lg" href="/svelte-preprocess-markdown">
     Svelte<span>-Preprocess-</span>Markdown
   </a>
-  <a class="logo show-xs" href="/">
+  <a class="logo show-xs" href="/svelte-preprocess-markdown">
     MD<span>Sv</span>
   </a>
 
   <ul class="links">
-    <li><a href="/">Docs</a></li>
-    <li><a href="/playground" class="active">Playground</a></li>
+    <li><a href="/svelte-preprocess-markdown">Docs</a></li>
+    <li><a href="/svelte-preprocess-markdown/playground" class="active">Playground</a></li>
     <li><a href="https://github.com/AlexxNB/svelte-preprocess-markdown" target="blank">GitHub</a></li>
   </ul>
 </nav>
