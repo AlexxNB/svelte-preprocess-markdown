@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
-    "export": "sapper export --basepath /svelte-preprocess-markdown",
+    "export": "sapper export --basepath /svelte-preprocess-markdown && node fix",
     "start": "npx serve __sapper__/export",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
