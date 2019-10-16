@@ -3,6 +3,11 @@ Allows to import `*.md` files as Svelte component. Very useful when your compone
 
 [![npm](https://img.shields.io/npm/v/svelte-preprocess-markdown)](https://www.npmjs.com/package/svelte-preprocess-markdown)   [![npm](https://img.shields.io/npm/dt/svelte-preprocess-markdown)](https://www.npmjs.com/package/svelte-preprocess-markdown)    [![](https://github.com/AlexxNB/svelte-preprocess-markdown/workflows/Publish%20on%20NPM/badge.svg)](https://github.com/AlexxNB/svelte-preprocess-markdown/actions?workflow=Publish+on+NPM)
 
+# Documentaton
+
+* Please, see the [Docs](https://alexxnb.github.io/svelte-preprocess-markdown) for more info
+* Or try yourself in the our [Playground](https://alexxnb.github.io/svelte-preprocess-markdown/playground)
+
 # Installation
 
 Install package:
