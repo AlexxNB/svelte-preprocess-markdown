@@ -178,3 +178,27 @@ import Box from './Box.svelte'
 counter,
 box
 ];
+
+export const Example7 = [
+{
+    type: "md",
+    name: "App",
+    source: `
+# \`h1\` heading
+...
+##### \`h5\` heading
+
+*\`em\`* **\`strong\`**
+
+<style>
+  h1{
+    color:green;
+  }
+
+  strong{
+    color:red
+  }
+</style>
+`
+}
+];
