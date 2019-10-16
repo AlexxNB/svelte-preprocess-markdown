@@ -4,5 +4,5 @@
 	"name": "mdsv",
 	"short_name": "mdsv",
 	"display": "minimal-ui",
-	"start_url": "/"
+	"start_url": "/svelte-preprocess-markdown"
 }
