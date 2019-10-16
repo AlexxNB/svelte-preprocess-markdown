@@ -1,11 +1,11 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "svelte-preprocess-markdown-docs",
+  "description": "svelte-preprocess-markdown documentation",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
-    "export": "sapper export --legacy",
+    "export": "sapper export --legacy --basepath svelte-preprocess-markdown",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
