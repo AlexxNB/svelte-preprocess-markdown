@@ -30,4 +30,4 @@ jobs:
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
         PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./docs_src/__sapper__/export
+        PUBLISH_DIR: ./docs_src/__sapper__/export/svelte-preprocess-markdown
