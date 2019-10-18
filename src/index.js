@@ -1,4 +1,4 @@
-import {getMarkedInstance } from './utils'
+import { getMarkedInstance,getMarkedRenderer } from './utils'
 
 //handlers
 import systemTags from './handlers/systemTags'
@@ -39,5 +39,5 @@ export function markdown(options={}) {
 }
 
 export function Renderer() {
-    return new marked.Renderer();
+    return getMarkedRenderer();
 }

@@ -22,3 +22,8 @@ export const getMarkedInstance = (options) =>{
 
     return set_p_renderer(marked);
 } 
+
+
+export const getMarkedRenderer = () => {
+    return new marked.Renderer();
+}
