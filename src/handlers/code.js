@@ -10,11 +10,16 @@ export default function code() {
         return text;
     }
 
+    const inline_code_replacer = (text,code) => {
+        savedCode[id++] = code_sanitizer(code);
+        return "```%svelte-md-inline-code-"+id+"%```";
+    }
+
     const code_replacer = (code,spaces) => {
         code = code.replace(new RegExp(`^[\\t ]{0,${spaces}}`, "gm"),'');
         code = code_sanitizer(marked(code));
         savedCode[id++] = code;
-        return "\n##### svelte-md-code-"+id+" #####\n";
+        return "%svelte-md-block-code-"+id+"%";
     }
 
     const code_restorator = (text,id) => {
@@ -23,6 +28,9 @@ export default function code() {
 
     const before = (text,processor) => {
         marked = processor;
+
+        const inline_re = /```(.+?)```/g;
+        text = text.replace(inline_re,inline_code_replacer);
 
         const re = /^([\t ]*)(```[\w ]*)[\t ]*$/mg
         let result;
@@ -57,7 +65,7 @@ export default function code() {
     }
 
     const after = (text,processor) => {
-        const re = /<h5.*?>svelte\-md\-code\-(\d+)<\/h5>/g;
+        const re = /%svelte\-md\-(?:inline|block)\-code\-(\d+)%/g;
         text = text.replace(re,code_restorator);
         return text;
     }

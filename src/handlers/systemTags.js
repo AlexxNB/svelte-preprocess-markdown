@@ -4,7 +4,7 @@ export default function systemTags() {
 
     const systags_replacer = (text) => {
         savedSystags[id++] = text;
-        return '##### svelte-md-systag-'+id+' #####';
+        return '%svelte-md-block-systag-'+id+'%';
     }
 
     const systags_restorator = (text,id) => {
@@ -38,7 +38,7 @@ export default function systemTags() {
     }
 
     const after = (text,processor) => {
-        const re = /(?:##### |<h5.*?>)svelte\-md\-systag\-(\d+)(?: #####|<\/h5>)/g;
+        const re = /%svelte\-md\-block\-systag\-(\d+)%/g;
         text = text.replace(re,systags_restorator);
         return text;
     }

@@ -1,5 +1,4 @@
 <!-- Test #7 -->
-
 <pre><code class="language-js">    ...
     // import css plugin at the top of the file
     import postcss from &#39;rollup-plugin-postcss&#39;;

@@ -6,7 +6,7 @@ export default function interpolation() {
     const i11n_replacer = (text) => {
         savedI11ns[id++] = text;
 
-        return `%svelte-md-i11n-${id}%`;
+        return `%svelte-md-inline-i11n-${id}%`;
     }
 
     const i11n_restorator = (text,id) => {
@@ -24,7 +24,7 @@ export default function interpolation() {
     }
 
     const after = (text,marked) => {
-        const re = /\%svelte\-md\-i11n\-(\d+)\%/g;
+        const re = /\%svelte\-md\-inline\-i11n\-(\d+)\%/g;
         while(text.match(re)){
             text = text.replace(re,i11n_restorator);
         }

@@ -16,12 +16,12 @@ export default function logic() {
         //if(!content.trim().match(/[\r\n]/g)) content = content.replace(/<p>|<\/p>/g,'').trim();
         
         savedLogic[id++] = `${open}${content}${close}`;
-        return "\n##### svelte-md-logic-"+id+" #####\n";
+        return "\n%svelte-md-block-logic-"+id+"%\n";
     }
 
     const logic_else_replacer = (text) => {
         savedLogic[id++] = text;
-        return "\n##### svelte-md-logic-"+id+" #####\n";
+        return "\n%svelte-md-block-logic-"+id+"%\n";
     }
 
     const logic_restorator = (text,id) => {
@@ -39,7 +39,7 @@ export default function logic() {
     }
 
     const after = (text,processor) => {
-        const re = /<h5.*?>svelte\-md\-logic\-(\d+)<\/h5>/g;
+        const re = /%svelte\-md\-block\-logic\-(\d+)%/g;
         while(text.match(re)){
             text = text.replace(re,logic_restorator);  
         }

@@ -1,4 +1,4 @@
-import marked from 'marked'
+import {getMarkedInstance } from './utils'
 
 //handlers
 import systemTags from './handlers/systemTags'
@@ -6,7 +6,6 @@ import interpolation from './handlers/interpolation'
 import tags from './handlers/tags'
 import logic from './handlers/logic'
 import code from './handlers/code'
-
 
 
 //order is important
@@ -19,9 +18,7 @@ const handlers = [
 ]
 
 export function markdown(options={}) {
-    options = {headerIds:false,...options};
-    marked.setOptions(marked.getDefaults());
-    marked.setOptions(options);
+    const marked = getMarkedInstance(options);
     return {
         markup({ content, filename }) {
             if(filename.endsWith('.md')){
