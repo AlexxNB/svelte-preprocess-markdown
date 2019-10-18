@@ -5,7 +5,7 @@ export default function tags() {
     let marked = () => {};
 
     const renderer_p = (text) => {
-        if(text.match(/^([\s]*<code>svelte\-md\-tag\-\d+<\/code>|<br>)+[\s]*$/)){
+        if(text.match(/^([\s]*%svelte\-md\-tag\-\d+%)+[\s]*$/)){
             return text.replace(/<br>/g,"\n")+"\n";
         }else{
             return `<p>${text}</p>\n`;
@@ -14,7 +14,7 @@ export default function tags() {
 
     const singletags_replacer = (text,spaces,tag) => {
         savedTags[id++] = tag;
-        return spaces+" ``` svelte-md-tag-"+id+" ``` ";
+        return spaces+"%svelte-md-tag-"+id+"%";
     }
 
     const tags_replacer = (text,space1,open,tag,content,space2,close) => {
@@ -26,7 +26,7 @@ export default function tags() {
         }
         
         savedTags[id++] = `${open}${content}${close}`;
-        return space1+" ``` svelte-md-tag-"+id+" ``` ";
+        return space1+"%svelte-md-tag-"+id+"%";;
     }
 
     const tags_restorator = (text,id) => {
@@ -47,13 +47,13 @@ export default function tags() {
             text = text.replace(re,tags_replacer);
         }
 
-        text = text.replace(/^[\\t ]+(``` svelte\-md\-tag\-\d+ ```)/gm,'$1');
+        text = text.replace(/^[\\t ]+(%svelte\-md\-tag\-\d+%)/gm,'$1');
 
         return text;
     }
 
     const after = (text,processor) => {
-        const re = /(?:```|[ ]?<code>)svelte\-md\-tag\-(\d+)(?: ```|<\/code>[ ]?)/g;
+        const re = /%svelte\-md\-tag\-(\d+)%/g;
         while(text.match(re)){
             text = text.replace(re,tags_restorator);  
         }
