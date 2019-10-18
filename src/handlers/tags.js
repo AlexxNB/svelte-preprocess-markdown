@@ -4,13 +4,20 @@ export default function tags() {
 
     let marked = () => {};
 
-    const renderer_p = (text) => {
-        if(text.match(/^([\s]*%svelte\-md\-tag\-\d+%)+[\s]*$/)){
-            return text.replace(/<br>/g,"\n")+"\n";
-        }else{
-            return `<p>${text}</p>\n`;
+    const set_p_renderer = (marked_instance) => {
+        const renderer = new marked_instance.Renderer();
+        const defaultRenderer = new marked_instance.Renderer();
+        renderer.paragraph = (text) => {
+            if(text.match(/^([\s]*%svelte\-md\-tag\-\d+%)+[\s]*$/)){
+                return text.replace(/<br>/g,"\n")+"\n";
+            }else{
+                return defaultRenderer.paragraph(text);
+            }
         }
+        marked_instance.setOptions({renderer});
+        return marked_instance;
     }
+    
 
     const singletags_replacer = (text,spaces,tag) => {
         savedTags[id++] = tag;
@@ -34,10 +41,7 @@ export default function tags() {
     }
 
     const before = (text,processor) => {
-        marked = processor;
-        const renderer = new marked.Renderer();
-        renderer.paragraph = renderer_p;
-        marked.setOptions({renderer});
+        marked = set_p_renderer(processor);
 
         const single_re = /([\t ]*)(<\w+[^>]*\/>)/g;
         text = text.replace(single_re,singletags_replacer);

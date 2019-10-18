@@ -7,6 +7,7 @@
             <Col size="12">
                 <Button clear on:click={e=>dropdown=false}>Sign up</Button>
                 <Button primary on:click={e=>dropdown=false}>Sign in</Button>
+                Test: <Button primary on:click={e=>dropdown=false}>Sign in</Button>
             </Col>
         </Row>
     </Button>

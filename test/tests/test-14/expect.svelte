@@ -4,8 +4,9 @@
         <Row>
             <Col size="12"><input placeholder="username"></Col>
             <Col size="12"><input placeholder="password" type="password"></Col>
-<Col size="12"><Button clear on:click={e=>dropdown=false}>Sign up</Button>
+<Col size="12"><p><Button clear on:click={e=>dropdown=false}>Sign up</Button>
 <Button primary on:click={e=>dropdown=false}>Sign in</Button>
+Test: <Button primary on:click={e=>dropdown=false}>Sign in</Button></p>
 </Col>
         </Row>
     </Button>
