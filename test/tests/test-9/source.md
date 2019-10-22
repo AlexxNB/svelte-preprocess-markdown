@@ -3,7 +3,6 @@
     import Snippet from './../cmp/Snippet.svelte';
     import {Tag} from './../../../cmp/index';
 
-
 # Tag
 
 ```html svelte
@@ -21,3 +20,4 @@
     <Tag large>Large</Tag>
 </Snippet>
 ```
+<Playground components={[{"type":"svelte","name":"App","source":"<script>\n    let name = 'World'\n</script>\n<h1>Just one component</h1>"}]} />

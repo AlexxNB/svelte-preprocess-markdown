@@ -20,3 +20,4 @@
     &lt;Tag large&gt;Large&lt;/Tag&gt;
 &lt;/Snippet&gt;</code></pre>
 
+<Playground components={[{"type":"svelte","name":"App","source":"<script>\n    let name = 'World'\n</script>\n<h1>Just one component</h1>"}]} />

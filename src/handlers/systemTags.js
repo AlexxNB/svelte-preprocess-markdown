@@ -12,7 +12,7 @@ export default function systemTags() {
     }
 
     const mdsv_parser = (text) => {
-        if(!text.match(/<script[\S\s]*?>[\S\s]*?<\/script>/gmi)){
+        if(!text.match(/^[\t ]*<script[\S\s]*?>[\S\s]*?<\/script>/gmi)){
             
             const re = /^[\s]*(import .+ from .+)[\s]*$/gmi
             const imports = [];
