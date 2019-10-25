@@ -19,9 +19,10 @@ const handlers = [
 
 export function markdown(options={}) {
     const marked = getMarkedInstance(options);
+    options.filetype = options.filetype || 'md';
     return {
         markup({ content, filename }) {
-            if(filename.endsWith('.md')){
+            if(filename.endsWith(`.${options.filetype}`)){
 
                 for(let i=0; i<handlers.length; i++){
                     content = handlers[i].before(content,marked);
