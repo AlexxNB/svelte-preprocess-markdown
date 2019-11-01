@@ -32,7 +32,7 @@ export default function code() {
         const inline_re = /```(.+?)```/g;
         text = text.replace(inline_re,inline_code_replacer);
 
-        const re = /^([\t ]*)(```[\w ]*)[\t ]*$/mg
+        const re = /^([\t ]*)(```.*)[\t ]*$/mg
         let result;
         let level = 0;
         let map = [];
