@@ -6,7 +6,11 @@ export default function code() {
     let marked = () => {};
 
     const code_sanitizer = (text) => {
-        text = text.replace(/{/g,'&#123;').replace(/}/g,'&#125;');
+        text = text
+                .replace(/{/g,'&#123;')
+                .replace(/}/g,'&#125;')
+                .replace(/</g,'&lt;')
+                .replace(/>/g,'&gt;');
         return text;
     }
 
