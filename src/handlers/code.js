@@ -5,17 +5,14 @@ export default function code() {
 
     let marked = () => {};
 
-    const code_sanitizer = (text) => {
-        text = text
-                .replace(/{/g,'&#123;')
-                .replace(/}/g,'&#125;')
-                .replace(/</g,'&lt;')
-                .replace(/>/g,'&gt;');
+    const code_sanitizer = (text,inline=false) => {
+        text = text.replace(/{/g,'&#123;').replace(/}/g,'&#125;');
+        if(inline) text = text.replace(/</g,'&lt;').replace(/>/g,'&gt;');
         return text;
     }
 
     const inline_code_replacer = (text,code) => {
-        savedCode[id++] = code_sanitizer(code);
+        savedCode[id++] = code_sanitizer(code,true);
         return "```%svelte-md-inline-code-"+id+"%```";
     }
 
