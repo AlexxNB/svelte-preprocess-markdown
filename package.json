@@ -16,6 +16,7 @@
     "docs-start": "cd docs_src && npm run start"
   },
   "dependencies": {
+    "front-matter": "^3.0.2",
     "marked": "^0.7.0"
   },
   "devDependencies": {
