@@ -52,8 +52,9 @@ function generateScriptModule(text){
         if(result){
             text = text.replace(result[1],`${result[1]}\n${lines.join(";\n")}\n`);
         }else{
-            text = `<script context="module">\n${lines.join(";\n")}\n</script>\n${text}`;
+            text = `<script context="module">\n${lines.join("\n")}\n</script>\n${text}`;
         }
+        moduleStore.clear();
     }
 
     return text;
