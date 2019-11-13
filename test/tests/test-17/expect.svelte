@@ -1,5 +1,5 @@
 <script context="module">
-const META = {"title":"This is a title","number":100500,"list":[1,2,3,4,5]};
+export const META = {"title":"This is a title","number":100500,"list":[1,2,3,4,5]};
 
     let a = 'fff';
 </script>
