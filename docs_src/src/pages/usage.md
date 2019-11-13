@@ -1,6 +1,6 @@
 <script>
     import Example from './../components/Example.svelte';
-    import {Example2,Example3,Example4,Example5,Example6} from './examples';
+    import {Example2,Example3,Example4,Example5,Example6,Example8} from './examples';
 </script>
 
 # Usage
@@ -31,3 +31,10 @@ Import other `*.md` files as well:
 If there are only imports in the `<script>` tag, you may use simplified imports:
 
 <Example components={Example6}/>
+
+
+### Metadata
+
+You can add some metadata at the top of the _*.md_ file. All metadata will be available in `META` constant:
+
+<Example components={Example8}/>

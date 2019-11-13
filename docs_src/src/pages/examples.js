@@ -202,3 +202,25 @@ export const Example7 = [
 `
 }
 ];
+
+export const Example8 = [
+{
+    type: "md",
+    name: "App",
+    source: `
+---
+title: This is a title
+number: 100500
+list: [1,2,3,"four","five"]
+---
+
+# {META.title}
+
+The number is: {META.number}
+
+{#each META.list as item}
+* {item}
+{/each}
+`
+}
+];
