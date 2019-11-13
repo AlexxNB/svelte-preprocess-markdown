@@ -1,8 +1,9 @@
-<script>
-  import Block from './Block.svelte';
-  import { data } from './my_data.js';
+<script context="module">
+import Block from './Block.svelte';
+import { data } from './my_data.js';
 </script>
 <!-- Test #5 -->
+
 
 
 <h1>The MDSv example</h1>

@@ -6,6 +6,6 @@ export default {
       { file: 'dist/index.js', format: 'cjs' },
       { file: 'dist/index.mjs', format: 'es' }
     ],
-    external: ['path', 'marked'],
+    external: ['path', 'marked','front-matter'],
     plugins: [terser()]
   };

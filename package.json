@@ -1,6 +1,6 @@
 {
   "name": "svelte-preprocess-markdown",
-  "version": "2.4.3",
+  "version": "2.5.0",
   "description": "Using markdown in Svelte components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -16,6 +16,7 @@
     "docs-start": "cd docs_src && npm run start"
   },
   "dependencies": {
+    "front-matter": "^3.0.2",
     "marked": "^0.7.0"
   },
   "devDependencies": {

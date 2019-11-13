@@ -1,8 +1,12 @@
-<script>
-  import Snippet from './../cmp/Snippet.svelte';
-  import {Tag} from './../../../cmp/index';
+<script context="module">
+export const META = {"title":"This is a title","number":100500,"list":[1,2,3,4,5]};
+import Snippet from './../cmp/Snippet.svelte';
+import {Tag} from './../../../cmp/index';
 </script>
 <!-- Test #9 -->
+
+
+
 
 
 <h1>Tag</h1>
