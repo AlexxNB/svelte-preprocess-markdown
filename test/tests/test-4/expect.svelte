@@ -1,3 +1,6 @@
+<script context="module">
+export const META = {};
+</script>
 <!-- Test #4 -->
 <script>
     import Child from './Child.svelte'

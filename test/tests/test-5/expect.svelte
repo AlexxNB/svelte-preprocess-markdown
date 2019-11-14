@@ -1,4 +1,5 @@
 <script context="module">
+export const META = {};
 import Block from './Block.svelte';
 import { data } from './my_data.js';
 </script>

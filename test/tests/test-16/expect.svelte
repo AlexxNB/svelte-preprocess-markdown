@@ -1,3 +1,6 @@
+<script context="module">
+export const META = {};
+</script>
 <!-- Test #16 -->
 <p>lorem ipsum <code>&lt;Foo /&gt; </code></p>
 <p>lorem ipsum <code>html &lt;Foo /&gt;</code></p>

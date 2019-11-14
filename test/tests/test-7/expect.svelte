@@ -1,3 +1,6 @@
+<script context="module">
+export const META = {};
+</script>
 <!-- Test #7 -->
 <pre><code class="language-js">    ...
     // import css plugin at the top of the file

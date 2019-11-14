@@ -1,3 +1,6 @@
+<script context="module">
+export const META = {};
+</script>
 <!-- Test #14 -->
 <div slot="text">
     <Button dropdown="Login" bind:open={dropdown} outline>
