@@ -1,27 +1,25 @@
-import {moduleStore} from './../store';
-
 export default function systemTags() {
     let savedSystags = [];
     let id = 0;
 
     const systags_replacer = (text) => {
         savedSystags[id++] = text;
-        return '%svelte-md-block-systag-'+id+'%';
-    }
-
-    const systags_restorator = (text,id) => {
-        return savedSystags[id-1];
+        return '';
     }
 
     const mdsv_parser = (text) => {
         if(!text.match(/^[\t ]*<script[\S\s]*?>[\S\s]*?<\/script>/gmi)){
             
-            const re = /^[\t ]*(import .+ from .+)[\t ]*$/gmi
+            const re = /^[\s]*(import .+ from .+)[\s]*$/gmi
+            const imports = [];
             let res;
-            while(res = re.exec(text)) {
-                moduleStore.add(res[1]);
+            while(res = re.exec(text)) imports.push(res[1]);
+
+            if(imports.length > 0) {
+                text = text.replace(re,'');
+                text = `<script>\n  ${imports.join("\n  ")}\n</script>\n${text}`;
             }
-            text = text.replace(re,'');
+
         }
         return text;
     }
@@ -36,9 +34,8 @@ export default function systemTags() {
     }
 
     const after = (text,processor) => {
-        const re = /%svelte\-md\-block\-systag\-(\d+)%/g;
-        text = text.replace(re,systags_restorator);
-        return text;
+        return savedSystags.length > 0 ? text + "\n\n" + savedSystags.join("\n\n") : text;
     }
+    
     return {before,after}
 }

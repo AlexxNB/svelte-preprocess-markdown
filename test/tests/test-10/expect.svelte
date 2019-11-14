@@ -1,6 +1,3 @@
-<script context="module">
-export const META = {};
-</script>
 <!-- Test #10 -->
 
 <h1>Utilites</h1>
@@ -11,3 +8,8 @@ export const META = {};
 <li><code>text-white</code> - <span class="bg-primary text-white">White <em>text</em></span></li>
 <li><code>text-dark</code> - <span class="text-dark">Dark text</span></li>
 </ul>
+
+
+<script context="module">
+export const META = {};
+</script>

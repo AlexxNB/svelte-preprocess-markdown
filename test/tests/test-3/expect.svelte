@@ -1,11 +1,4 @@
-<script context="module">
-export const META = {};
-</script>
 <!-- Test #3 -->
-<script>
-    import Child from './Child.svelte'
-    let name = 'world';
-</script>
 
 <h1>Hello {name}!</h1>
 <Child />
@@ -31,3 +24,14 @@ export const META = {};
 <li>Item 2</li>
 </ul>
 </Child>
+
+
+<script>
+    import Child from './Child.svelte'
+    let name = 'world';
+</script>
+
+
+<script context="module">
+export const META = {};
+</script>

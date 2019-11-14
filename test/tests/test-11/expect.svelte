@@ -1,6 +1,3 @@
-<script context="module">
-export const META = {};
-</script>
 <!-- Test #11 -->
 <Example><div slot="text"><Row><Col class="grid_col">auto</Col>
 <Col class="grid_col">auto</Col>
@@ -13,3 +10,8 @@ export const META = {};
 <p>Blackquote in the tag</p>
 </blockquote>
 </div></div>
+
+
+<script context="module">
+export const META = {};
+</script>

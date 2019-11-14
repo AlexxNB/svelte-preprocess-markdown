@@ -1,11 +1,4 @@
-<script context="module">
-export const META = {};
-</script>
 <!-- Test #2 -->
-<script>
-    import Child from './Child.svelte'
-    let name = 'world';
-</script>
 
 <h1>Hello {name}!</h1>
 <p>Let&#39;s try the list:</p>
@@ -15,3 +8,14 @@ export const META = {};
 </ul>
 <p><a href="https://ya.ru">Link</a></p>
 <Child />
+
+
+<script>
+    import Child from './Child.svelte'
+    let name = 'world';
+</script>
+
+
+<script context="module">
+export const META = {};
+</script>

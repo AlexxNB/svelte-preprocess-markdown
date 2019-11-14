@@ -1,6 +1,3 @@
-<script context="module">
-export const META = {};
-</script>
 <!-- Test #12 -->
 <Example><div slot="text"><div>ddd</div>
 <p>Current active tab: {active_tab}</p>
@@ -21,3 +18,8 @@ export const META = {};
 <Button error icon={mdiDelete} /> 
 <Button secondary class="is-rounded" icon="icons/svelte.svg" />
 </div>
+
+
+<script context="module">
+export const META = {};
+</script>

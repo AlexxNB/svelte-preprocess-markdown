@@ -1,19 +1,4 @@
-<script context="module">
-export const META = {};
-</script>
 <!-- Test #4 -->
-<script>
-    import Child from './Child.svelte'
-    let name = 'world';
-
-    let list = [
-        'item1',
-        'item1',
-        'item1',
-        'item1',
-        'item1'
-    ]
-</script>
 
 <h1>Testing list</h1>
 {#each list as item}
@@ -44,3 +29,22 @@ export const META = {};
 {:catch error}
 <p>Something went wrong: <code>{error.message}</code></p>
 {/await}
+
+
+<script>
+    import Child from './Child.svelte'
+    let name = 'world';
+
+    let list = [
+        'item1',
+        'item1',
+        'item1',
+        'item1',
+        'item1'
+    ]
+</script>
+
+
+<script context="module">
+export const META = {};
+</script>

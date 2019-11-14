@@ -1,10 +1,4 @@
-<script context="module">
-export const META = {};
-import Block from './Block.svelte';
-import { data } from './my_data.js';
-</script>
 <!-- Test #5 -->
-
 
 
 <h1>The MDSv example</h1>
@@ -14,3 +8,13 @@ import { data } from './my_data.js';
 <p>{item}</p>
 {/each}
 </Block>
+
+
+<script>
+  import Block from './Block.svelte';
+  import { data } from './my_data.js';
+</script>
+
+<script context="module">
+export const META = {};
+</script>

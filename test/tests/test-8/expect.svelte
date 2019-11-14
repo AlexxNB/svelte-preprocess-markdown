@@ -1,6 +1,3 @@
-<script context="module">
-export const META = {};
-</script>
 <!-- Test #8 -->
 <div><div><pre><code class="language-js">
 ...
@@ -41,3 +38,8 @@ const production = !process.env.ROLLUP_WATCH;
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 </div>
 </Example>
+
+
+<script context="module">
+export const META = {};
+</script>

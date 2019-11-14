@@ -1,9 +1,13 @@
-<script context="module">
-export const META = {};
-</script>
 <!-- Test #1 -->
+
+<h1>Hello <em>{name}</em>!</h1>
+
+
 <script>
     let name = 'world';
 </script>
 
-<h1>Hello <em>{name}</em>!</h1>
+
+<script context="module">
+export const META = {};
+</script>

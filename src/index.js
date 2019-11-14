@@ -10,17 +10,19 @@ import code from './handlers/code'
 import meta from './handlers/meta'
 
 
-//order is important
-const handlers = [
-    meta(),
-    code(),
-    systemTags(),
-    logic(),
-    interpolation(),
-    tags(),
-]
+
 
 export function markdown(options={}) {
+    //order is important
+    const handlers = [
+        meta(),
+        code(),
+        systemTags(),
+        logic(),
+        interpolation(),
+        tags(),
+    ]
+
     const marked = getMarkedInstance(options);
     options.filetype = options.filetype || 'md';
     return {
@@ -48,11 +50,11 @@ function generateScriptModule(text){
     const lines = moduleStore.get();
 
     if(lines.length > 0) {
-        const result = /^[\t ]*(<script[\t ]+?context="module"[\t ]*?>)[\S\s]*?<\/script>/gi.exec(text)
+        const result = /^[\t ]*(<script[\t ]+?context="module"[\t ]*?>)[\S\s]*?<\/script>/gim.exec(text)
         if(result){
             text = text.replace(result[1],`${result[1]}\n${lines.join(";\n")}\n`);
         }else{
-            text = `<script context="module">\n${lines.join("\n")}\n</script>\n${text}`;
+            text = `${text}\n\n<script context="module">\n${lines.join("\n")}\n</script>`;
         }
         moduleStore.clear();
     }
