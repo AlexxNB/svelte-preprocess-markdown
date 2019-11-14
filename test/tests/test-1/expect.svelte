@@ -1,3 +1,6 @@
+<script context="module">
+export const META = {};
+</script>
 <!-- Test #1 -->
 <script>
     let name = 'world';

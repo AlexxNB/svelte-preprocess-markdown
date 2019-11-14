@@ -5,9 +5,7 @@ export default function tags() {
    
     const before = (text,processor) => {
         const {attributes,body} = fm(text);
-        if(Object.keys(attributes).length > 0){
-            moduleStore.add(`export const META = ${JSON.stringify(attributes)};`);
-        }
+        moduleStore.add(`export const META = ${JSON.stringify(attributes)};`);
         return body;
     }
 

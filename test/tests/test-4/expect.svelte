@@ -1,3 +1,6 @@
+<script context="module">
+export const META = {};
+</script>
 <!-- Test #4 -->
 <script>
     import Child from './Child.svelte'
@@ -13,7 +16,9 @@
 </script>
 
 <h1>Testing list</h1>
-{#each list as item}{#if item === 'alexxnb'}<ul>
+{#each list as item}
+{#if item === 'alexxnb'}
+<ul>
 <li>Hello, <em>{item}</em>!</li>
 </ul>
 {:else}
@@ -22,15 +27,18 @@
 </ul>
 {/if}
 {/each}
-{#each list as item}<ul>
+{#each list as item}
+<ul>
 <li>Hello, <em>{item}</em>!</li>
 </ul>
 {/each}
-{#if name}<p>Hello, <em>{name}</em>!</p>
+{#if name}
+<p>Hello, <em>{name}</em>!</p>
 {:else}
 <p>Hello, stranger!</p>
 {/if}
-{#await promise}<p>waiting for the promise to resolve...</p>
+{#await promise}
+<p>waiting for the promise to resolve...</p>
 {:then value}
 <p>The value is <code>{value}</code></p>
 {:catch error}

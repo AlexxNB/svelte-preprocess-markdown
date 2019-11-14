@@ -1,3 +1,6 @@
+<script context="module">
+export const META = {};
+</script>
 <!-- Test #6 -->
 
 <pre><code class="language-js"><highlight lang="js">// test

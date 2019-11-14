@@ -1,3 +1,6 @@
+<script context="module">
+export const META = {};
+</script>
 <!-- Test #10 -->
 
 <h1>Utilites</h1>
