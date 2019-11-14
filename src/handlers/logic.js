@@ -15,7 +15,7 @@ export default function logic() {
         content = marked(content);
         //if(!content.trim().match(/[\r\n]/g)) content = content.replace(/<p>|<\/p>/g,'').trim();
         
-        savedLogic[id++] = `${open}${content}${close}`;
+        savedLogic[id++] = `${open}\n${content}${close}`;
         return "\n%svelte-md-block-logic-"+id+"%\n";
     }
 
