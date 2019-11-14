@@ -9,24 +9,22 @@ import logic from './handlers/logic'
 import code from './handlers/code'
 import meta from './handlers/meta'
 
-
-
-
 export function markdown(options={}) {
-    //order is important
-    const handlers = [
-        meta(),
-        code(),
-        systemTags(),
-        logic(),
-        interpolation(),
-        tags(),
-    ]
-
     const marked = getMarkedInstance(options);
     options.filetype = options.filetype || 'md';
     return {
         markup({ content, filename }) {
+
+            //order is important
+            const handlers = [
+                meta(),
+                code(),
+                systemTags(),
+                logic(),
+                interpolation(),
+                tags(),
+            ]
+
             if(filename.endsWith(`.${options.filetype}`)){
 
                 for(let i=0; i<handlers.length; i++){
@@ -41,6 +39,7 @@ export function markdown(options={}) {
 
                 content = generateScriptModule(content);
             }
+            
             return { code: content };
         }
     };
