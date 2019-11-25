@@ -4,9 +4,11 @@ console.log();
 
 ```
 
-```js
+```html
 // test
-console.log();
+<script>
+    console.log(`${123}`);
+</script>
 
 ```
 

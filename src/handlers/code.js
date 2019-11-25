@@ -1,3 +1,5 @@
+import {moduleStore} from './../store';
+
 export default function code() {
 
     let savedCode = [];
@@ -23,8 +25,13 @@ export default function code() {
         return "%svelte-md-block-code-"+id+"%";
     }
 
-    const code_restorator = (text,id) => {
+    const code_restorator_inline = (text,id) => {
         return savedCode[id-1];
+    }
+
+    const code_restorator_block = (text,id) => {
+        moduleStore.add('const CODEBLOCK_'+id+' = `'+savedCode[id-1].replace(/`/g,'\\`')+'`;');
+        return `{@html CODEBLOCK_${id}}`;
     }
 
     const before = (text,processor) => {
@@ -66,8 +73,10 @@ export default function code() {
     }
 
     const after = (text,processor) => {
-        const re = /%svelte\-md\-(?:inline|block)\-code\-(\d+)%/g;
-        text = text.replace(re,code_restorator);
+        const re_inline = /%svelte\-md\-inline\-code\-(\d+)%/g;
+        const re_block = /%svelte\-md\-block\-code\-(\d+)%/g;
+        text = text.replace(re_inline,code_restorator_inline);
+        text = text.replace(re_block,code_restorator_block);
         return text;
     }
     return {before,after}
