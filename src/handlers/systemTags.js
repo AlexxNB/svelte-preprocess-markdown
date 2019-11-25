@@ -1,3 +1,4 @@
+import {moduleStore} from './../store';
 export default function systemTags() {
     let savedSystags = [];
     let id = 0;
@@ -17,7 +18,9 @@ export default function systemTags() {
 
             if(imports.length > 0) {
                 text = text.replace(re,'');
-                text = `<script>\n  ${imports.join("\n  ")}\n</script>\n${text}`;
+                imports.forEach( imp => {
+                    moduleStore.add(imp);
+                });
             }
 
         }
