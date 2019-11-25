@@ -7,7 +7,9 @@
   "scripts": {
     "build": "rollup -c",
     "pretest": "npm run build",
-    "test": "node ./test/runtest.js",
+    "test": "node tests/test.js | tap-diff",
+    "test-update": "node tests/test.js update | tap-diff",
+    "test-new": "node tests/test.js new",
     "prepublishOnly": "npm run build",
     "docs-install": "cd docs_src && npm i",
     "docs-dev": "cd docs_src && npm run dev",
@@ -20,9 +22,13 @@
     "marked": "^0.7.0"
   },
   "devDependencies": {
+    "diff": "^4.0.1",
+    "fs-extra": "^8.1.0",
     "highlight.js": "^9.15.10",
     "rollup": "^1.23.1",
-    "rollup-plugin-terser": "^5.1.2"
+    "rollup-plugin-terser": "^5.1.2",
+    "tap-diff": "^0.1.1",
+    "tape": "^4.11.0"
   },
   "files": [
     "dist"
