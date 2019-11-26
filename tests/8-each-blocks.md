@@ -41,3 +41,8 @@
  
  and some text
 {/each}
+
+### Case 8:
+{#each [1,2,3] as num}
+ 1. List item 
+{/each}
