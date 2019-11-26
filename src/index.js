@@ -20,8 +20,8 @@ export function markdown(options={}) {
                 meta(),
                 code(),
                 systemTags(),
-                logic(),
                 interpolation(),
+                logic(),
                 tags(),
             ]
 

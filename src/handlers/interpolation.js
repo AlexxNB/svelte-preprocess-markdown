@@ -15,7 +15,7 @@ export default function interpolation() {
 
     const before = (text,marked) => {
 
-        const re = /{[^{}]+}/mg;
+        const re = /{[^#@:\/][^{}]+}/mg;
         while(text.match(re)){
             text = text.replace(re,i11n_replacer);
         }

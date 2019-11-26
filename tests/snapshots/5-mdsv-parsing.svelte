@@ -1,9 +1,9 @@
 <h1>The MDSv example</h1>
 <p>You can use components and a logic inside doc:</p>
-<Block color="red"><p>My <code>data</code> list:</p>
+<Block color="red"><p>My <code>data</code> list:
 {#each data as item}
 <p>{item}</p>
-{/each}
+{/each}</p>
 </Block>
 
 
