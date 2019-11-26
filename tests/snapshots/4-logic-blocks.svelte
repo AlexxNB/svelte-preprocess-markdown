@@ -10,11 +10,11 @@
 </ul>
 {/if}
 {/each}
-{#each list as item}
 <ul>
+{#each list as item}
 <li>Hello, <em>{item}</em>!</li>
-</ul>
 {/each}
+</ul>
 {#if name}
 <p>Hello, <em>{name}</em>!</p>
 {:else}

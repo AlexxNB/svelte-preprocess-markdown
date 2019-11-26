@@ -34,6 +34,10 @@ export default function logic() {
         return savedLogic[id-1];
     }
 
+    const each_list_butify = (text,open,content,close) => {
+        return `<ul>\n${open}\n${content}${close}\n</ul>`;
+    }
+
     const before = (text,processor) => {
         marked = processor;
         
@@ -52,6 +56,9 @@ export default function logic() {
         while(text.match(re)){
             text = text.replace(re,logic_restorator);  
         }
+
+        text = text.replace(/({#each.*?})\s*<ul>\s*([\s\S]*)<\/ul>\s*({\/each})/gmi,each_list_butify);
+
         return text;
     }
 

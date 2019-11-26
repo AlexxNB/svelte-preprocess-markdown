@@ -19,11 +19,11 @@ Two</p>
 <p>Two</p>
 {/each}
 <h3>Case 6:</h3>
-{#each [1,2,3] as num}
 <ul>
+{#each [1,2,3] as num}
 <li>List item {num}</li>
-</ul>
 {/each}
+</ul>
 <h3>Case 7:</h3>
 {#each [1,2,3] as num}
 <ul>
