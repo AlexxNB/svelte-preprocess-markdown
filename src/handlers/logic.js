@@ -34,8 +34,8 @@ export default function logic() {
         return savedLogic[id-1];
     }
 
-    const each_list_butify = (text,open,type,content,close) => {
-        return `<${type}>\n${open}\n${content}${close}\n</${type}>`;
+    const each_list_butify = (text,open,type,attr,content,close) => {
+        return `<${type}${attr}>\n${open}\n${content}${close}\n</${type}>`;
     }
 
     const before = (text,processor) => {
@@ -57,7 +57,7 @@ export default function logic() {
             text = text.replace(re,logic_restorator);  
         }
 
-        text = text.replace(/({#each.*?})\s*<([uo]l)>\s*([\s\S]*)<\/\2>\s*({\/each})/gmi,each_list_butify);
+        text = text.replace(/({#each.*?})\s*<([uo]l)(.*?)>\s*([\s\S]*)<\/\2>\s*({\/each})/gmi,each_list_butify);
 
         return text;
     }

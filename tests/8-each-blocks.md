@@ -44,5 +44,5 @@
 
 ### Case 8:
 {#each [1,2,3] as num}
- 1. List item 
+ 0. List item 
 {/each}

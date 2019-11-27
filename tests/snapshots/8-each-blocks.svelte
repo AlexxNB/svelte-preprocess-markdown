@@ -32,7 +32,7 @@ Two</p>
 <p>and some text</p>
 {/each}
 <h3>Case 8:</h3>
-<ol>
+<ol start="0">
 {#each [1,2,3] as num}
 <li>List item </li>
 {/each}
