@@ -3,7 +3,6 @@
   import { onMount } from "svelte";
   let repl;
 
-  export let code = `# Hello World!`;
   export let readonly = false;
   export let components = [
     {
