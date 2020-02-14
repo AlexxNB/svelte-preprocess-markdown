@@ -12,7 +12,6 @@
 
   export let svelteUrl = "https://unpkg.com/svelte";
   export let rollupUrl = "https://unpkg.com/rollup/dist/rollup.browser.js";
-  export let embedded = false;
   export let orientation = "columns";
   export let relaxed = false;
   export let readonly = false;
@@ -222,7 +221,7 @@
     pos={fixed ? fixedPos : orientation === 'rows' ? 50 : 60}
     {fixed}>
     <section slot="a">
-      <ComponentSelector {handle_select} {readonly} {embedded}/>
+      <ComponentSelector {handle_select} {readonly} />
       <ModuleEditor
         bind:this={input}
         errorLoc={sourceErrorLoc || runtimeErrorLoc} {readonly}/>
@@ -230,7 +229,7 @@
     </section>
 
     <section slot="b" style="height: 100%;">
-      <Output {svelteUrl} {embedded} {relaxed} {injectedJS} {injectedCSS} />
+      <Output {svelteUrl} {relaxed} {injectedJS} {injectedCSS} />
     </section>
   </SplitPane>
 </div>

@@ -10,9 +10,7 @@
   const { register_output } = getContext("REPL");
 
   export let svelteUrl;
-  export let sourceErrorLoc = null;
   export let runtimeError = null;
-  export let embedded = false;
   export let relaxed = false;
   export let injectedJS;
   export let injectedCSS;

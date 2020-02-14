@@ -29,7 +29,6 @@ components = components.map(cmp => {
         <Repl bind:this={repl} 
             orientation="rows"
             {readonly}
-            embedded
         />
     </div>
 </div>

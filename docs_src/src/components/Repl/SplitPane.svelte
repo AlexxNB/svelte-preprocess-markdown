@@ -1,5 +1,5 @@
 <script>
-  import * as yootils from "yootils";
+  import {clamp} from "yootils";
   import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();
@@ -20,7 +20,7 @@
 
     const extents = type === "vertical" ? [top, bottom] : [left, right];
 
-    const px = yootils.clamp(
+    const px = clamp(
       type === "vertical" ? event.clientY : event.clientX,
       extents[0] + min,
       extents[1] - min

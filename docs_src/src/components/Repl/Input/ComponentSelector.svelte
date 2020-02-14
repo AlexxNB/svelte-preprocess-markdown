@@ -3,7 +3,6 @@
 
   export let handle_select;
   export let readonly;
-  export let embedded=null;
 
   const { components, selected, request_focus, rebundle } = getContext("REPL");
 
@@ -207,7 +206,7 @@
   }
 </style>
 {#if !readonly}
-<div class="component-selector" class:embedded>
+<div class="component-selector">
   {#if $components.length}
     <div class="file-tabs" on:dblclick={addNew}>
       {#each $components as component}
@@ -225,7 +224,7 @@
                {editing.name + (/\./.test(editing.name) ? '' : `.${editing.type}`)}
 
             </span>
-
+            <!-- svelte-ignore a11y-autofocus -->
             <input
               autofocus
               spellcheck={false}
