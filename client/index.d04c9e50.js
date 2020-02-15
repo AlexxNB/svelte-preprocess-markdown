@@ -1,1 +1,1459 @@
-import{S as n,i as e,s as t,e as a,x as o,b as r,d as s,y as l,g as c,j as i,k as p,l as m,z as h,o as f,p as d,C as u,Q as g,J as v,t as $,a as w,f as y,h as k,v as E,a0 as b,E as x,F as M,r as I,U as j}from"./index.4682b6d0.js";import{R as A}from"./Repl.01943d3c.js";import"./commonjsHelpers.6c54ee37.js";function S(n){let e,t,g,v={orientation:"rows",readonly:n[0]};const $=new A({props:v});return n[3]($),{c(){e=a("div"),t=a("div"),o($.$$.fragment),this.h()},l(n){e=r(n,"DIV",{class:!0});var a=s(e);t=r(a,"DIV",{class:!0});var o=s(t);l($.$$.fragment,o),o.forEach(c),a.forEach(c),this.h()},h(){i(t,"class","repl svelte-cgg22k"),i(e,"class","container svelte-cgg22k")},m(n,a){p(n,e,a),m(e,t),h($,t,null),g=!0},p(n,[e]){const t={};1&e&&(t.readonly=n[0]),$.$set(t)},i(n){g||(f($.$$.fragment,n),g=!0)},o(n){d($.$$.fragment,n),g=!1},d(t){t&&c(e),n[3](null),u($)}}}function D(n,e,t){let a,{readonly:o=!1}=e,{components:r=[{type:"md",name:"App",source:"# Hello World!"}]}=e;return r=r.map(n=>(n.source=n.source.trim(),n)),g(()=>{a.set({components:r})}),n.$set=n=>{"readonly"in n&&t(0,o=n.readonly),"components"in n&&t(2,r=n.components)},[o,a,r,function(n){v[n?"unshift":"push"](()=>{t(1,a=n)})}]}class T extends n{constructor(n){super(),e(this,n,D,S,t,{readonly:0,components:2})}}let C={type:"svelte",name:"Counter",source:'\n<script>\nlet count = 0;\n<\/script>\n\n<span class="counter">\n<span class="minus" on:click={e => count--}>-</span>\n<span class="value">{count}</span>\n<span class="plus" on:click={e => count++}>+</span>\n</span>\n\n<style>\n.counter{\nbackground-color: #f9ac00;\npadding: 2px;\nborder-radius:5px;\n}\n\n.value{\ndisplay: inline-block;\nbackground-color: white;\ntext-align: center;\npadding:0 5px;\nborder-radius:5px;\ncolor: black;\n}\n\n.minus,.plus{\ndisplay: inline-block;\ncolor: white;\nwidth:15px;\ntext-align: center;\nfont-weight: bold;\ncursor:pointer;\n}\n</style>\n'},H={type:"svelte",name:"Box",source:'\n<script>\nexport let color = "black";\n<\/script>\n\n<div style="background-color:{color}"><slot /></div>\n\n<style>\ndiv{\n  color: white;\n  border-radius:5px;\n  padding: 20px;\n  text-align: center;\n}\n</style>\n'};const B=[{type:"md",name:"App",source:"\n<script>\nlet name = 'World'\n<\/script>\n# Hello {name}!"}],O=[{type:"md",name:"App",source:"\n## Simplest component\n\nYou can write **any** `markdown` you want.\n\n|ID|Name|\n|--|----|\n|1 |John|\n"}],L=[{type:"md",name:"App",source:"\n<script>\n  let list = ['item0','item1'];\n  function add() { list = [...list,'item'+list.length] }\n  function del() { list = list.slice(0,-1) }\n<\/script>\n\n### My items\n\n{#each list as item}\n* {item}\n{/each}\n\n<button on:click={add}>Add Item</button>\n<button on:click={del}>Del Item</button>\n"}],P=[{type:"md",name:"App",source:"\n<script>\n  import Counter from './Counter.svelte'\n  import Box from './Box.svelte'\n<\/script>\n\n<Box color=\"orange\">\n   Hello, I'm **orange** box\n</Box>\n\nYou could inline <Counter /> components as well.\n"},C,H],Y=[{type:"md",name:"App",source:"\n<script>\n  import Box from './Box.svelte';\n  import Submarkup from './Submarkup.md';\n<\/script>\n\n<Box color=\"slateblue\">\n   <Submarkup />\n</Box>\n"},{type:"md",name:"Submarkup",source:"\n# Hello\n\nI'm **blue** box\n"},H],_=[{type:"md",name:"App",source:"\nimport Counter from './Counter.svelte'\nimport Box from './Box.svelte'\n\n<Box color=\"silver\">\n   Hello, I'm **grey** box. Counter: <Counter />\n</Box>\n"},C,H],q=[{type:"md",name:"App",source:"\n# `h1` heading\n...\n##### `h5` heading\n\n*`em`* **`strong`**\n\n<style>\n  h1{\n    color:green;\n  }\n\n  strong{\n    color:red\n  }\n</style>\n"}],R=[{type:"md",name:"App",source:'\n---\ntitle: This is a title\nnumber: 100500\nlist: [1,2,3,"four","five"]\n---\n\n# {META.title}\n\nThe number is: {META.number}\n\n{#each META.list as item}\n* {item}\n{/each}\n'}];function U(n){let e,t,g,v,b,x,M,I,j,A,S,D,C,H,O,L,P,Y,_,q,R,U,V,F,N,J,Q,W,X,z,K,G,Z,nn,en,tn,an,on,rn,sn,ln,cn,pn,mn,hn,fn,dn,un,gn;const vn=new T({props:{components:B}});return{c(){e=a("h1"),t=$("Introducing"),g=w(),v=a("p"),b=$("The "),x=a("a"),M=$("svelte-preprocess-markdown"),I=$(" is a way to use "),j=a("a"),A=$("Svelte"),S=$(" components written in Markdown syntax. You can import any "),D=a("code"),C=$("*.md"),H=$(" file as a component, which will be handeled by Svelte's compiler. You can import any other component in your "),O=a("code"),L=$("*.md"),P=$(" file and use it right inside a markup. All "),Y=a("a"),_=$("HTMLx"),q=$(" logic and interpolations are also supported."),R=w(),U=a("p"),V=$("The format of the "),F=a("em"),N=$("MarkDown"),J=$(" and "),Q=a("em"),W=$("Svelte"),X=$(" combination is called "),z=a("code"),K=$("MDSv"),G=$(". It is like React's "),Z=a("a"),nn=$("MDX"),en=$(" format, but for "),tn=a("a"),an=$("Svelte"),on=$("."),rn=w(),o(vn.$$.fragment),sn=w(),ln=a("blockquote"),cn=a("p"),pn=$("You can try "),mn=a("code"),hn=$("svelte-preprocess-markdown"),fn=$(" in the fullpage "),dn=a("a"),un=$("Playground"),this.h()},l(n){e=r(n,"H1",{});var a=s(e);t=y(a,"Introducing"),a.forEach(c),g=k(n),v=r(n,"P",{});var o=s(v);b=y(o,"The "),x=r(o,"A",{href:!0,target:!0});var i=s(x);M=y(i,"svelte-preprocess-markdown"),i.forEach(c),I=y(o," is a way to use "),j=r(o,"A",{href:!0,target:!0});var p=s(j);A=y(p,"Svelte"),p.forEach(c),S=y(o," components written in Markdown syntax. You can import any "),D=r(o,"CODE",{});var m=s(D);C=y(m,"*.md"),m.forEach(c),H=y(o," file as a component, which will be handeled by Svelte's compiler. You can import any other component in your "),O=r(o,"CODE",{});var h=s(O);L=y(h,"*.md"),h.forEach(c),P=y(o," file and use it right inside a markup. All "),Y=r(o,"A",{href:!0,target:!0});var f=s(Y);_=y(f,"HTMLx"),f.forEach(c),q=y(o," logic and interpolations are also supported."),o.forEach(c),R=k(n),U=r(n,"P",{});var d=s(U);V=y(d,"The format of the "),F=r(d,"EM",{});var u=s(F);N=y(u,"MarkDown"),u.forEach(c),J=y(d," and "),Q=r(d,"EM",{});var $=s(Q);W=y($,"Svelte"),$.forEach(c),X=y(d," combination is called "),z=r(d,"CODE",{});var w=s(z);K=y(w,"MDSv"),w.forEach(c),G=y(d,". It is like React's "),Z=r(d,"A",{href:!0,target:!0});var E=s(Z);nn=y(E,"MDX"),E.forEach(c),en=y(d," format, but for "),tn=r(d,"A",{href:!0,target:!0});var T=s(tn);an=y(T,"Svelte"),T.forEach(c),on=y(d,"."),d.forEach(c),rn=k(n),l(vn.$$.fragment,n),sn=k(n),ln=r(n,"BLOCKQUOTE",{});var B=s(ln);cn=r(B,"P",{});var gn=s(cn);pn=y(gn,"You can try "),mn=r(gn,"CODE",{});var $n=s(mn);hn=y($n,"svelte-preprocess-markdown"),$n.forEach(c),fn=y(gn," in the fullpage "),dn=r(gn,"A",{href:!0});var wn=s(dn);un=y(wn,"Playground"),wn.forEach(c),gn.forEach(c),B.forEach(c),this.h()},h(){i(x,"href","https://www.npmjs.com/package/svelte-preprocess-markdown"),i(x,"target","_blank"),i(j,"href","https://svelte.dev"),i(j,"target","_blank"),i(Y,"href","https://github.com/htmlx-org/HTMLx"),i(Y,"target","_blank"),i(Z,"href","https://mdxjs.com/"),i(Z,"target","_blank"),i(tn,"href","https://svelte.dev"),i(tn,"target","_blank"),i(dn,"href","/playground")},m(n,a){p(n,e,a),m(e,t),p(n,g,a),p(n,v,a),m(v,b),m(v,x),m(x,M),m(v,I),m(v,j),m(j,A),m(v,S),m(v,D),m(D,C),m(v,H),m(v,O),m(O,L),m(v,P),m(v,Y),m(Y,_),m(v,q),p(n,R,a),p(n,U,a),m(U,V),m(U,F),m(F,N),m(U,J),m(U,Q),m(Q,W),m(U,X),m(U,z),m(z,K),m(U,G),m(U,Z),m(Z,nn),m(U,en),m(U,tn),m(tn,an),m(U,on),p(n,rn,a),h(vn,n,a),p(n,sn,a),p(n,ln,a),m(ln,cn),m(cn,pn),m(cn,mn),m(mn,hn),m(cn,fn),m(cn,dn),m(dn,un),gn=!0},p:E,i(n){gn||(f(vn.$$.fragment,n),gn=!0)},o(n){d(vn.$$.fragment,n),gn=!1},d(n){n&&c(e),n&&c(g),n&&c(v),n&&c(R),n&&c(U),n&&c(rn),u(vn,n),n&&c(sn),n&&c(ln)}}}function V(n){let e,t,o,l,h,f,d,u,g,v,x,M,I,j,A,S,D;return{c(){e=a("h1"),t=$("Install"),o=w(),l=a("ol"),h=a("li"),f=$("Install the package:"),d=w(),g=w(),v=a("ol"),x=a("li"),M=$("Then, edit "),I=a("code"),j=$("rollup.config.js"),A=$(" file:"),S=w(),this.h()},l(n){e=r(n,"H1",{});var a=s(e);t=y(a,"Install"),a.forEach(c),o=k(n),l=r(n,"OL",{});var i=s(l);h=r(i,"LI",{});var p=s(h);f=y(p,"Install the package:"),p.forEach(c),i.forEach(c),d=k(n),g=k(n),v=r(n,"OL",{start:!0});var m=s(v);x=r(m,"LI",{});var u=s(x);M=y(u,"Then, edit "),I=r(u,"CODE",{});var $=s(I);j=y($,"rollup.config.js"),$.forEach(c),A=y(u," file:"),u.forEach(c),m.forEach(c),S=k(n),this.h()},h(){u=new b(F,g),i(v,"start","2"),D=new b(N,null)},m(n,a){p(n,e,a),m(e,t),p(n,o,a),p(n,l,a),m(l,h),m(h,f),p(n,d,a),u.m(n,a),p(n,g,a),p(n,v,a),m(v,x),m(x,M),m(x,I),m(I,j),m(x,A),p(n,S,a),D.m(n,a)},p:E,i:E,o:E,d(n){n&&c(e),n&&c(o),n&&c(l),n&&c(d),n&&u.d(),n&&c(g),n&&c(v),n&&c(S),n&&D.d()}}}const F='<pre><code class="hljs language-bash">\nnpm i -D svelte-preprocess-markdown</code></pre>\n',N='<pre><code class="hljs language-js">\n<span class="hljs-comment">// 1. import package</span>\n<span class="hljs-keyword">const</span> &#123;markdown&#125; = <span class="hljs-built_in">require</span>(<span class="hljs-string">\'svelte-preprocess-markdown\'</span>);\n\n<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;\n  <span class="hljs-comment">// ...</span>\n  <span class="hljs-attr">plugins</span>: [\n    svelte(&#123;\n      <span class="hljs-comment">// 2. add \'.md\', to the extensions  </span>\n      <span class="hljs-attr">extensions</span>: [<span class="hljs-string">\'.svelte\'</span>,<span class="hljs-string">\'.md\'</span>],\n      <span class="hljs-comment">// 3. add markdown preprocessor</span>\n      <span class="hljs-attr">preprocess</span>: markdown()\n    &#125;)\n  ]\n&#125;</code></pre>\n';function J(n){let e,t,i,g,v,b,x,M,I,j,A,S,D,C,H,B,q,U,V,F,N,J,Q,W,X,z,K,G,Z,nn,en,tn,an,on,rn,sn,ln,cn,pn,mn,hn,fn,dn,un,gn,vn,$n,wn,yn,kn,En,bn,xn,Mn;const In=new T({props:{components:O}}),jn=new T({props:{components:L}}),An=new T({props:{components:P}}),Sn=new T({props:{components:Y}}),Dn=new T({props:{components:_}}),Tn=new T({props:{components:R}});return{c(){e=a("h1"),t=$("Usage"),i=w(),g=a("h3"),v=$("Simple markup"),b=w(),x=a("p"),M=$("First of all "),I=a("code"),j=$("MDSv"),A=$(" is markdown format. The simplest component is just a markdown synatax without any Svelte's magic."),S=w(),o(In.$$.fragment),D=w(),C=a("h3"),H=$("Components"),B=w(),q=a("p"),U=$("You can mix svelte and markdown as you want:"),V=w(),o(jn.$$.fragment),F=w(),N=a("h3"),J=$("Imports"),Q=w(),W=a("p"),X=$("Import components and use it as usual:"),z=w(),o(An.$$.fragment),K=w(),G=a("p"),Z=$("Import other "),nn=a("code"),en=$("*.md"),tn=$(" files as well:"),an=w(),o(Sn.$$.fragment),on=w(),rn=a("p"),sn=$("If there are only imports in the "),ln=a("code"),cn=$("<script>"),pn=$(" tag, you may use simplified imports:"),mn=w(),o(Dn.$$.fragment),hn=w(),fn=a("h3"),dn=$("Metadata"),un=w(),gn=a("p"),vn=$("You can add some metadata at the top of the "),$n=a("em"),wn=$("*.md"),yn=$(" file. All metadata will be available in "),kn=a("code"),En=$("META"),bn=$(" constant:"),xn=w(),o(Tn.$$.fragment)},l(n){e=r(n,"H1",{});var a=s(e);t=y(a,"Usage"),a.forEach(c),i=k(n),g=r(n,"H3",{});var o=s(g);v=y(o,"Simple markup"),o.forEach(c),b=k(n),x=r(n,"P",{});var p=s(x);M=y(p,"First of all "),I=r(p,"CODE",{});var m=s(I);j=y(m,"MDSv"),m.forEach(c),A=y(p," is markdown format. The simplest component is just a markdown synatax without any Svelte's magic."),p.forEach(c),S=k(n),l(In.$$.fragment,n),D=k(n),C=r(n,"H3",{});var h=s(C);H=y(h,"Components"),h.forEach(c),B=k(n),q=r(n,"P",{});var f=s(q);U=y(f,"You can mix svelte and markdown as you want:"),f.forEach(c),V=k(n),l(jn.$$.fragment,n),F=k(n),N=r(n,"H3",{});var d=s(N);J=y(d,"Imports"),d.forEach(c),Q=k(n),W=r(n,"P",{});var u=s(W);X=y(u,"Import components and use it as usual:"),u.forEach(c),z=k(n),l(An.$$.fragment,n),K=k(n),G=r(n,"P",{});var $=s(G);Z=y($,"Import other "),nn=r($,"CODE",{});var w=s(nn);en=y(w,"*.md"),w.forEach(c),tn=y($," files as well:"),$.forEach(c),an=k(n),l(Sn.$$.fragment,n),on=k(n),rn=r(n,"P",{});var E=s(rn);sn=y(E,"If there are only imports in the "),ln=r(E,"CODE",{});var T=s(ln);cn=y(T,"<script>"),T.forEach(c),pn=y(E," tag, you may use simplified imports:"),E.forEach(c),mn=k(n),l(Dn.$$.fragment,n),hn=k(n),fn=r(n,"H3",{});var O=s(fn);dn=y(O,"Metadata"),O.forEach(c),un=k(n),gn=r(n,"P",{});var L=s(gn);vn=y(L,"You can add some metadata at the top of the "),$n=r(L,"EM",{});var P=s($n);wn=y(P,"*.md"),P.forEach(c),yn=y(L," file. All metadata will be available in "),kn=r(L,"CODE",{});var Y=s(kn);En=y(Y,"META"),Y.forEach(c),bn=y(L," constant:"),L.forEach(c),xn=k(n),l(Tn.$$.fragment,n)},m(n,a){p(n,e,a),m(e,t),p(n,i,a),p(n,g,a),m(g,v),p(n,b,a),p(n,x,a),m(x,M),m(x,I),m(I,j),m(x,A),p(n,S,a),h(In,n,a),p(n,D,a),p(n,C,a),m(C,H),p(n,B,a),p(n,q,a),m(q,U),p(n,V,a),h(jn,n,a),p(n,F,a),p(n,N,a),m(N,J),p(n,Q,a),p(n,W,a),m(W,X),p(n,z,a),h(An,n,a),p(n,K,a),p(n,G,a),m(G,Z),m(G,nn),m(nn,en),m(G,tn),p(n,an,a),h(Sn,n,a),p(n,on,a),p(n,rn,a),m(rn,sn),m(rn,ln),m(ln,cn),m(rn,pn),p(n,mn,a),h(Dn,n,a),p(n,hn,a),p(n,fn,a),m(fn,dn),p(n,un,a),p(n,gn,a),m(gn,vn),m(gn,$n),m($n,wn),m(gn,yn),m(gn,kn),m(kn,En),m(gn,bn),p(n,xn,a),h(Tn,n,a),Mn=!0},p:E,i(n){Mn||(f(In.$$.fragment,n),f(jn.$$.fragment,n),f(An.$$.fragment,n),f(Sn.$$.fragment,n),f(Dn.$$.fragment,n),f(Tn.$$.fragment,n),Mn=!0)},o(n){d(In.$$.fragment,n),d(jn.$$.fragment,n),d(An.$$.fragment,n),d(Sn.$$.fragment,n),d(Dn.$$.fragment,n),d(Tn.$$.fragment,n),Mn=!1},d(n){n&&c(e),n&&c(i),n&&c(g),n&&c(b),n&&c(x),n&&c(S),u(In,n),n&&c(D),n&&c(C),n&&c(B),n&&c(q),n&&c(V),u(jn,n),n&&c(F),n&&c(N),n&&c(Q),n&&c(W),n&&c(z),u(An,n),n&&c(K),n&&c(G),n&&c(an),u(Sn,n),n&&c(on),n&&c(rn),n&&c(mn),u(Dn,n),n&&c(hn),n&&c(fn),n&&c(un),n&&c(gn),n&&c(xn),u(Tn,n)}}}function Q(n){let e,t,g,v,b,x,M,I,j,A,S,D;const C=new T({props:{components:q}});return{c(){e=a("h1"),t=$("Styling"),g=w(),v=a("p"),b=a("em"),x=$("Markdown"),M=$(" is being converted to the simple HTML-elements. If you want to style markdown markup, you should write selectors to corresponding HTML-elements. See the "),I=a("a"),j=$("Markdown"),A=$(" guide for more info."),S=w(),o(C.$$.fragment),this.h()},l(n){e=r(n,"H1",{});var a=s(e);t=y(a,"Styling"),a.forEach(c),g=k(n),v=r(n,"P",{});var o=s(v);b=r(o,"EM",{});var i=s(b);x=y(i,"Markdown"),i.forEach(c),M=y(o," is being converted to the simple HTML-elements. If you want to style markdown markup, you should write selectors to corresponding HTML-elements. See the "),I=r(o,"A",{href:!0,target:!0});var p=s(I);j=y(p,"Markdown"),p.forEach(c),A=y(o," guide for more info."),o.forEach(c),S=k(n),l(C.$$.fragment,n),this.h()},h(){i(I,"href","https://www.markdownguide.org/basic-syntax/"),i(I,"target","_blank")},m(n,a){p(n,e,a),m(e,t),p(n,g,a),p(n,v,a),m(v,b),m(b,x),m(v,M),m(v,I),m(I,j),m(v,A),p(n,S,a),h(C,n,a),D=!0},p:E,i(n){D||(f(C.$$.fragment,n),D=!0)},o(n){d(C.$$.fragment,n),D=!1},d(n){n&&c(e),n&&c(g),n&&c(v),n&&c(S),u(C,n)}}}var W=[class extends n{constructor(n){super(),e(this,n,null,U,t,{})}},class extends n{constructor(n){super(),e(this,n,null,V,t,{})}},class extends n{constructor(n){super(),e(this,n,null,J,t,{})}},class extends n{constructor(n){super(),e(this,n,null,Q,t,{})}}];function X(n,e,t){const a=n.slice();return a[0]=e[t],a}function z(n){let e,t,m;var g=n[0];if(g)var v=new g({});return{c(){v&&o(v.$$.fragment),e=w(),t=a("div"),this.h()},l(n){v&&l(v.$$.fragment,n),e=k(n),t=r(n,"DIV",{class:!0}),s(t).forEach(c),this.h()},h(){i(t,"class","svelte-mvq4nw")},m(n,a){v&&h(v,n,a),p(n,e,a),p(n,t,a),m=!0},p(n,t){if(g!==(g=n[0])){if(v){x();const n=v;d(n.$$.fragment,1,0,()=>{u(n,1)}),M()}g?(v=new g({}),o(v.$$.fragment),f(v.$$.fragment,1),h(v,e.parentNode,e)):v=null}},i(n){m||(v&&f(v.$$.fragment,n),m=!0)},o(n){v&&d(v.$$.fragment,n),m=!1},d(n){v&&u(v,n),n&&c(e),n&&c(t)}}}function K(n){let e,t,a=W,o=[];for(let e=0;e<a.length;e+=1)o[e]=z(X(n,a,e));const r=n=>d(o[n],1,1,()=>{o[n]=null});return{c(){for(let n=0;n<o.length;n+=1)o[n].c();e=I()},l(n){for(let e=0;e<o.length;e+=1)o[e].l(n);e=I()},m(n,a){for(let e=0;e<o.length;e+=1)o[e].m(n,a);p(n,e,a),t=!0},p(n,[t]){if(0&t){let s;for(a=W,s=0;s<a.length;s+=1){const r=X(n,a,s);o[s]?(o[s].p(r,t),f(o[s],1)):(o[s]=z(r),o[s].c(),f(o[s],1),o[s].m(e.parentNode,e))}for(x(),s=a.length;s<o.length;s+=1)r(s);M()}},i(n){if(!t){for(let n=0;n<a.length;n+=1)f(o[n]);t=!0}},o(n){o=o.filter(Boolean);for(let n=0;n<o.length;n+=1)d(o[n]);t=!1},d(n){j(o,n),n&&c(e)}}}class G extends n{constructor(n){super(),e(this,n,null,K,t,{})}}function Z(n){let e,t;const m=new G({});return{c(){e=a("div"),o(m.$$.fragment),this.h()},l(n){e=r(n,"DIV",{class:!0});var t=s(e);l(m.$$.fragment,t),t.forEach(c),this.h()},h(){i(e,"class","svelte-qau3fm")},m(n,a){p(n,e,a),h(m,e,null),t=!0},p:E,i(n){t||(f(m.$$.fragment,n),t=!0)},o(n){d(m.$$.fragment,n),t=!1},d(n){n&&c(e),u(m)}}}export default class extends n{constructor(n){super(),e(this,n,null,Z,t,{})}}
+import { S as SvelteComponent, i as init, s as safe_not_equal, e as element, x as create_component, b as claim_element, d as children, y as claim_component, g as detach, j as attr, k as insert, l as append, z as mount_component, o as transition_in, p as transition_out, C as destroy_component, Q as onMount, J as binding_callbacks, t as text, a as space, f as claim_text, h as claim_space, v as noop, a0 as HtmlTag, E as group_outros, F as check_outros, r as empty, U as destroy_each } from './index.4682b6d0.js';
+import { R as Repl } from './Repl.01943d3c.js';
+import './commonjsHelpers.6c54ee37.js';
+
+/* src/components/Example.svelte generated by Svelte v3.18.2 */
+
+function create_fragment(ctx) {
+	let div1;
+	let div0;
+	let current;
+
+	let repl_1_props = {
+		orientation: "rows",
+		readonly: /*readonly*/ ctx[0]
+	};
+
+	const repl_1 = new Repl({ props: repl_1_props });
+	/*repl_1_binding*/ ctx[3](repl_1);
+
+	return {
+		c() {
+			div1 = element("div");
+			div0 = element("div");
+			create_component(repl_1.$$.fragment);
+			this.h();
+		},
+		l(nodes) {
+			div1 = claim_element(nodes, "DIV", { class: true });
+			var div1_nodes = children(div1);
+			div0 = claim_element(div1_nodes, "DIV", { class: true });
+			var div0_nodes = children(div0);
+			claim_component(repl_1.$$.fragment, div0_nodes);
+			div0_nodes.forEach(detach);
+			div1_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(div0, "class", "repl svelte-cgg22k");
+			attr(div1, "class", "container svelte-cgg22k");
+		},
+		m(target, anchor) {
+			insert(target, div1, anchor);
+			append(div1, div0);
+			mount_component(repl_1, div0, null);
+			current = true;
+		},
+		p(ctx, [dirty]) {
+			const repl_1_changes = {};
+			if (dirty & /*readonly*/ 1) repl_1_changes.readonly = /*readonly*/ ctx[0];
+			repl_1.$set(repl_1_changes);
+		},
+		i(local) {
+			if (current) return;
+			transition_in(repl_1.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			transition_out(repl_1.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(div1);
+			/*repl_1_binding*/ ctx[3](null);
+			destroy_component(repl_1);
+		}
+	};
+}
+
+function instance($$self, $$props, $$invalidate) {
+	let repl;
+	let { readonly = false } = $$props;
+
+	let { components = [
+		{
+			type: "md",
+			name: "App",
+			source: "# Hello World!"
+		}
+	] } = $$props;
+
+	components = components.map(cmp => {
+		cmp.source = cmp.source.trim();
+		return cmp;
+	});
+
+	onMount(() => {
+		repl.set({ components });
+	});
+
+	function repl_1_binding($$value) {
+		binding_callbacks[$$value ? "unshift" : "push"](() => {
+			$$invalidate(1, repl = $$value);
+		});
+	}
+
+	$$self.$set = $$props => {
+		if ("readonly" in $$props) $$invalidate(0, readonly = $$props.readonly);
+		if ("components" in $$props) $$invalidate(2, components = $$props.components);
+	};
+
+	return [readonly, repl, components, repl_1_binding];
+}
+
+class Example extends SvelteComponent {
+	constructor(options) {
+		super();
+		init(this, options, instance, create_fragment, safe_not_equal, { readonly: 0, components: 2 });
+	}
+}
+
+let counter = {
+  type: "svelte",
+  name: "Counter",
+  source: `
+<script>
+let count = 0;
+</script>
+
+<span class="counter">
+<span class="minus" on:click={e => count--}>-</span>
+<span class="value">{count}</span>
+<span class="plus" on:click={e => count++}>+</span>
+</span>
+
+<style>
+.counter{
+background-color: #f9ac00;
+padding: 2px;
+border-radius:5px;
+}
+
+.value{
+display: inline-block;
+background-color: white;
+text-align: center;
+padding:0 5px;
+border-radius:5px;
+color: black;
+}
+
+.minus,.plus{
+display: inline-block;
+color: white;
+width:15px;
+text-align: center;
+font-weight: bold;
+cursor:pointer;
+}
+</style>
+`
+};
+
+
+let box = {
+  type: "svelte",
+  name: "Box",
+  source: `
+<script>
+export let color = "black";
+</script>
+
+<div style="background-color:{color}"><slot /></div>
+
+<style>
+div{
+  color: white;
+  border-radius:5px;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+`
+};
+
+
+const Example1 = [
+  {
+      type: "md",
+      name: "App",
+      source: `
+<script>
+let name = 'World'
+</script>
+# Hello {name}!`
+  }
+];
+
+const Example2 = [
+{
+    type: "md",
+    name: "App",
+    source: `
+## Simplest component
+
+You can write **any** \`markdown\` you want.
+
+|ID|Name|
+|--|----|
+|1 |John|
+`
+}
+];
+
+const Example3 = [
+{
+    type: "md",
+    name: "App",
+    source: `
+<script>
+  let list = ['item0','item1'];
+  function add() { list = [...list,'item'+list.length] }
+  function del() { list = list.slice(0,-1) }
+</script>
+
+### My items
+
+{#each list as item}
+* {item}
+{/each}
+
+<button on:click={add}>Add Item</button>
+<button on:click={del}>Del Item</button>
+`
+}
+];
+
+const Example4 = [
+{
+    type: "md",
+    name: "App",
+    source: `
+<script>
+  import Counter from './Counter.svelte'
+  import Box from './Box.svelte'
+</script>
+
+<Box color="orange">
+   Hello, I'm **orange** box
+</Box>
+
+You could inline <Counter /> components as well.
+`
+},
+counter,
+box
+];
+
+const Example5 = [
+{
+    type: "md",
+    name: "App",
+    source: `
+<script>
+  import Box from './Box.svelte';
+  import Submarkup from './Submarkup.md';
+</script>
+
+<Box color="slateblue">
+   <Submarkup />
+</Box>
+`
+},
+{
+    type: "md",
+    name: "Submarkup",
+    source: `
+# Hello
+
+I'm **blue** box
+`
+},
+box
+];
+
+const Example6 = [
+{
+    type: "md",
+    name: "App",
+    source: `
+import Counter from './Counter.svelte'
+import Box from './Box.svelte'
+
+<Box color="silver">
+   Hello, I'm **grey** box. Counter: <Counter />
+</Box>
+`
+},
+counter,
+box
+];
+
+const Example7 = [
+{
+    type: "md",
+    name: "App",
+    source: `
+# \`h1\` heading
+...
+##### \`h5\` heading
+
+*\`em\`* **\`strong\`**
+
+<style>
+  h1{
+    color:green;
+  }
+
+  strong{
+    color:red
+  }
+</style>
+`
+}
+];
+
+const Example8 = [
+{
+    type: "md",
+    name: "App",
+    source: `
+---
+title: This is a title
+number: 100500
+list: [1,2,3,"four","five"]
+---
+
+# {META.title}
+
+The number is: {META.number}
+
+{#each META.list as item}
+* {item}
+{/each}
+`
+}
+];
+
+/* src/pages/intro.md generated by Svelte v3.18.2 */
+
+function create_fragment$1(ctx) {
+	let h1;
+	let t0;
+	let t1;
+	let p0;
+	let t2;
+	let a0;
+	let t3;
+	let t4;
+	let a1;
+	let t5;
+	let t6;
+	let code0;
+	let t7;
+	let t8;
+	let code1;
+	let t9;
+	let t10;
+	let a2;
+	let t11;
+	let t12;
+	let t13;
+	let p1;
+	let t14;
+	let em0;
+	let t15;
+	let t16;
+	let em1;
+	let t17;
+	let t18;
+	let code2;
+	let t19;
+	let t20;
+	let a3;
+	let t21;
+	let t22;
+	let a4;
+	let t23;
+	let t24;
+	let t25;
+	let t26;
+	let blockquote;
+	let p2;
+	let t27;
+	let code3;
+	let t28;
+	let t29;
+	let a5;
+	let t30;
+	let current;
+	const example = new Example({ props: { components: Example1 } });
+
+	return {
+		c() {
+			h1 = element("h1");
+			t0 = text("Introducing");
+			t1 = space();
+			p0 = element("p");
+			t2 = text("The ");
+			a0 = element("a");
+			t3 = text("svelte-preprocess-markdown");
+			t4 = text(" is a way to use ");
+			a1 = element("a");
+			t5 = text("Svelte");
+			t6 = text(" components written in Markdown syntax. You can import any ");
+			code0 = element("code");
+			t7 = text("*.md");
+			t8 = text(" file as a component, which will be handeled by Svelte's compiler. You can import any other component in your ");
+			code1 = element("code");
+			t9 = text("*.md");
+			t10 = text(" file and use it right inside a markup. All ");
+			a2 = element("a");
+			t11 = text("HTMLx");
+			t12 = text(" logic and interpolations are also supported.");
+			t13 = space();
+			p1 = element("p");
+			t14 = text("The format of the ");
+			em0 = element("em");
+			t15 = text("MarkDown");
+			t16 = text(" and ");
+			em1 = element("em");
+			t17 = text("Svelte");
+			t18 = text(" combination is called ");
+			code2 = element("code");
+			t19 = text("MDSv");
+			t20 = text(". It is like React's ");
+			a3 = element("a");
+			t21 = text("MDX");
+			t22 = text(" format, but for ");
+			a4 = element("a");
+			t23 = text("Svelte");
+			t24 = text(".");
+			t25 = space();
+			create_component(example.$$.fragment);
+			t26 = space();
+			blockquote = element("blockquote");
+			p2 = element("p");
+			t27 = text("You can try ");
+			code3 = element("code");
+			t28 = text("svelte-preprocess-markdown");
+			t29 = text(" in the fullpage ");
+			a5 = element("a");
+			t30 = text("Playground");
+			this.h();
+		},
+		l(nodes) {
+			h1 = claim_element(nodes, "H1", {});
+			var h1_nodes = children(h1);
+			t0 = claim_text(h1_nodes, "Introducing");
+			h1_nodes.forEach(detach);
+			t1 = claim_space(nodes);
+			p0 = claim_element(nodes, "P", {});
+			var p0_nodes = children(p0);
+			t2 = claim_text(p0_nodes, "The ");
+			a0 = claim_element(p0_nodes, "A", { href: true, target: true });
+			var a0_nodes = children(a0);
+			t3 = claim_text(a0_nodes, "svelte-preprocess-markdown");
+			a0_nodes.forEach(detach);
+			t4 = claim_text(p0_nodes, " is a way to use ");
+			a1 = claim_element(p0_nodes, "A", { href: true, target: true });
+			var a1_nodes = children(a1);
+			t5 = claim_text(a1_nodes, "Svelte");
+			a1_nodes.forEach(detach);
+			t6 = claim_text(p0_nodes, " components written in Markdown syntax. You can import any ");
+			code0 = claim_element(p0_nodes, "CODE", {});
+			var code0_nodes = children(code0);
+			t7 = claim_text(code0_nodes, "*.md");
+			code0_nodes.forEach(detach);
+			t8 = claim_text(p0_nodes, " file as a component, which will be handeled by Svelte's compiler. You can import any other component in your ");
+			code1 = claim_element(p0_nodes, "CODE", {});
+			var code1_nodes = children(code1);
+			t9 = claim_text(code1_nodes, "*.md");
+			code1_nodes.forEach(detach);
+			t10 = claim_text(p0_nodes, " file and use it right inside a markup. All ");
+			a2 = claim_element(p0_nodes, "A", { href: true, target: true });
+			var a2_nodes = children(a2);
+			t11 = claim_text(a2_nodes, "HTMLx");
+			a2_nodes.forEach(detach);
+			t12 = claim_text(p0_nodes, " logic and interpolations are also supported.");
+			p0_nodes.forEach(detach);
+			t13 = claim_space(nodes);
+			p1 = claim_element(nodes, "P", {});
+			var p1_nodes = children(p1);
+			t14 = claim_text(p1_nodes, "The format of the ");
+			em0 = claim_element(p1_nodes, "EM", {});
+			var em0_nodes = children(em0);
+			t15 = claim_text(em0_nodes, "MarkDown");
+			em0_nodes.forEach(detach);
+			t16 = claim_text(p1_nodes, " and ");
+			em1 = claim_element(p1_nodes, "EM", {});
+			var em1_nodes = children(em1);
+			t17 = claim_text(em1_nodes, "Svelte");
+			em1_nodes.forEach(detach);
+			t18 = claim_text(p1_nodes, " combination is called ");
+			code2 = claim_element(p1_nodes, "CODE", {});
+			var code2_nodes = children(code2);
+			t19 = claim_text(code2_nodes, "MDSv");
+			code2_nodes.forEach(detach);
+			t20 = claim_text(p1_nodes, ". It is like React's ");
+			a3 = claim_element(p1_nodes, "A", { href: true, target: true });
+			var a3_nodes = children(a3);
+			t21 = claim_text(a3_nodes, "MDX");
+			a3_nodes.forEach(detach);
+			t22 = claim_text(p1_nodes, " format, but for ");
+			a4 = claim_element(p1_nodes, "A", { href: true, target: true });
+			var a4_nodes = children(a4);
+			t23 = claim_text(a4_nodes, "Svelte");
+			a4_nodes.forEach(detach);
+			t24 = claim_text(p1_nodes, ".");
+			p1_nodes.forEach(detach);
+			t25 = claim_space(nodes);
+			claim_component(example.$$.fragment, nodes);
+			t26 = claim_space(nodes);
+			blockquote = claim_element(nodes, "BLOCKQUOTE", {});
+			var blockquote_nodes = children(blockquote);
+			p2 = claim_element(blockquote_nodes, "P", {});
+			var p2_nodes = children(p2);
+			t27 = claim_text(p2_nodes, "You can try ");
+			code3 = claim_element(p2_nodes, "CODE", {});
+			var code3_nodes = children(code3);
+			t28 = claim_text(code3_nodes, "svelte-preprocess-markdown");
+			code3_nodes.forEach(detach);
+			t29 = claim_text(p2_nodes, " in the fullpage ");
+			a5 = claim_element(p2_nodes, "A", { href: true });
+			var a5_nodes = children(a5);
+			t30 = claim_text(a5_nodes, "Playground");
+			a5_nodes.forEach(detach);
+			p2_nodes.forEach(detach);
+			blockquote_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(a0, "href", "https://www.npmjs.com/package/svelte-preprocess-markdown");
+			attr(a0, "target", "_blank");
+			attr(a1, "href", "https://svelte.dev");
+			attr(a1, "target", "_blank");
+			attr(a2, "href", "https://github.com/htmlx-org/HTMLx");
+			attr(a2, "target", "_blank");
+			attr(a3, "href", "https://mdxjs.com/");
+			attr(a3, "target", "_blank");
+			attr(a4, "href", "https://svelte.dev");
+			attr(a4, "target", "_blank");
+			attr(a5, "href", "/playground");
+		},
+		m(target, anchor) {
+			insert(target, h1, anchor);
+			append(h1, t0);
+			insert(target, t1, anchor);
+			insert(target, p0, anchor);
+			append(p0, t2);
+			append(p0, a0);
+			append(a0, t3);
+			append(p0, t4);
+			append(p0, a1);
+			append(a1, t5);
+			append(p0, t6);
+			append(p0, code0);
+			append(code0, t7);
+			append(p0, t8);
+			append(p0, code1);
+			append(code1, t9);
+			append(p0, t10);
+			append(p0, a2);
+			append(a2, t11);
+			append(p0, t12);
+			insert(target, t13, anchor);
+			insert(target, p1, anchor);
+			append(p1, t14);
+			append(p1, em0);
+			append(em0, t15);
+			append(p1, t16);
+			append(p1, em1);
+			append(em1, t17);
+			append(p1, t18);
+			append(p1, code2);
+			append(code2, t19);
+			append(p1, t20);
+			append(p1, a3);
+			append(a3, t21);
+			append(p1, t22);
+			append(p1, a4);
+			append(a4, t23);
+			append(p1, t24);
+			insert(target, t25, anchor);
+			mount_component(example, target, anchor);
+			insert(target, t26, anchor);
+			insert(target, blockquote, anchor);
+			append(blockquote, p2);
+			append(p2, t27);
+			append(p2, code3);
+			append(code3, t28);
+			append(p2, t29);
+			append(p2, a5);
+			append(a5, t30);
+			current = true;
+		},
+		p: noop,
+		i(local) {
+			if (current) return;
+			transition_in(example.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			transition_out(example.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(h1);
+			if (detaching) detach(t1);
+			if (detaching) detach(p0);
+			if (detaching) detach(t13);
+			if (detaching) detach(p1);
+			if (detaching) detach(t25);
+			destroy_component(example, detaching);
+			if (detaching) detach(t26);
+			if (detaching) detach(blockquote);
+		}
+	};
+}
+
+class Intro extends SvelteComponent {
+	constructor(options) {
+		super();
+		init(this, options, null, create_fragment$1, safe_not_equal, {});
+	}
+}
+
+/* src/pages/install.md generated by Svelte v3.18.2 */
+
+function create_fragment$2(ctx) {
+	let h1;
+	let t0;
+	let t1;
+	let ol0;
+	let li0;
+	let t2;
+	let t3;
+	let html_tag;
+	let t4;
+	let ol1;
+	let li1;
+	let t5;
+	let code;
+	let t6;
+	let t7;
+	let t8;
+	let html_tag_1;
+
+	return {
+		c() {
+			h1 = element("h1");
+			t0 = text("Install");
+			t1 = space();
+			ol0 = element("ol");
+			li0 = element("li");
+			t2 = text("Install the package:");
+			t3 = space();
+			t4 = space();
+			ol1 = element("ol");
+			li1 = element("li");
+			t5 = text("Then, edit ");
+			code = element("code");
+			t6 = text("rollup.config.js");
+			t7 = text(" file:");
+			t8 = space();
+			this.h();
+		},
+		l(nodes) {
+			h1 = claim_element(nodes, "H1", {});
+			var h1_nodes = children(h1);
+			t0 = claim_text(h1_nodes, "Install");
+			h1_nodes.forEach(detach);
+			t1 = claim_space(nodes);
+			ol0 = claim_element(nodes, "OL", {});
+			var ol0_nodes = children(ol0);
+			li0 = claim_element(ol0_nodes, "LI", {});
+			var li0_nodes = children(li0);
+			t2 = claim_text(li0_nodes, "Install the package:");
+			li0_nodes.forEach(detach);
+			ol0_nodes.forEach(detach);
+			t3 = claim_space(nodes);
+			t4 = claim_space(nodes);
+			ol1 = claim_element(nodes, "OL", { start: true });
+			var ol1_nodes = children(ol1);
+			li1 = claim_element(ol1_nodes, "LI", {});
+			var li1_nodes = children(li1);
+			t5 = claim_text(li1_nodes, "Then, edit ");
+			code = claim_element(li1_nodes, "CODE", {});
+			var code_nodes = children(code);
+			t6 = claim_text(code_nodes, "rollup.config.js");
+			code_nodes.forEach(detach);
+			t7 = claim_text(li1_nodes, " file:");
+			li1_nodes.forEach(detach);
+			ol1_nodes.forEach(detach);
+			t8 = claim_space(nodes);
+			this.h();
+		},
+		h() {
+			html_tag = new HtmlTag(CODEBLOCK_1, t4);
+			attr(ol1, "start", "2");
+			html_tag_1 = new HtmlTag(CODEBLOCK_2, null);
+		},
+		m(target, anchor) {
+			insert(target, h1, anchor);
+			append(h1, t0);
+			insert(target, t1, anchor);
+			insert(target, ol0, anchor);
+			append(ol0, li0);
+			append(li0, t2);
+			insert(target, t3, anchor);
+			html_tag.m(target, anchor);
+			insert(target, t4, anchor);
+			insert(target, ol1, anchor);
+			append(ol1, li1);
+			append(li1, t5);
+			append(li1, code);
+			append(code, t6);
+			append(li1, t7);
+			insert(target, t8, anchor);
+			html_tag_1.m(target, anchor);
+		},
+		p: noop,
+		i: noop,
+		o: noop,
+		d(detaching) {
+			if (detaching) detach(h1);
+			if (detaching) detach(t1);
+			if (detaching) detach(ol0);
+			if (detaching) detach(t3);
+			if (detaching) html_tag.d();
+			if (detaching) detach(t4);
+			if (detaching) detach(ol1);
+			if (detaching) detach(t8);
+			if (detaching) html_tag_1.d();
+		}
+	};
+}
+
+const CODEBLOCK_1 = `<pre><code class="hljs language-bash">
+npm i -D svelte-preprocess-markdown</code></pre>
+`;
+
+const CODEBLOCK_2 = `<pre><code class="hljs language-js">
+<span class="hljs-comment">// 1. import package</span>
+<span class="hljs-keyword">const</span> &#123;markdown&#125; = <span class="hljs-built_in">require</span>(<span class="hljs-string">'svelte-preprocess-markdown'</span>);
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-attr">plugins</span>: [
+    svelte(&#123;
+      <span class="hljs-comment">// 2. add '.md', to the extensions  </span>
+      <span class="hljs-attr">extensions</span>: [<span class="hljs-string">'.svelte'</span>,<span class="hljs-string">'.md'</span>],
+      <span class="hljs-comment">// 3. add markdown preprocessor</span>
+      <span class="hljs-attr">preprocess</span>: markdown()
+    &#125;)
+  ]
+&#125;</code></pre>
+`;
+
+class Install extends SvelteComponent {
+	constructor(options) {
+		super();
+		init(this, options, null, create_fragment$2, safe_not_equal, {});
+	}
+}
+
+/* src/pages/usage.md generated by Svelte v3.18.2 */
+
+function create_fragment$3(ctx) {
+	let h1;
+	let t0;
+	let t1;
+	let h30;
+	let t2;
+	let t3;
+	let p0;
+	let t4;
+	let code0;
+	let t5;
+	let t6;
+	let t7;
+	let t8;
+	let h31;
+	let t9;
+	let t10;
+	let p1;
+	let t11;
+	let t12;
+	let t13;
+	let h32;
+	let t14;
+	let t15;
+	let p2;
+	let t16;
+	let t17;
+	let t18;
+	let p3;
+	let t19;
+	let code1;
+	let t20;
+	let t21;
+	let t22;
+	let t23;
+	let p4;
+	let t24;
+	let code2;
+	let t25;
+	let t26;
+	let t27;
+	let t28;
+	let h33;
+	let t29;
+	let t30;
+	let p5;
+	let t31;
+	let em;
+	let t32;
+	let t33;
+	let code3;
+	let t34;
+	let t35;
+	let t36;
+	let current;
+	const example0 = new Example({ props: { components: Example2 } });
+	const example1 = new Example({ props: { components: Example3 } });
+	const example2 = new Example({ props: { components: Example4 } });
+	const example3 = new Example({ props: { components: Example5 } });
+	const example4 = new Example({ props: { components: Example6 } });
+	const example5 = new Example({ props: { components: Example8 } });
+
+	return {
+		c() {
+			h1 = element("h1");
+			t0 = text("Usage");
+			t1 = space();
+			h30 = element("h3");
+			t2 = text("Simple markup");
+			t3 = space();
+			p0 = element("p");
+			t4 = text("First of all ");
+			code0 = element("code");
+			t5 = text("MDSv");
+			t6 = text(" is markdown format. The simplest component is just a markdown synatax without any Svelte's magic.");
+			t7 = space();
+			create_component(example0.$$.fragment);
+			t8 = space();
+			h31 = element("h3");
+			t9 = text("Components");
+			t10 = space();
+			p1 = element("p");
+			t11 = text("You can mix svelte and markdown as you want:");
+			t12 = space();
+			create_component(example1.$$.fragment);
+			t13 = space();
+			h32 = element("h3");
+			t14 = text("Imports");
+			t15 = space();
+			p2 = element("p");
+			t16 = text("Import components and use it as usual:");
+			t17 = space();
+			create_component(example2.$$.fragment);
+			t18 = space();
+			p3 = element("p");
+			t19 = text("Import other ");
+			code1 = element("code");
+			t20 = text("*.md");
+			t21 = text(" files as well:");
+			t22 = space();
+			create_component(example3.$$.fragment);
+			t23 = space();
+			p4 = element("p");
+			t24 = text("If there are only imports in the ");
+			code2 = element("code");
+			t25 = text("<script>");
+			t26 = text(" tag, you may use simplified imports:");
+			t27 = space();
+			create_component(example4.$$.fragment);
+			t28 = space();
+			h33 = element("h3");
+			t29 = text("Metadata");
+			t30 = space();
+			p5 = element("p");
+			t31 = text("You can add some metadata at the top of the ");
+			em = element("em");
+			t32 = text("*.md");
+			t33 = text(" file. All metadata will be available in ");
+			code3 = element("code");
+			t34 = text("META");
+			t35 = text(" constant:");
+			t36 = space();
+			create_component(example5.$$.fragment);
+		},
+		l(nodes) {
+			h1 = claim_element(nodes, "H1", {});
+			var h1_nodes = children(h1);
+			t0 = claim_text(h1_nodes, "Usage");
+			h1_nodes.forEach(detach);
+			t1 = claim_space(nodes);
+			h30 = claim_element(nodes, "H3", {});
+			var h30_nodes = children(h30);
+			t2 = claim_text(h30_nodes, "Simple markup");
+			h30_nodes.forEach(detach);
+			t3 = claim_space(nodes);
+			p0 = claim_element(nodes, "P", {});
+			var p0_nodes = children(p0);
+			t4 = claim_text(p0_nodes, "First of all ");
+			code0 = claim_element(p0_nodes, "CODE", {});
+			var code0_nodes = children(code0);
+			t5 = claim_text(code0_nodes, "MDSv");
+			code0_nodes.forEach(detach);
+			t6 = claim_text(p0_nodes, " is markdown format. The simplest component is just a markdown synatax without any Svelte's magic.");
+			p0_nodes.forEach(detach);
+			t7 = claim_space(nodes);
+			claim_component(example0.$$.fragment, nodes);
+			t8 = claim_space(nodes);
+			h31 = claim_element(nodes, "H3", {});
+			var h31_nodes = children(h31);
+			t9 = claim_text(h31_nodes, "Components");
+			h31_nodes.forEach(detach);
+			t10 = claim_space(nodes);
+			p1 = claim_element(nodes, "P", {});
+			var p1_nodes = children(p1);
+			t11 = claim_text(p1_nodes, "You can mix svelte and markdown as you want:");
+			p1_nodes.forEach(detach);
+			t12 = claim_space(nodes);
+			claim_component(example1.$$.fragment, nodes);
+			t13 = claim_space(nodes);
+			h32 = claim_element(nodes, "H3", {});
+			var h32_nodes = children(h32);
+			t14 = claim_text(h32_nodes, "Imports");
+			h32_nodes.forEach(detach);
+			t15 = claim_space(nodes);
+			p2 = claim_element(nodes, "P", {});
+			var p2_nodes = children(p2);
+			t16 = claim_text(p2_nodes, "Import components and use it as usual:");
+			p2_nodes.forEach(detach);
+			t17 = claim_space(nodes);
+			claim_component(example2.$$.fragment, nodes);
+			t18 = claim_space(nodes);
+			p3 = claim_element(nodes, "P", {});
+			var p3_nodes = children(p3);
+			t19 = claim_text(p3_nodes, "Import other ");
+			code1 = claim_element(p3_nodes, "CODE", {});
+			var code1_nodes = children(code1);
+			t20 = claim_text(code1_nodes, "*.md");
+			code1_nodes.forEach(detach);
+			t21 = claim_text(p3_nodes, " files as well:");
+			p3_nodes.forEach(detach);
+			t22 = claim_space(nodes);
+			claim_component(example3.$$.fragment, nodes);
+			t23 = claim_space(nodes);
+			p4 = claim_element(nodes, "P", {});
+			var p4_nodes = children(p4);
+			t24 = claim_text(p4_nodes, "If there are only imports in the ");
+			code2 = claim_element(p4_nodes, "CODE", {});
+			var code2_nodes = children(code2);
+			t25 = claim_text(code2_nodes, "<script>");
+			code2_nodes.forEach(detach);
+			t26 = claim_text(p4_nodes, " tag, you may use simplified imports:");
+			p4_nodes.forEach(detach);
+			t27 = claim_space(nodes);
+			claim_component(example4.$$.fragment, nodes);
+			t28 = claim_space(nodes);
+			h33 = claim_element(nodes, "H3", {});
+			var h33_nodes = children(h33);
+			t29 = claim_text(h33_nodes, "Metadata");
+			h33_nodes.forEach(detach);
+			t30 = claim_space(nodes);
+			p5 = claim_element(nodes, "P", {});
+			var p5_nodes = children(p5);
+			t31 = claim_text(p5_nodes, "You can add some metadata at the top of the ");
+			em = claim_element(p5_nodes, "EM", {});
+			var em_nodes = children(em);
+			t32 = claim_text(em_nodes, "*.md");
+			em_nodes.forEach(detach);
+			t33 = claim_text(p5_nodes, " file. All metadata will be available in ");
+			code3 = claim_element(p5_nodes, "CODE", {});
+			var code3_nodes = children(code3);
+			t34 = claim_text(code3_nodes, "META");
+			code3_nodes.forEach(detach);
+			t35 = claim_text(p5_nodes, " constant:");
+			p5_nodes.forEach(detach);
+			t36 = claim_space(nodes);
+			claim_component(example5.$$.fragment, nodes);
+		},
+		m(target, anchor) {
+			insert(target, h1, anchor);
+			append(h1, t0);
+			insert(target, t1, anchor);
+			insert(target, h30, anchor);
+			append(h30, t2);
+			insert(target, t3, anchor);
+			insert(target, p0, anchor);
+			append(p0, t4);
+			append(p0, code0);
+			append(code0, t5);
+			append(p0, t6);
+			insert(target, t7, anchor);
+			mount_component(example0, target, anchor);
+			insert(target, t8, anchor);
+			insert(target, h31, anchor);
+			append(h31, t9);
+			insert(target, t10, anchor);
+			insert(target, p1, anchor);
+			append(p1, t11);
+			insert(target, t12, anchor);
+			mount_component(example1, target, anchor);
+			insert(target, t13, anchor);
+			insert(target, h32, anchor);
+			append(h32, t14);
+			insert(target, t15, anchor);
+			insert(target, p2, anchor);
+			append(p2, t16);
+			insert(target, t17, anchor);
+			mount_component(example2, target, anchor);
+			insert(target, t18, anchor);
+			insert(target, p3, anchor);
+			append(p3, t19);
+			append(p3, code1);
+			append(code1, t20);
+			append(p3, t21);
+			insert(target, t22, anchor);
+			mount_component(example3, target, anchor);
+			insert(target, t23, anchor);
+			insert(target, p4, anchor);
+			append(p4, t24);
+			append(p4, code2);
+			append(code2, t25);
+			append(p4, t26);
+			insert(target, t27, anchor);
+			mount_component(example4, target, anchor);
+			insert(target, t28, anchor);
+			insert(target, h33, anchor);
+			append(h33, t29);
+			insert(target, t30, anchor);
+			insert(target, p5, anchor);
+			append(p5, t31);
+			append(p5, em);
+			append(em, t32);
+			append(p5, t33);
+			append(p5, code3);
+			append(code3, t34);
+			append(p5, t35);
+			insert(target, t36, anchor);
+			mount_component(example5, target, anchor);
+			current = true;
+		},
+		p: noop,
+		i(local) {
+			if (current) return;
+			transition_in(example0.$$.fragment, local);
+			transition_in(example1.$$.fragment, local);
+			transition_in(example2.$$.fragment, local);
+			transition_in(example3.$$.fragment, local);
+			transition_in(example4.$$.fragment, local);
+			transition_in(example5.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			transition_out(example0.$$.fragment, local);
+			transition_out(example1.$$.fragment, local);
+			transition_out(example2.$$.fragment, local);
+			transition_out(example3.$$.fragment, local);
+			transition_out(example4.$$.fragment, local);
+			transition_out(example5.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(h1);
+			if (detaching) detach(t1);
+			if (detaching) detach(h30);
+			if (detaching) detach(t3);
+			if (detaching) detach(p0);
+			if (detaching) detach(t7);
+			destroy_component(example0, detaching);
+			if (detaching) detach(t8);
+			if (detaching) detach(h31);
+			if (detaching) detach(t10);
+			if (detaching) detach(p1);
+			if (detaching) detach(t12);
+			destroy_component(example1, detaching);
+			if (detaching) detach(t13);
+			if (detaching) detach(h32);
+			if (detaching) detach(t15);
+			if (detaching) detach(p2);
+			if (detaching) detach(t17);
+			destroy_component(example2, detaching);
+			if (detaching) detach(t18);
+			if (detaching) detach(p3);
+			if (detaching) detach(t22);
+			destroy_component(example3, detaching);
+			if (detaching) detach(t23);
+			if (detaching) detach(p4);
+			if (detaching) detach(t27);
+			destroy_component(example4, detaching);
+			if (detaching) detach(t28);
+			if (detaching) detach(h33);
+			if (detaching) detach(t30);
+			if (detaching) detach(p5);
+			if (detaching) detach(t36);
+			destroy_component(example5, detaching);
+		}
+	};
+}
+
+class Usage extends SvelteComponent {
+	constructor(options) {
+		super();
+		init(this, options, null, create_fragment$3, safe_not_equal, {});
+	}
+}
+
+/* src/pages/styling.md generated by Svelte v3.18.2 */
+
+function create_fragment$4(ctx) {
+	let h1;
+	let t0;
+	let t1;
+	let p;
+	let em;
+	let t2;
+	let t3;
+	let a;
+	let t4;
+	let t5;
+	let t6;
+	let current;
+	const example = new Example({ props: { components: Example7 } });
+
+	return {
+		c() {
+			h1 = element("h1");
+			t0 = text("Styling");
+			t1 = space();
+			p = element("p");
+			em = element("em");
+			t2 = text("Markdown");
+			t3 = text(" is being converted to the simple HTML-elements. If you want to style markdown markup, you should write selectors to corresponding HTML-elements. See the ");
+			a = element("a");
+			t4 = text("Markdown");
+			t5 = text(" guide for more info.");
+			t6 = space();
+			create_component(example.$$.fragment);
+			this.h();
+		},
+		l(nodes) {
+			h1 = claim_element(nodes, "H1", {});
+			var h1_nodes = children(h1);
+			t0 = claim_text(h1_nodes, "Styling");
+			h1_nodes.forEach(detach);
+			t1 = claim_space(nodes);
+			p = claim_element(nodes, "P", {});
+			var p_nodes = children(p);
+			em = claim_element(p_nodes, "EM", {});
+			var em_nodes = children(em);
+			t2 = claim_text(em_nodes, "Markdown");
+			em_nodes.forEach(detach);
+			t3 = claim_text(p_nodes, " is being converted to the simple HTML-elements. If you want to style markdown markup, you should write selectors to corresponding HTML-elements. See the ");
+			a = claim_element(p_nodes, "A", { href: true, target: true });
+			var a_nodes = children(a);
+			t4 = claim_text(a_nodes, "Markdown");
+			a_nodes.forEach(detach);
+			t5 = claim_text(p_nodes, " guide for more info.");
+			p_nodes.forEach(detach);
+			t6 = claim_space(nodes);
+			claim_component(example.$$.fragment, nodes);
+			this.h();
+		},
+		h() {
+			attr(a, "href", "https://www.markdownguide.org/basic-syntax/");
+			attr(a, "target", "_blank");
+		},
+		m(target, anchor) {
+			insert(target, h1, anchor);
+			append(h1, t0);
+			insert(target, t1, anchor);
+			insert(target, p, anchor);
+			append(p, em);
+			append(em, t2);
+			append(p, t3);
+			append(p, a);
+			append(a, t4);
+			append(p, t5);
+			insert(target, t6, anchor);
+			mount_component(example, target, anchor);
+			current = true;
+		},
+		p: noop,
+		i(local) {
+			if (current) return;
+			transition_in(example.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			transition_out(example.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(h1);
+			if (detaching) detach(t1);
+			if (detaching) detach(p);
+			if (detaching) detach(t6);
+			destroy_component(example, detaching);
+		}
+	};
+}
+
+class Styling extends SvelteComponent {
+	constructor(options) {
+		super();
+		init(this, options, null, create_fragment$4, safe_not_equal, {});
+	}
+}
+
+var pages = [
+    Intro,
+    Install,
+    Usage,
+    Styling,
+];
+
+/* src/components/Docs.svelte generated by Svelte v3.18.2 */
+
+function get_each_context(ctx, list, i) {
+	const child_ctx = ctx.slice();
+	child_ctx[0] = list[i];
+	return child_ctx;
+}
+
+// (5:0) {#each pages as page}
+function create_each_block(ctx) {
+	let t;
+	let div;
+	let current;
+	var switch_value = /*page*/ ctx[0];
+
+	function switch_props(ctx) {
+		return {};
+	}
+
+	if (switch_value) {
+		var switch_instance = new switch_value(switch_props());
+	}
+
+	return {
+		c() {
+			if (switch_instance) create_component(switch_instance.$$.fragment);
+			t = space();
+			div = element("div");
+			this.h();
+		},
+		l(nodes) {
+			if (switch_instance) claim_component(switch_instance.$$.fragment, nodes);
+			t = claim_space(nodes);
+			div = claim_element(nodes, "DIV", { class: true });
+			children(div).forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(div, "class", "svelte-mvq4nw");
+		},
+		m(target, anchor) {
+			if (switch_instance) {
+				mount_component(switch_instance, target, anchor);
+			}
+
+			insert(target, t, anchor);
+			insert(target, div, anchor);
+			current = true;
+		},
+		p(ctx, dirty) {
+			if (switch_value !== (switch_value = /*page*/ ctx[0])) {
+				if (switch_instance) {
+					group_outros();
+					const old_component = switch_instance;
+
+					transition_out(old_component.$$.fragment, 1, 0, () => {
+						destroy_component(old_component, 1);
+					});
+
+					check_outros();
+				}
+
+				if (switch_value) {
+					switch_instance = new switch_value(switch_props());
+					create_component(switch_instance.$$.fragment);
+					transition_in(switch_instance.$$.fragment, 1);
+					mount_component(switch_instance, t.parentNode, t);
+				} else {
+					switch_instance = null;
+				}
+			}
+		},
+		i(local) {
+			if (current) return;
+			if (switch_instance) transition_in(switch_instance.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			if (switch_instance) transition_out(switch_instance.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			if (switch_instance) destroy_component(switch_instance, detaching);
+			if (detaching) detach(t);
+			if (detaching) detach(div);
+		}
+	};
+}
+
+function create_fragment$5(ctx) {
+	let each_1_anchor;
+	let current;
+	let each_value = pages;
+	let each_blocks = [];
+
+	for (let i = 0; i < each_value.length; i += 1) {
+		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
+	}
+
+	const out = i => transition_out(each_blocks[i], 1, 1, () => {
+		each_blocks[i] = null;
+	});
+
+	return {
+		c() {
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].c();
+			}
+
+			each_1_anchor = empty();
+		},
+		l(nodes) {
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].l(nodes);
+			}
+
+			each_1_anchor = empty();
+		},
+		m(target, anchor) {
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].m(target, anchor);
+			}
+
+			insert(target, each_1_anchor, anchor);
+			current = true;
+		},
+		p(ctx, [dirty]) {
+			if (dirty & /*pages*/ 0) {
+				each_value = pages;
+				let i;
+
+				for (i = 0; i < each_value.length; i += 1) {
+					const child_ctx = get_each_context(ctx, each_value, i);
+
+					if (each_blocks[i]) {
+						each_blocks[i].p(child_ctx, dirty);
+						transition_in(each_blocks[i], 1);
+					} else {
+						each_blocks[i] = create_each_block(child_ctx);
+						each_blocks[i].c();
+						transition_in(each_blocks[i], 1);
+						each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
+					}
+				}
+
+				group_outros();
+
+				for (i = each_value.length; i < each_blocks.length; i += 1) {
+					out(i);
+				}
+
+				check_outros();
+			}
+		},
+		i(local) {
+			if (current) return;
+
+			for (let i = 0; i < each_value.length; i += 1) {
+				transition_in(each_blocks[i]);
+			}
+
+			current = true;
+		},
+		o(local) {
+			each_blocks = each_blocks.filter(Boolean);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				transition_out(each_blocks[i]);
+			}
+
+			current = false;
+		},
+		d(detaching) {
+			destroy_each(each_blocks, detaching);
+			if (detaching) detach(each_1_anchor);
+		}
+	};
+}
+
+class Docs extends SvelteComponent {
+	constructor(options) {
+		super();
+		init(this, options, null, create_fragment$5, safe_not_equal, {});
+	}
+}
+
+/* src/routes/index.svelte generated by Svelte v3.18.2 */
+
+function create_fragment$6(ctx) {
+	let div;
+	let current;
+	const docs = new Docs({});
+
+	return {
+		c() {
+			div = element("div");
+			create_component(docs.$$.fragment);
+			this.h();
+		},
+		l(nodes) {
+			div = claim_element(nodes, "DIV", { class: true });
+			var div_nodes = children(div);
+			claim_component(docs.$$.fragment, div_nodes);
+			div_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(div, "class", "svelte-qau3fm");
+		},
+		m(target, anchor) {
+			insert(target, div, anchor);
+			mount_component(docs, div, null);
+			current = true;
+		},
+		p: noop,
+		i(local) {
+			if (current) return;
+			transition_in(docs.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			transition_out(docs.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(div);
+			destroy_component(docs);
+		}
+	};
+}
+
+class Routes extends SvelteComponent {
+	constructor(options) {
+		super();
+		init(this, options, null, create_fragment$6, safe_not_equal, {});
+	}
+}
+
+export default Routes;

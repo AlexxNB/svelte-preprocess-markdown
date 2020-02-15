@@ -1,1 +1,1205 @@
-import{S as e,i as t,s,c as r,e as n,t as a,a as o,b as l,d as c,f as i,g as u,h as p,j as f,k as h,l as d,m,n as v,o as g,p as $,q as y,r as E,u as S,v as w,w as b,x,y as P,z as A,A as R,B as _,C as L,D as k,E as N,F as z,G as q}from"./index.4682b6d0.js";const C={},U=()=>({});function j(e){let t,s,y,E,S,w,b,x,P,A,R,_,L,k,N,z,q,C,U,j,D,O,I,B,H,M,G;const J=e[1].default,V=r(J,e,e[0],null);return{c(){t=n("nav"),s=n("a"),y=a("Svelte"),E=n("span"),S=a("-Preprocess-"),w=a("Markdown"),b=o(),x=n("a"),P=a("MD"),A=n("span"),R=a("Sv"),_=o(),L=n("ul"),k=n("li"),N=n("a"),z=a("Docs"),q=o(),C=n("li"),U=n("a"),j=a("Playground"),D=o(),O=n("li"),I=n("a"),B=a("GitHub"),H=o(),M=n("main"),V&&V.c(),this.h()},l(e){t=l(e,"NAV",{class:!0});var r=c(t);s=l(r,"A",{class:!0,href:!0});var n=c(s);y=i(n,"Svelte"),E=l(n,"SPAN",{class:!0});var a=c(E);S=i(a,"-Preprocess-"),a.forEach(u),w=i(n,"Markdown"),n.forEach(u),b=p(r),x=l(r,"A",{class:!0,href:!0});var o=c(x);P=i(o,"MD"),A=l(o,"SPAN",{class:!0});var f=c(A);R=i(f,"Sv"),f.forEach(u),o.forEach(u),_=p(r),L=l(r,"UL",{class:!0});var h=c(L);k=l(h,"LI",{class:!0});var d=c(k);N=l(d,"A",{href:!0,class:!0});var m=c(N);z=i(m,"Docs"),m.forEach(u),d.forEach(u),q=p(h),C=l(h,"LI",{class:!0});var v=c(C);U=l(v,"A",{href:!0,class:!0});var g=c(U);j=i(g,"Playground"),g.forEach(u),v.forEach(u),D=p(h),O=l(h,"LI",{class:!0});var $=c(O);I=l($,"A",{href:!0,target:!0,class:!0});var G=c(I);B=i(G,"GitHub"),G.forEach(u),$.forEach(u),h.forEach(u),r.forEach(u),H=p(e),M=l(e,"MAIN",{class:!0});var J=c(M);V&&V.l(J),J.forEach(u),this.h()},h(){f(E,"class","svelte-7mzdv4"),f(s,"class","logo show-lg svelte-7mzdv4"),f(s,"href","/svelte-preprocess-markdown"),f(A,"class","svelte-7mzdv4"),f(x,"class","logo show-xs svelte-7mzdv4"),f(x,"href","/svelte-preprocess-markdown"),f(N,"href","/svelte-preprocess-markdown"),f(N,"class","svelte-7mzdv4"),f(k,"class","svelte-7mzdv4"),f(U,"href","/svelte-preprocess-markdown/playground"),f(U,"class","active svelte-7mzdv4"),f(C,"class","svelte-7mzdv4"),f(I,"href","https://github.com/AlexxNB/svelte-preprocess-markdown"),f(I,"target","blank"),f(I,"class","svelte-7mzdv4"),f(O,"class","svelte-7mzdv4"),f(L,"class","links svelte-7mzdv4"),f(t,"class","svelte-7mzdv4"),f(M,"class","svelte-7mzdv4")},m(e,r){h(e,t,r),d(t,s),d(s,y),d(s,E),d(E,S),d(s,w),d(t,b),d(t,x),d(x,P),d(x,A),d(A,R),d(t,_),d(t,L),d(L,k),d(k,N),d(N,z),d(L,q),d(L,C),d(C,U),d(U,j),d(L,D),d(L,O),d(O,I),d(I,B),h(e,H,r),h(e,M,r),V&&V.m(M,null),G=!0},p(e,[t]){V&&V.p&&1&t&&V.p(m(J,e,e[0],null),v(J,e[0],t,null))},i(e){G||(g(V,e),G=!0)},o(e){$(V,e),G=!1},d(e){e&&u(t),e&&u(H),e&&u(M),V&&V.d(e)}}}function D(e,t,s){let{$$slots:r={},$$scope:n}=t;return e.$set=e=>{"$$scope"in e&&s(0,n=e.$$scope)},[n,r]}class O extends e{constructor(e){super(),t(this,e,D,j,s,{})}}function I(e){let t,s,r=e[1].stack+"";return{c(){t=n("pre"),s=a(r)},l(e){t=l(e,"PRE",{});var n=c(t);s=i(n,r),n.forEach(u)},m(e,r){h(e,t,r),d(t,s)},p(e,t){2&t&&r!==(r=e[1].stack+"")&&y(s,r)},d(e){e&&u(t)}}}function B(e){let t,s,r,m,v,g,$,b,x,P=e[1].message+"";document.title=t=e[0];let A=e[2]&&e[1].stack&&I(e);return{c(){s=o(),r=n("h1"),m=a(e[0]),v=o(),g=n("p"),$=a(P),b=o(),A&&A.c(),x=E(),this.h()},l(t){S('[data-svelte="svelte-1o9r2ue"]',document.head).forEach(u),s=p(t),r=l(t,"H1",{class:!0});var n=c(r);m=i(n,e[0]),n.forEach(u),v=p(t),g=l(t,"P",{class:!0});var a=c(g);$=i(a,P),a.forEach(u),b=p(t),A&&A.l(t),x=E(),this.h()},h(){f(r,"class","svelte-8od9u6"),f(g,"class","svelte-8od9u6")},m(e,t){h(e,s,t),h(e,r,t),d(r,m),h(e,v,t),h(e,g,t),d(g,$),h(e,b,t),A&&A.m(e,t),h(e,x,t)},p(e,[s]){1&s&&t!==(t=e[0])&&(document.title=t),1&s&&y(m,e[0]),2&s&&P!==(P=e[1].message+"")&&y($,P),e[2]&&e[1].stack?A?A.p(e,s):(A=I(e),A.c(),A.m(x.parentNode,x)):A&&(A.d(1),A=null)},i:w,o:w,d(e){e&&u(s),e&&u(r),e&&u(v),e&&u(g),e&&u(b),A&&A.d(e),e&&u(x)}}}function H(e,t,s){let{status:r}=t,{error:n}=t;return e.$set=e=>{"status"in e&&s(0,r=e.status),"error"in e&&s(1,n=e.error)},[r,n,!1]}class M extends e{constructor(e){super(),t(this,e,H,B,s,{status:0,error:1})}}function G(e){let t,s;const r=[e[4].props];var n=e[4].component;function a(e){let t={};for(let e=0;e<r.length;e+=1)t=b(t,r[e]);return{props:t}}if(n)var o=new n(a());return{c(){o&&x(o.$$.fragment),t=E()},l(e){o&&P(o.$$.fragment,e),t=E()},m(e,r){o&&A(o,e,r),h(e,t,r),s=!0},p(e,s){const l=16&s?R(r,[_(e[4].props)]):{};if(n!==(n=e[4].component)){if(o){N();const e=o;$(e.$$.fragment,1,0,()=>{L(e,1)}),z()}n?(o=new n(a()),x(o.$$.fragment),g(o.$$.fragment,1),A(o,t.parentNode,t)):o=null}else n&&o.$set(l)},i(e){s||(o&&g(o.$$.fragment,e),s=!0)},o(e){o&&$(o.$$.fragment,e),s=!1},d(e){e&&u(t),o&&L(o,e)}}}function J(e){let t;const s=new M({props:{error:e[0],status:e[1]}});return{c(){x(s.$$.fragment)},l(e){P(s.$$.fragment,e)},m(e,r){A(s,e,r),t=!0},p(e,t){const r={};1&t&&(r.error=e[0]),2&t&&(r.status=e[1]),s.$set(r)},i(e){t||(g(s.$$.fragment,e),t=!0)},o(e){$(s.$$.fragment,e),t=!1},d(e){L(s,e)}}}function V(e){let t,s,r,n;const a=[J,G],o=[];function l(e,t){return e[0]?0:1}return t=l(e),s=o[t]=a[t](e),{c(){s.c(),r=E()},l(e){s.l(e),r=E()},m(e,s){o[t].m(e,s),h(e,r,s),n=!0},p(e,n){let c=t;t=l(e),t===c?o[t].p(e,n):(N(),$(o[c],1,1,()=>{o[c]=null}),z(),s=o[t],s||(s=o[t]=a[t](e),s.c()),g(s,1),s.m(r.parentNode,r))},i(e){n||(g(s),n=!0)},o(e){$(s),n=!1},d(e){o[t].d(e),e&&u(r)}}}function K(e){let t;const s=[{segment:e[2][0]},e[3].props];let r={$$slots:{default:[V]},$$scope:{ctx:e}};for(let e=0;e<s.length;e+=1)r=b(r,s[e]);const n=new O({props:r});return{c(){x(n.$$.fragment)},l(e){P(n.$$.fragment,e)},m(e,s){A(n,e,s),t=!0},p(e,[t]){const r=12&t?R(s,[4&t&&{segment:e[2][0]},8&t&&_(e[3].props)]):{};83&t&&(r.$$scope={dirty:t,ctx:e}),n.$set(r)},i(e){t||(g(n.$$.fragment,e),t=!0)},o(e){$(n.$$.fragment,e),t=!1},d(e){L(n,e)}}}function T(e,t,s){let{stores:r}=t,{error:n}=t,{status:a}=t,{segments:o}=t,{level0:l}=t,{level1:c=null}=t;return k(C,r),e.$set=e=>{"stores"in e&&s(5,r=e.stores),"error"in e&&s(0,n=e.error),"status"in e&&s(1,a=e.status),"segments"in e&&s(2,o=e.segments),"level0"in e&&s(3,l=e.level0),"level1"in e&&s(4,c=e.level1)},[n,a,o,l,c,r]}class F extends e{constructor(e){super(),t(this,e,T,K,s,{stores:5,error:0,status:1,segments:2,level0:3,level1:4})}}const W=[],X=[{js:()=>import("./index.d04c9e50.js"),css:["index.d04c9e50.css","Repl.01943d3c.css"]},{js:()=>import("./index.3f71ea43.js"),css:["Repl.01943d3c.css"]}],Y=[{pattern:/^\/$/,parts:[{i:0}]},{pattern:/^\/playground\/?$/,parts:[{i:1}]}];const Q="undefined"!=typeof __SAPPER__&&__SAPPER__;let Z,ee,te,se=!1,re=[],ne="{}";const ae={page:q({}),preloading:q(null),session:q(Q&&Q.session)};let oe,le;ae.session.subscribe(async e=>{if(oe=e,!se)return;le=!0;const t=me(new URL(location.href)),s=ee={},{redirect:r,props:n,branch:a}=await ye(t);s===ee&&await $e(r,a,n,t.page)});let ce,ie=null;let ue,pe=1;const fe="undefined"!=typeof history?history:{pushState:(e,t,s)=>{},replaceState:(e,t,s)=>{},scrollRestoration:""},he={};function de(e){const t=Object.create(null);return e.length>0&&e.slice(1).split("&").forEach(e=>{let[,s,r=""]=/([^=]*)(?:=(.*))?/.exec(decodeURIComponent(e.replace(/\+/g," ")));"string"==typeof t[s]&&(t[s]=[t[s]]),"object"==typeof t[s]?t[s].push(r):t[s]=r}),t}function me(e){if(e.origin!==location.origin)return null;if(!e.pathname.startsWith(Q.baseUrl))return null;let t=e.pathname.slice(Q.baseUrl.length);if(""===t&&(t="/"),!W.some(e=>e.test(t)))for(let s=0;s<Y.length;s+=1){const r=Y[s],n=r.pattern.exec(t);if(n){const s=de(e.search),a=r.parts[r.parts.length-1],o=a.params?a.params(n):{},l={host:location.host,path:t,query:s,params:o};return{href:e.href,route:r,match:n,page:l}}}}function ve(){return{x:pageXOffset,y:pageYOffset}}async function ge(e,t,s,r){if(t)ue=t;else{const e=ve();he[ue]=e,t=ue=++pe,he[ue]=s?e:{x:0,y:0}}ue=t,Z&&ae.preloading.set(!0);const n=ie&&ie.href===e.href?ie.promise:ye(e);ie=null;const a=ee={},{redirect:o,props:l,branch:c}=await n;if(a===ee&&(await $e(o,c,l,e.page),document.activeElement&&document.activeElement.blur(),!s)){let e=he[t];if(r){const t=document.getElementById(r.slice(1));t&&(e={x:0,y:t.getBoundingClientRect().top})}he[ue]=e,e&&scrollTo(e.x,e.y)}}async function $e(e,t,s,r){if(e)return function(e,t={replaceState:!1}){const s=me(new URL(e,document.baseURI));return s?(fe[t.replaceState?"replaceState":"pushState"]({id:ue},"",e),ge(s,null).then(()=>{})):(location.href=e,new Promise(e=>{}))}(e.location,{replaceState:!0});if(ae.page.set(r),ae.preloading.set(!1),Z)Z.$set(s);else{s.stores={page:{subscribe:ae.page.subscribe},preloading:{subscribe:ae.preloading.subscribe},session:ae.session},s.level0={props:await te};const e=document.querySelector("#sapper-head-start"),t=document.querySelector("#sapper-head-end");if(e&&t){for(;e.nextSibling!==t;)Se(e.nextSibling);Se(e),Se(t)}Z=new F({target:ce,props:s,hydrate:!0})}re=t,ne=JSON.stringify(r.query),se=!0,le=!1}async function ye(e){const{route:t,page:s}=e,r=s.path.split("/").filter(Boolean);let n=null;const a={error:null,status:200,segments:[r[0]]},o={fetch:(e,t)=>fetch(e,t),redirect:(e,t)=>{if(n&&(n.statusCode!==e||n.location!==t))throw new Error("Conflicting redirects");n={statusCode:e,location:t}},error:(e,t)=>{a.error="string"==typeof t?new Error(t):t,a.status=e}};let l;te||(te=Q.preloaded[0]||U.call(o,{host:s.host,path:s.path,query:s.query,params:{}},oe));let c=1;try{const n=JSON.stringify(s.query),i=t.pattern.exec(s.path);let u=!1;l=await Promise.all(t.parts.map(async(t,l)=>{const p=r[l];if(function(e,t,s,r){if(r!==ne)return!0;const n=re[e];return!!n&&(t!==n.segment||(!(!n.match||JSON.stringify(n.match.slice(1,e+2))===JSON.stringify(s.slice(1,e+2)))||void 0))}(l,p,i,n)&&(u=!0),a.segments[c]=r[l+1],!t)return{segment:p};const f=c++;if(!le&&!u&&re[l]&&re[l].part===t.i)return re[l];u=!1;const{default:h,preload:d}=await function(e){const t="string"==typeof e.css?[]:e.css.map(Ee);return t.unshift(e.js()),Promise.all(t).then(e=>e[0])}(X[t.i]);let m;return m=se||!Q.preloaded[l+1]?d?await d.call(o,{host:s.host,path:s.path,query:s.query,params:t.params?t.params(e.match):{}},oe):{}:Q.preloaded[l+1],a[`level${f}`]={component:h,props:m,segment:p,match:i,part:t.i}}))}catch(e){a.error=e,a.status=500,l=[]}return{redirect:n,props:a,branch:l}}function Ee(e){const t=`client/${e}`;if(!document.querySelector(`link[href="${t}"]`))return new Promise((e,s)=>{const r=document.createElement("link");r.rel="stylesheet",r.href=t,r.onload=()=>e(),r.onerror=s,document.head.appendChild(r)})}function Se(e){e.parentNode.removeChild(e)}function we(e){const t=me(new URL(e,document.baseURI));if(t)return ie&&e===ie.href||function(e,t){ie={href:e,promise:t}}(e,ye(t)),ie.promise}let be;function xe(e){clearTimeout(be),be=setTimeout(()=>{Pe(e)},20)}function Pe(e){const t=Re(e.target);t&&"prefetch"===t.rel&&we(t.href)}function Ae(e){if(1!==function(e){return null===e.which?e.button:e.which}(e))return;if(e.metaKey||e.ctrlKey||e.shiftKey)return;if(e.defaultPrevented)return;const t=Re(e.target);if(!t)return;if(!t.href)return;const s="object"==typeof t.href&&"SVGAnimatedString"===t.href.constructor.name,r=String(s?t.href.baseVal:t.href);if(r===location.href)return void(location.hash||e.preventDefault());if(t.hasAttribute("download")||"external"===t.getAttribute("rel"))return;if(s?t.target.baseVal:t.target)return;const n=new URL(r);if(n.pathname===location.pathname&&n.search===location.search)return;const a=me(n);if(a){ge(a,null,t.hasAttribute("sapper-noscroll"),n.hash),e.preventDefault(),fe.pushState({id:ue},"",n.href)}}function Re(e){for(;e&&"A"!==e.nodeName.toUpperCase();)e=e.parentNode;return e}function _e(e){if(he[ue]=ve(),e.state){const t=me(new URL(location.href));t?ge(t,e.state.id):location.href=location.href}else pe=pe+1,function(e){ue=e}(pe),fe.replaceState({id:ue},"",location.href)}var Le;Le={target:document.querySelector("#sapper")},"scrollRestoration"in fe&&(fe.scrollRestoration="manual"),function(e){ce=e}(Le.target),addEventListener("click",Ae),addEventListener("popstate",_e),addEventListener("touchstart",Pe),addEventListener("mousemove",xe),Promise.resolve().then(()=>{const{hash:e,href:t}=location;fe.replaceState({id:pe},"",t);const s=new URL(location.href);if(Q.error)return function(e){const{host:t,pathname:s,search:r}=location,{session:n,preloaded:a,status:o,error:l}=Q;te||(te=a&&a[0]),$e(null,[],{error:l,status:o,session:n,level0:{props:te},level1:{props:{status:o,error:l},component:M},segments:a},{host:t,path:s,query:de(r),params:{}})}();const r=me(s);return r?ge(r,pe,!0,e):void 0});
+import { S as SvelteComponent, i as init, s as safe_not_equal, c as create_slot, e as element, t as text, a as space, b as claim_element, d as children, f as claim_text, g as detach$1, h as claim_space, j as attr, k as insert, l as append, m as get_slot_context, n as get_slot_changes, o as transition_in, p as transition_out, q as set_data, r as empty, u as query_selector_all, v as noop, w as assign, x as create_component, y as claim_component, z as mount_component, A as get_spread_update, B as get_spread_object, C as destroy_component, D as setContext, E as group_outros, F as check_outros, G as writable } from './index.4682b6d0.js';
+
+const CONTEXT_KEY = {};
+
+const preload = () => ({});
+
+/* src/routes/_layout.svelte generated by Svelte v3.18.2 */
+
+function create_fragment(ctx) {
+	let nav;
+	let a0;
+	let t0;
+	let span0;
+	let t1;
+	let t2;
+	let t3;
+	let a1;
+	let t4;
+	let span1;
+	let t5;
+	let t6;
+	let ul;
+	let li0;
+	let a2;
+	let t7;
+	let t8;
+	let li1;
+	let a3;
+	let t9;
+	let t10;
+	let li2;
+	let a4;
+	let t11;
+	let t12;
+	let main;
+	let current;
+	const default_slot_template = /*$$slots*/ ctx[1].default;
+	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[0], null);
+
+	return {
+		c() {
+			nav = element("nav");
+			a0 = element("a");
+			t0 = text("Svelte");
+			span0 = element("span");
+			t1 = text("-Preprocess-");
+			t2 = text("Markdown");
+			t3 = space();
+			a1 = element("a");
+			t4 = text("MD");
+			span1 = element("span");
+			t5 = text("Sv");
+			t6 = space();
+			ul = element("ul");
+			li0 = element("li");
+			a2 = element("a");
+			t7 = text("Docs");
+			t8 = space();
+			li1 = element("li");
+			a3 = element("a");
+			t9 = text("Playground");
+			t10 = space();
+			li2 = element("li");
+			a4 = element("a");
+			t11 = text("GitHub");
+			t12 = space();
+			main = element("main");
+			if (default_slot) default_slot.c();
+			this.h();
+		},
+		l(nodes) {
+			nav = claim_element(nodes, "NAV", { class: true });
+			var nav_nodes = children(nav);
+			a0 = claim_element(nav_nodes, "A", { class: true, href: true });
+			var a0_nodes = children(a0);
+			t0 = claim_text(a0_nodes, "Svelte");
+			span0 = claim_element(a0_nodes, "SPAN", { class: true });
+			var span0_nodes = children(span0);
+			t1 = claim_text(span0_nodes, "-Preprocess-");
+			span0_nodes.forEach(detach$1);
+			t2 = claim_text(a0_nodes, "Markdown");
+			a0_nodes.forEach(detach$1);
+			t3 = claim_space(nav_nodes);
+			a1 = claim_element(nav_nodes, "A", { class: true, href: true });
+			var a1_nodes = children(a1);
+			t4 = claim_text(a1_nodes, "MD");
+			span1 = claim_element(a1_nodes, "SPAN", { class: true });
+			var span1_nodes = children(span1);
+			t5 = claim_text(span1_nodes, "Sv");
+			span1_nodes.forEach(detach$1);
+			a1_nodes.forEach(detach$1);
+			t6 = claim_space(nav_nodes);
+			ul = claim_element(nav_nodes, "UL", { class: true });
+			var ul_nodes = children(ul);
+			li0 = claim_element(ul_nodes, "LI", { class: true });
+			var li0_nodes = children(li0);
+			a2 = claim_element(li0_nodes, "A", { href: true, class: true });
+			var a2_nodes = children(a2);
+			t7 = claim_text(a2_nodes, "Docs");
+			a2_nodes.forEach(detach$1);
+			li0_nodes.forEach(detach$1);
+			t8 = claim_space(ul_nodes);
+			li1 = claim_element(ul_nodes, "LI", { class: true });
+			var li1_nodes = children(li1);
+			a3 = claim_element(li1_nodes, "A", { href: true, class: true });
+			var a3_nodes = children(a3);
+			t9 = claim_text(a3_nodes, "Playground");
+			a3_nodes.forEach(detach$1);
+			li1_nodes.forEach(detach$1);
+			t10 = claim_space(ul_nodes);
+			li2 = claim_element(ul_nodes, "LI", { class: true });
+			var li2_nodes = children(li2);
+			a4 = claim_element(li2_nodes, "A", { href: true, target: true, class: true });
+			var a4_nodes = children(a4);
+			t11 = claim_text(a4_nodes, "GitHub");
+			a4_nodes.forEach(detach$1);
+			li2_nodes.forEach(detach$1);
+			ul_nodes.forEach(detach$1);
+			nav_nodes.forEach(detach$1);
+			t12 = claim_space(nodes);
+			main = claim_element(nodes, "MAIN", { class: true });
+			var main_nodes = children(main);
+			if (default_slot) default_slot.l(main_nodes);
+			main_nodes.forEach(detach$1);
+			this.h();
+		},
+		h() {
+			attr(span0, "class", "svelte-7mzdv4");
+			attr(a0, "class", "logo show-lg svelte-7mzdv4");
+			attr(a0, "href", "/svelte-preprocess-markdown");
+			attr(span1, "class", "svelte-7mzdv4");
+			attr(a1, "class", "logo show-xs svelte-7mzdv4");
+			attr(a1, "href", "/svelte-preprocess-markdown");
+			attr(a2, "href", "/svelte-preprocess-markdown");
+			attr(a2, "class", "svelte-7mzdv4");
+			attr(li0, "class", "svelte-7mzdv4");
+			attr(a3, "href", "/svelte-preprocess-markdown/playground");
+			attr(a3, "class", "active svelte-7mzdv4");
+			attr(li1, "class", "svelte-7mzdv4");
+			attr(a4, "href", "https://github.com/AlexxNB/svelte-preprocess-markdown");
+			attr(a4, "target", "blank");
+			attr(a4, "class", "svelte-7mzdv4");
+			attr(li2, "class", "svelte-7mzdv4");
+			attr(ul, "class", "links svelte-7mzdv4");
+			attr(nav, "class", "svelte-7mzdv4");
+			attr(main, "class", "svelte-7mzdv4");
+		},
+		m(target, anchor) {
+			insert(target, nav, anchor);
+			append(nav, a0);
+			append(a0, t0);
+			append(a0, span0);
+			append(span0, t1);
+			append(a0, t2);
+			append(nav, t3);
+			append(nav, a1);
+			append(a1, t4);
+			append(a1, span1);
+			append(span1, t5);
+			append(nav, t6);
+			append(nav, ul);
+			append(ul, li0);
+			append(li0, a2);
+			append(a2, t7);
+			append(ul, t8);
+			append(ul, li1);
+			append(li1, a3);
+			append(a3, t9);
+			append(ul, t10);
+			append(ul, li2);
+			append(li2, a4);
+			append(a4, t11);
+			insert(target, t12, anchor);
+			insert(target, main, anchor);
+
+			if (default_slot) {
+				default_slot.m(main, null);
+			}
+
+			current = true;
+		},
+		p(ctx, [dirty]) {
+			if (default_slot && default_slot.p && dirty & /*$$scope*/ 1) {
+				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[0], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[0], dirty, null));
+			}
+		},
+		i(local) {
+			if (current) return;
+			transition_in(default_slot, local);
+			current = true;
+		},
+		o(local) {
+			transition_out(default_slot, local);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach$1(nav);
+			if (detaching) detach$1(t12);
+			if (detaching) detach$1(main);
+			if (default_slot) default_slot.d(detaching);
+		}
+	};
+}
+
+function instance($$self, $$props, $$invalidate) {
+	let { $$slots = {}, $$scope } = $$props;
+
+	$$self.$set = $$props => {
+		if ("$$scope" in $$props) $$invalidate(0, $$scope = $$props.$$scope);
+	};
+
+	return [$$scope, $$slots];
+}
+
+class Layout extends SvelteComponent {
+	constructor(options) {
+		super();
+		init(this, options, instance, create_fragment, safe_not_equal, {});
+	}
+}
+
+/* src/routes/_error.svelte generated by Svelte v3.18.2 */
+
+function create_if_block(ctx) {
+	let pre;
+	let t_value = /*error*/ ctx[1].stack + "";
+	let t;
+
+	return {
+		c() {
+			pre = element("pre");
+			t = text(t_value);
+		},
+		l(nodes) {
+			pre = claim_element(nodes, "PRE", {});
+			var pre_nodes = children(pre);
+			t = claim_text(pre_nodes, t_value);
+			pre_nodes.forEach(detach$1);
+		},
+		m(target, anchor) {
+			insert(target, pre, anchor);
+			append(pre, t);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*error*/ 2 && t_value !== (t_value = /*error*/ ctx[1].stack + "")) set_data(t, t_value);
+		},
+		d(detaching) {
+			if (detaching) detach$1(pre);
+		}
+	};
+}
+
+function create_fragment$1(ctx) {
+	let title_value;
+	let t0;
+	let h1;
+	let t1;
+	let t2;
+	let p;
+	let t3_value = /*error*/ ctx[1].message + "";
+	let t3;
+	let t4;
+	let if_block_anchor;
+	document.title = title_value = /*status*/ ctx[0];
+	let if_block = /*dev*/ ctx[2] && /*error*/ ctx[1].stack && create_if_block(ctx);
+
+	return {
+		c() {
+			t0 = space();
+			h1 = element("h1");
+			t1 = text(/*status*/ ctx[0]);
+			t2 = space();
+			p = element("p");
+			t3 = text(t3_value);
+			t4 = space();
+			if (if_block) if_block.c();
+			if_block_anchor = empty();
+			this.h();
+		},
+		l(nodes) {
+			const head_nodes = query_selector_all("[data-svelte=\"svelte-1o9r2ue\"]", document.head);
+			head_nodes.forEach(detach$1);
+			t0 = claim_space(nodes);
+			h1 = claim_element(nodes, "H1", { class: true });
+			var h1_nodes = children(h1);
+			t1 = claim_text(h1_nodes, /*status*/ ctx[0]);
+			h1_nodes.forEach(detach$1);
+			t2 = claim_space(nodes);
+			p = claim_element(nodes, "P", { class: true });
+			var p_nodes = children(p);
+			t3 = claim_text(p_nodes, t3_value);
+			p_nodes.forEach(detach$1);
+			t4 = claim_space(nodes);
+			if (if_block) if_block.l(nodes);
+			if_block_anchor = empty();
+			this.h();
+		},
+		h() {
+			attr(h1, "class", "svelte-8od9u6");
+			attr(p, "class", "svelte-8od9u6");
+		},
+		m(target, anchor) {
+			insert(target, t0, anchor);
+			insert(target, h1, anchor);
+			append(h1, t1);
+			insert(target, t2, anchor);
+			insert(target, p, anchor);
+			append(p, t3);
+			insert(target, t4, anchor);
+			if (if_block) if_block.m(target, anchor);
+			insert(target, if_block_anchor, anchor);
+		},
+		p(ctx, [dirty]) {
+			if (dirty & /*status*/ 1 && title_value !== (title_value = /*status*/ ctx[0])) {
+				document.title = title_value;
+			}
+
+			if (dirty & /*status*/ 1) set_data(t1, /*status*/ ctx[0]);
+			if (dirty & /*error*/ 2 && t3_value !== (t3_value = /*error*/ ctx[1].message + "")) set_data(t3, t3_value);
+
+			if (/*dev*/ ctx[2] && /*error*/ ctx[1].stack) {
+				if (if_block) {
+					if_block.p(ctx, dirty);
+				} else {
+					if_block = create_if_block(ctx);
+					if_block.c();
+					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+				}
+			} else if (if_block) {
+				if_block.d(1);
+				if_block = null;
+			}
+		},
+		i: noop,
+		o: noop,
+		d(detaching) {
+			if (detaching) detach$1(t0);
+			if (detaching) detach$1(h1);
+			if (detaching) detach$1(t2);
+			if (detaching) detach$1(p);
+			if (detaching) detach$1(t4);
+			if (if_block) if_block.d(detaching);
+			if (detaching) detach$1(if_block_anchor);
+		}
+	};
+}
+
+function instance$1($$self, $$props, $$invalidate) {
+	let { status } = $$props;
+	let { error } = $$props;
+	const dev = undefined === "development";
+
+	$$self.$set = $$props => {
+		if ("status" in $$props) $$invalidate(0, status = $$props.status);
+		if ("error" in $$props) $$invalidate(1, error = $$props.error);
+	};
+
+	return [status, error, dev];
+}
+
+class Error$1 extends SvelteComponent {
+	constructor(options) {
+		super();
+		init(this, options, instance$1, create_fragment$1, safe_not_equal, { status: 0, error: 1 });
+	}
+}
+
+/* src/node_modules/@sapper/internal/App.svelte generated by Svelte v3.18.2 */
+
+function create_else_block(ctx) {
+	let switch_instance_anchor;
+	let current;
+	const switch_instance_spread_levels = [/*level1*/ ctx[4].props];
+	var switch_value = /*level1*/ ctx[4].component;
+
+	function switch_props(ctx) {
+		let switch_instance_props = {};
+
+		for (let i = 0; i < switch_instance_spread_levels.length; i += 1) {
+			switch_instance_props = assign(switch_instance_props, switch_instance_spread_levels[i]);
+		}
+
+		return { props: switch_instance_props };
+	}
+
+	if (switch_value) {
+		var switch_instance = new switch_value(switch_props());
+	}
+
+	return {
+		c() {
+			if (switch_instance) create_component(switch_instance.$$.fragment);
+			switch_instance_anchor = empty();
+		},
+		l(nodes) {
+			if (switch_instance) claim_component(switch_instance.$$.fragment, nodes);
+			switch_instance_anchor = empty();
+		},
+		m(target, anchor) {
+			if (switch_instance) {
+				mount_component(switch_instance, target, anchor);
+			}
+
+			insert(target, switch_instance_anchor, anchor);
+			current = true;
+		},
+		p(ctx, dirty) {
+			const switch_instance_changes = (dirty & /*level1*/ 16)
+			? get_spread_update(switch_instance_spread_levels, [get_spread_object(/*level1*/ ctx[4].props)])
+			: {};
+
+			if (switch_value !== (switch_value = /*level1*/ ctx[4].component)) {
+				if (switch_instance) {
+					group_outros();
+					const old_component = switch_instance;
+
+					transition_out(old_component.$$.fragment, 1, 0, () => {
+						destroy_component(old_component, 1);
+					});
+
+					check_outros();
+				}
+
+				if (switch_value) {
+					switch_instance = new switch_value(switch_props());
+					create_component(switch_instance.$$.fragment);
+					transition_in(switch_instance.$$.fragment, 1);
+					mount_component(switch_instance, switch_instance_anchor.parentNode, switch_instance_anchor);
+				} else {
+					switch_instance = null;
+				}
+			} else if (switch_value) {
+				switch_instance.$set(switch_instance_changes);
+			}
+		},
+		i(local) {
+			if (current) return;
+			if (switch_instance) transition_in(switch_instance.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			if (switch_instance) transition_out(switch_instance.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach$1(switch_instance_anchor);
+			if (switch_instance) destroy_component(switch_instance, detaching);
+		}
+	};
+}
+
+// (19:1) {#if error}
+function create_if_block$1(ctx) {
+	let current;
+
+	const error_1 = new Error$1({
+			props: {
+				error: /*error*/ ctx[0],
+				status: /*status*/ ctx[1]
+			}
+		});
+
+	return {
+		c() {
+			create_component(error_1.$$.fragment);
+		},
+		l(nodes) {
+			claim_component(error_1.$$.fragment, nodes);
+		},
+		m(target, anchor) {
+			mount_component(error_1, target, anchor);
+			current = true;
+		},
+		p(ctx, dirty) {
+			const error_1_changes = {};
+			if (dirty & /*error*/ 1) error_1_changes.error = /*error*/ ctx[0];
+			if (dirty & /*status*/ 2) error_1_changes.status = /*status*/ ctx[1];
+			error_1.$set(error_1_changes);
+		},
+		i(local) {
+			if (current) return;
+			transition_in(error_1.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			transition_out(error_1.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			destroy_component(error_1, detaching);
+		}
+	};
+}
+
+// (18:0) <Layout segment="{segments[0]}" {...level0.props}>
+function create_default_slot(ctx) {
+	let current_block_type_index;
+	let if_block;
+	let if_block_anchor;
+	let current;
+	const if_block_creators = [create_if_block$1, create_else_block];
+	const if_blocks = [];
+
+	function select_block_type(ctx, dirty) {
+		if (/*error*/ ctx[0]) return 0;
+		return 1;
+	}
+
+	current_block_type_index = select_block_type(ctx);
+	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+
+	return {
+		c() {
+			if_block.c();
+			if_block_anchor = empty();
+		},
+		l(nodes) {
+			if_block.l(nodes);
+			if_block_anchor = empty();
+		},
+		m(target, anchor) {
+			if_blocks[current_block_type_index].m(target, anchor);
+			insert(target, if_block_anchor, anchor);
+			current = true;
+		},
+		p(ctx, dirty) {
+			let previous_block_index = current_block_type_index;
+			current_block_type_index = select_block_type(ctx);
+
+			if (current_block_type_index === previous_block_index) {
+				if_blocks[current_block_type_index].p(ctx, dirty);
+			} else {
+				group_outros();
+
+				transition_out(if_blocks[previous_block_index], 1, 1, () => {
+					if_blocks[previous_block_index] = null;
+				});
+
+				check_outros();
+				if_block = if_blocks[current_block_type_index];
+
+				if (!if_block) {
+					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+					if_block.c();
+				}
+
+				transition_in(if_block, 1);
+				if_block.m(if_block_anchor.parentNode, if_block_anchor);
+			}
+		},
+		i(local) {
+			if (current) return;
+			transition_in(if_block);
+			current = true;
+		},
+		o(local) {
+			transition_out(if_block);
+			current = false;
+		},
+		d(detaching) {
+			if_blocks[current_block_type_index].d(detaching);
+			if (detaching) detach$1(if_block_anchor);
+		}
+	};
+}
+
+function create_fragment$2(ctx) {
+	let current;
+	const layout_spread_levels = [{ segment: /*segments*/ ctx[2][0] }, /*level0*/ ctx[3].props];
+
+	let layout_props = {
+		$$slots: { default: [create_default_slot] },
+		$$scope: { ctx }
+	};
+
+	for (let i = 0; i < layout_spread_levels.length; i += 1) {
+		layout_props = assign(layout_props, layout_spread_levels[i]);
+	}
+
+	const layout = new Layout({ props: layout_props });
+
+	return {
+		c() {
+			create_component(layout.$$.fragment);
+		},
+		l(nodes) {
+			claim_component(layout.$$.fragment, nodes);
+		},
+		m(target, anchor) {
+			mount_component(layout, target, anchor);
+			current = true;
+		},
+		p(ctx, [dirty]) {
+			const layout_changes = (dirty & /*segments, level0*/ 12)
+			? get_spread_update(layout_spread_levels, [
+					dirty & /*segments*/ 4 && { segment: /*segments*/ ctx[2][0] },
+					dirty & /*level0*/ 8 && get_spread_object(/*level0*/ ctx[3].props)
+				])
+			: {};
+
+			if (dirty & /*$$scope, error, status, level1*/ 83) {
+				layout_changes.$$scope = { dirty, ctx };
+			}
+
+			layout.$set(layout_changes);
+		},
+		i(local) {
+			if (current) return;
+			transition_in(layout.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			transition_out(layout.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			destroy_component(layout, detaching);
+		}
+	};
+}
+
+function instance$2($$self, $$props, $$invalidate) {
+	let { stores } = $$props;
+	let { error } = $$props;
+	let { status } = $$props;
+	let { segments } = $$props;
+	let { level0 } = $$props;
+	let { level1 = null } = $$props;
+	setContext(CONTEXT_KEY, stores);
+
+	$$self.$set = $$props => {
+		if ("stores" in $$props) $$invalidate(5, stores = $$props.stores);
+		if ("error" in $$props) $$invalidate(0, error = $$props.error);
+		if ("status" in $$props) $$invalidate(1, status = $$props.status);
+		if ("segments" in $$props) $$invalidate(2, segments = $$props.segments);
+		if ("level0" in $$props) $$invalidate(3, level0 = $$props.level0);
+		if ("level1" in $$props) $$invalidate(4, level1 = $$props.level1);
+	};
+
+	return [error, status, segments, level0, level1, stores];
+}
+
+class App extends SvelteComponent {
+	constructor(options) {
+		super();
+
+		init(this, options, instance$2, create_fragment$2, safe_not_equal, {
+			stores: 5,
+			error: 0,
+			status: 1,
+			segments: 2,
+			level0: 3,
+			level1: 4
+		});
+	}
+}
+
+// This file is generated by Sapper — do not edit it!
+
+const ignore = [];
+
+const components = [
+	{
+		js: () => import('./index.d04c9e50.js'),
+		css: ["index.d04c9e50.css","Repl.01943d3c.css"]
+	},
+	{
+		js: () => import('./index.3f71ea43.js'),
+		css: ["Repl.01943d3c.css"]
+	}
+];
+
+const routes = [
+	{
+		// index.svelte
+		pattern: /^\/$/,
+		parts: [
+			{ i: 0 }
+		]
+	},
+
+	{
+		// playground/index.svelte
+		pattern: /^\/playground\/?$/,
+		parts: [
+			{ i: 1 }
+		]
+	}
+];
+
+function goto(href, opts = { replaceState: false }) {
+	const target = select_target(new URL(href, document.baseURI));
+
+	if (target) {
+		_history[opts.replaceState ? 'replaceState' : 'pushState']({ id: cid }, '', href);
+		return navigate(target, null).then(() => {});
+	}
+
+	location.href = href;
+	return new Promise(f => {}); // never resolves
+}
+
+const initial_data = typeof __SAPPER__ !== 'undefined' && __SAPPER__;
+
+let ready = false;
+let root_component;
+let current_token;
+let root_preloaded;
+let current_branch = [];
+let current_query = '{}';
+
+const stores = {
+	page: writable({}),
+	preloading: writable(null),
+	session: writable(initial_data && initial_data.session)
+};
+
+let $session;
+let session_dirty;
+
+stores.session.subscribe(async value => {
+	$session = value;
+
+	if (!ready) return;
+	session_dirty = true;
+
+	const target = select_target(new URL(location.href));
+
+	const token = current_token = {};
+	const { redirect, props, branch } = await hydrate_target(target);
+	if (token !== current_token) return; // a secondary navigation happened while we were loading
+
+	await render(redirect, branch, props, target.page);
+});
+
+let prefetching
+
+
+ = null;
+function set_prefetching(href, promise) {
+	prefetching = { href, promise };
+}
+
+let target;
+function set_target(element) {
+	target = element;
+}
+
+let uid = 1;
+function set_uid(n) {
+	uid = n;
+}
+
+let cid;
+function set_cid(n) {
+	cid = n;
+}
+
+const _history = typeof history !== 'undefined' ? history : {
+	pushState: (state, title, href) => {},
+	replaceState: (state, title, href) => {},
+	scrollRestoration: ''
+};
+
+const scroll_history = {};
+
+function extract_query(search) {
+	const query = Object.create(null);
+	if (search.length > 0) {
+		search.slice(1).split('&').forEach(searchParam => {
+			let [, key, value = ''] = /([^=]*)(?:=(.*))?/.exec(decodeURIComponent(searchParam.replace(/\+/g, ' ')));
+			if (typeof query[key] === 'string') query[key] = [query[key]];
+			if (typeof query[key] === 'object') (query[key] ).push(value);
+			else query[key] = value;
+		});
+	}
+	return query;
+}
+
+function select_target(url) {
+	if (url.origin !== location.origin) return null;
+	if (!url.pathname.startsWith(initial_data.baseUrl)) return null;
+
+	let path = url.pathname.slice(initial_data.baseUrl.length);
+
+	if (path === '') {
+		path = '/';
+	}
+
+	// avoid accidental clashes between server routes and page routes
+	if (ignore.some(pattern => pattern.test(path))) return;
+
+	for (let i = 0; i < routes.length; i += 1) {
+		const route = routes[i];
+
+		const match = route.pattern.exec(path);
+
+		if (match) {
+			const query = extract_query(url.search);
+			const part = route.parts[route.parts.length - 1];
+			const params = part.params ? part.params(match) : {};
+
+			const page = { host: location.host, path, query, params };
+
+			return { href: url.href, route, match, page };
+		}
+	}
+}
+
+function handle_error(url) {
+	const { host, pathname, search } = location;
+	const { session, preloaded, status, error } = initial_data;
+
+	if (!root_preloaded) {
+		root_preloaded = preloaded && preloaded[0];
+	}
+
+	const props = {
+		error,
+		status,
+		session,
+		level0: {
+			props: root_preloaded
+		},
+		level1: {
+			props: {
+				status,
+				error
+			},
+			component: Error$1
+		},
+		segments: preloaded
+
+	};
+	const query = extract_query(search);
+	render(null, [], props, { host, path: pathname, query, params: {} });
+}
+
+function scroll_state() {
+	return {
+		x: pageXOffset,
+		y: pageYOffset
+	};
+}
+
+async function navigate(target, id, noscroll, hash) {
+	if (id) {
+		// popstate or initial navigation
+		cid = id;
+	} else {
+		const current_scroll = scroll_state();
+
+		// clicked on a link. preserve scroll state
+		scroll_history[cid] = current_scroll;
+
+		id = cid = ++uid;
+		scroll_history[cid] = noscroll ? current_scroll : { x: 0, y: 0 };
+	}
+
+	cid = id;
+
+	if (root_component) stores.preloading.set(true);
+
+	const loaded = prefetching && prefetching.href === target.href ?
+		prefetching.promise :
+		hydrate_target(target);
+
+	prefetching = null;
+
+	const token = current_token = {};
+	const { redirect, props, branch } = await loaded;
+	if (token !== current_token) return; // a secondary navigation happened while we were loading
+
+	await render(redirect, branch, props, target.page);
+	if (document.activeElement) document.activeElement.blur();
+
+	if (!noscroll) {
+		let scroll = scroll_history[id];
+
+		if (hash) {
+			// scroll is an element id (from a hash), we need to compute y.
+			const deep_linked = document.getElementById(hash.slice(1));
+
+			if (deep_linked) {
+				scroll = {
+					x: 0,
+					y: deep_linked.getBoundingClientRect().top
+				};
+			}
+		}
+
+		scroll_history[cid] = scroll;
+		if (scroll) scrollTo(scroll.x, scroll.y);
+	}
+}
+
+async function render(redirect, branch, props, page) {
+	if (redirect) return goto(redirect.location, { replaceState: true });
+
+	stores.page.set(page);
+	stores.preloading.set(false);
+
+	if (root_component) {
+		root_component.$set(props);
+	} else {
+		props.stores = {
+			page: { subscribe: stores.page.subscribe },
+			preloading: { subscribe: stores.preloading.subscribe },
+			session: stores.session
+		};
+		props.level0 = {
+			props: await root_preloaded
+		};
+
+		// first load — remove SSR'd <head> contents
+		const start = document.querySelector('#sapper-head-start');
+		const end = document.querySelector('#sapper-head-end');
+
+		if (start && end) {
+			while (start.nextSibling !== end) detach(start.nextSibling);
+			detach(start);
+			detach(end);
+		}
+
+		root_component = new App({
+			target,
+			props,
+			hydrate: true
+		});
+	}
+
+	current_branch = branch;
+	current_query = JSON.stringify(page.query);
+	ready = true;
+	session_dirty = false;
+}
+
+function part_changed(i, segment, match, stringified_query) {
+	// TODO only check query string changes for preload functions
+	// that do in fact depend on it (using static analysis or
+	// runtime instrumentation)
+	if (stringified_query !== current_query) return true;
+
+	const previous = current_branch[i];
+
+	if (!previous) return false;
+	if (segment !== previous.segment) return true;
+	if (previous.match) {
+		if (JSON.stringify(previous.match.slice(1, i + 2)) !== JSON.stringify(match.slice(1, i + 2))) {
+			return true;
+		}
+	}
+}
+
+async function hydrate_target(target)
+
+
+
+ {
+	const { route, page } = target;
+	const segments = page.path.split('/').filter(Boolean);
+
+	let redirect = null;
+
+	const props = { error: null, status: 200, segments: [segments[0]] };
+
+	const preload_context = {
+		fetch: (url, opts) => fetch(url, opts),
+		redirect: (statusCode, location) => {
+			if (redirect && (redirect.statusCode !== statusCode || redirect.location !== location)) {
+				throw new Error(`Conflicting redirects`);
+			}
+			redirect = { statusCode, location };
+		},
+		error: (status, error) => {
+			props.error = typeof error === 'string' ? new Error(error) : error;
+			props.status = status;
+		}
+	};
+
+	if (!root_preloaded) {
+		root_preloaded = initial_data.preloaded[0] || preload.call(preload_context, {
+			host: page.host,
+			path: page.path,
+			query: page.query,
+			params: {}
+		}, $session);
+	}
+
+	let branch;
+	let l = 1;
+
+	try {
+		const stringified_query = JSON.stringify(page.query);
+		const match = route.pattern.exec(page.path);
+
+		let segment_dirty = false;
+
+		branch = await Promise.all(route.parts.map(async (part, i) => {
+			const segment = segments[i];
+
+			if (part_changed(i, segment, match, stringified_query)) segment_dirty = true;
+
+			props.segments[l] = segments[i + 1]; // TODO make this less confusing
+			if (!part) return { segment };
+
+			const j = l++;
+
+			if (!session_dirty && !segment_dirty && current_branch[i] && current_branch[i].part === part.i) {
+				return current_branch[i];
+			}
+
+			segment_dirty = false;
+
+			const { default: component, preload } = await load_component(components[part.i]);
+
+			let preloaded;
+			if (ready || !initial_data.preloaded[i + 1]) {
+				preloaded = preload
+					? await preload.call(preload_context, {
+						host: page.host,
+						path: page.path,
+						query: page.query,
+						params: part.params ? part.params(target.match) : {}
+					}, $session)
+					: {};
+			} else {
+				preloaded = initial_data.preloaded[i + 1];
+			}
+
+			return (props[`level${j}`] = { component, props: preloaded, segment, match, part: part.i });
+		}));
+	} catch (error) {
+		props.error = error;
+		props.status = 500;
+		branch = [];
+	}
+
+	return { redirect, props, branch };
+}
+
+function load_css(chunk) {
+	const href = `client/${chunk}`;
+	if (document.querySelector(`link[href="${href}"]`)) return;
+
+	return new Promise((fulfil, reject) => {
+		const link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.href = href;
+
+		link.onload = () => fulfil();
+		link.onerror = reject;
+
+		document.head.appendChild(link);
+	});
+}
+
+function load_component(component)
+
+
+ {
+	// TODO this is temporary — once placeholders are
+	// always rewritten, scratch the ternary
+	const promises = (typeof component.css === 'string' ? [] : component.css.map(load_css));
+	promises.unshift(component.js());
+	return Promise.all(promises).then(values => values[0]);
+}
+
+function detach(node) {
+	node.parentNode.removeChild(node);
+}
+
+function prefetch(href) {
+	const target = select_target(new URL(href, document.baseURI));
+
+	if (target) {
+		if (!prefetching || href !== prefetching.href) {
+			set_prefetching(href, hydrate_target(target));
+		}
+
+		return prefetching.promise;
+	}
+}
+
+function start(opts
+
+) {
+	if ('scrollRestoration' in _history) {
+		_history.scrollRestoration = 'manual';
+	}
+
+	set_target(opts.target);
+
+	addEventListener('click', handle_click);
+	addEventListener('popstate', handle_popstate);
+
+	// prefetch
+	addEventListener('touchstart', trigger_prefetch);
+	addEventListener('mousemove', handle_mousemove);
+
+	return Promise.resolve().then(() => {
+		const { hash, href } = location;
+
+		_history.replaceState({ id: uid }, '', href);
+
+		const url = new URL(location.href);
+
+		if (initial_data.error) return handle_error();
+
+		const target = select_target(url);
+		if (target) return navigate(target, uid, true, hash);
+	});
+}
+
+let mousemove_timeout;
+
+function handle_mousemove(event) {
+	clearTimeout(mousemove_timeout);
+	mousemove_timeout = setTimeout(() => {
+		trigger_prefetch(event);
+	}, 20);
+}
+
+function trigger_prefetch(event) {
+	const a = find_anchor(event.target);
+	if (!a || a.rel !== 'prefetch') return;
+
+	prefetch(a.href);
+}
+
+function handle_click(event) {
+	// Adapted from https://github.com/visionmedia/page.js
+	// MIT license https://github.com/visionmedia/page.js#license
+	if (which(event) !== 1) return;
+	if (event.metaKey || event.ctrlKey || event.shiftKey) return;
+	if (event.defaultPrevented) return;
+
+	const a = find_anchor(event.target);
+	if (!a) return;
+
+	if (!a.href) return;
+
+	// check if link is inside an svg
+	// in this case, both href and target are always inside an object
+	const svg = typeof a.href === 'object' && a.href.constructor.name === 'SVGAnimatedString';
+	const href = String(svg ? (a).href.baseVal : a.href);
+
+	if (href === location.href) {
+		if (!location.hash) event.preventDefault();
+		return;
+	}
+
+	// Ignore if tag has
+	// 1. 'download' attribute
+	// 2. rel='external' attribute
+	if (a.hasAttribute('download') || a.getAttribute('rel') === 'external') return;
+
+	// Ignore if <a> has a target
+	if (svg ? (a).target.baseVal : a.target) return;
+
+	const url = new URL(href);
+
+	// Don't handle hash changes
+	if (url.pathname === location.pathname && url.search === location.search) return;
+
+	const target = select_target(url);
+	if (target) {
+		const noscroll = a.hasAttribute('sapper-noscroll');
+		navigate(target, null, noscroll, url.hash);
+		event.preventDefault();
+		_history.pushState({ id: cid }, '', url.href);
+	}
+}
+
+function which(event) {
+	return event.which === null ? event.button : event.which;
+}
+
+function find_anchor(node) {
+	while (node && node.nodeName.toUpperCase() !== 'A') node = node.parentNode; // SVG <a> elements have a lowercase name
+	return node;
+}
+
+function handle_popstate(event) {
+	scroll_history[cid] = scroll_state();
+
+	if (event.state) {
+		const url = new URL(location.href);
+		const target = select_target(url);
+		if (target) {
+			navigate(target, event.state.id);
+		} else {
+			location.href = location.href;
+		}
+	} else {
+		// hashchange
+		set_uid(uid + 1);
+		set_cid(uid);
+		_history.replaceState({ id: cid }, '', location.href);
+	}
+}
+
+start({
+	target: document.querySelector('#sapper')
+});
