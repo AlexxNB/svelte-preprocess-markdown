@@ -404,7 +404,7 @@ function create_fragment$1(ctx) {
 			t6 = text(" components written in Markdown syntax. You can import any ");
 			code0 = element("code");
 			t7 = text("*.md");
-			t8 = text(" file as a component, which will be handeled by Svelte's compiler. You can import any other component in your ");
+			t8 = text(" file as a component, which will be handled by Svelte's compiler. You can import any other component in your ");
 			code1 = element("code");
 			t9 = text("*.md");
 			t10 = text(" file and use it right inside a markup. All ");
@@ -465,7 +465,7 @@ function create_fragment$1(ctx) {
 			var code0_nodes = children(code0);
 			t7 = claim_text(code0_nodes, "*.md");
 			code0_nodes.forEach(detach);
-			t8 = claim_text(p0_nodes, " file as a component, which will be handeled by Svelte's compiler. You can import any other component in your ");
+			t8 = claim_text(p0_nodes, " file as a component, which will be handled by Svelte's compiler. You can import any other component in your ");
 			code1 = claim_element(p0_nodes, "CODE", {});
 			var code1_nodes = children(code1);
 			t9 = claim_text(code1_nodes, "*.md");
