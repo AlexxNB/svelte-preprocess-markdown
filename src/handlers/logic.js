@@ -39,13 +39,16 @@ export default function logic() {
     }
 
     
-    const each_table_butify = (text,head,_,open,content,close) => {
-        return `<table>
+    const table_butify = (text,head,body) => {
+        const columns = getCols(head);
+
+        body = body.replace(/{:else}\s+?<p>(.+)<\/p>\s+?{\/each}/mgi,(_,string) => `{:else}\n${makeSpanedRow(string,columns)}\n{\/each}`);
+        body = body.replace(/^(?:<p>)?(\|.+\|)(?:<\/p>)?$/mgi,(_,content)=>makeHTMLRows(content,columns));
+
+return `<table>
 <thead><tr>${head}</tr></thead>
 <tbody>
-${open}
-${getHTMLRows(content,getCols(head))}
-${close}
+${body}
 </tbody>
 </table>`;
     }
@@ -73,38 +76,33 @@ ${close}
         text = text.replace(/({#each.*?})\s*<([uo]l)(.*?)>\s*([\s\S]*)<\/\2>\s*({\/each})/gmi,each_list_butify);
 
         // Make table in each
-        text = text.replace(/<table>\s*<thead>\s*<tr>(((?!<\/tr>)[\s\S])+)<\/tr>\s*<\/thead>\s*<tbody>\s*<tr>\s*<td>\s*({#each.+})\s*([\s\S]+?)\s*({\/each})[\s\S]+?<\/tr>\s*<\/tbody>\s*<\/table>/gmi,each_table_butify); 
-
+        text = text.replace(/<table>\s*<thead>\s*<tr>((?:(?!<\/tr>)[\s\S])+)<\/tr>\s*<\/thead>\s*<tbody>\s*<tr>\s*<td(?: align=".+")*>((?:(?!<\/table>)[\s\S])*(?:<p>\|[\s\S]+?\|<\/p>)[\s\S]*?)<\/td>[\s\S]+?<\/tr>\s*<\/tbody>\s*<\/table>/gmi,table_butify); 
         return text;
     }
 
     return {before,after}
 }
 
-// Table in each helpers
+// Table helpers
 
-function getHTMLRows(str,cols){
-    return str.split(/\s*\{:else\}\s*/i).map(block => {
-      return block.split('\n').map( line => {
+function makeHTMLRows(str,cols){
+  return str.split('\n').map(line => {
+    let cells = line.split('|');
 
-          line = line.replace(/^\s*(?:<p>)?([\s\S]*?)(?:<\/p>)?\s*$/m,'$1').split('|');
+    if(cells.length - cols.length !== 2) return line;
+    if(cells[0] !== '' || cells[cells.length-1] !== '') return line;
 
-          let row = '';
-          if(line[0] === '' && line[line.length-1] === '') {
-            line.pop();
-            line.shift();
-  
-            row = line.map((cell,i) => `<td${cols[i] === 'left' ? '' : ' align="'+cols[i]+'"'}>${cell}</td>`).join('\n');
-          }else{
-            row = `<td${cols.length > 1 ? ' colspan="'+cols.length+'"' : ''}>${line.join('|')}</td>`;
-          }
-          
-          return `<tr>\n${row}\n</tr>`;
-      }).join('\n');
-    }).join('\n{:else}\n');
+    cells = cells.slice(1,-1).map((content,index) => `<td${cols[index] === 'left' ? '' : ` align="${cols[index]}"`}>${content}</td>`)
+    
+    return `<tr>${cells.join('')}</tr>`
+  }).join('\n');
+}
+
+function makeSpanedRow(str,cols){
+    return `<tr><td${cols.length > 1 ? ` colspan="${cols.length}"` : ''}>${str}</td></tr>`
 }
   
-  function getCols(str){
+function getCols(str){
     let cols = [];
   
     let regexp = /<th(?: align="(.+?)")*>.+?<\/th>/gim;
