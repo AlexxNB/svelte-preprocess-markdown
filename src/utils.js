@@ -1,10 +1,11 @@
 import marked from 'marked'
 
 export const getMarkedInstance = (options) =>{
-    options = {headerIds:false,...options};
-    marked.setOptions(marked.getDefaults());
-    marked.setOptions(options);
+    const defaults = marked.getDefaults();
+    defaults.renderer = getMarkedRenderer();
+    options = Object.assign(defaults,{headerIds:false},options);
     
+    marked.setOptions(options);
 
     set_p_renderer(marked);
     set_checkbox_renderer(marked,options);
