@@ -44,7 +44,10 @@ function get_slot_context(definition, ctx, $$scope, fn) {
 function get_slot_changes(definition, $$scope, dirty, fn) {
     if (definition[2] && fn) {
         const lets = definition[2](fn(dirty));
-        if (typeof $$scope.dirty === 'object') {
+        if ($$scope.dirty === undefined) {
+            return lets;
+        }
+        if (typeof lets === 'object') {
             const merged = [];
             const len = Math.max($$scope.dirty.length, lets.length);
             for (let i = 0; i < len; i += 1) {
@@ -155,33 +158,53 @@ function set_input_value(input, value) {
 function set_style(node, key, value, important) {
     node.style.setProperty(key, value, important ? 'important' : '');
 }
-function add_resize_listener(element, fn) {
-    if (getComputedStyle(element).position === 'static') {
-        element.style.position = 'relative';
+// unfortunately this can't be a constant as that wouldn't be tree-shakeable
+// so we cache the result instead
+let crossorigin;
+function is_crossorigin() {
+    if (crossorigin === undefined) {
+        crossorigin = false;
+        try {
+            if (typeof window !== 'undefined' && window.parent) {
+                void window.parent.document;
+            }
+        }
+        catch (error) {
+            crossorigin = true;
+        }
     }
-    const object = document.createElement('object');
-    object.setAttribute('style', 'display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;');
-    object.setAttribute('aria-hidden', 'true');
-    object.type = 'text/html';
-    object.tabIndex = -1;
-    let win;
-    object.onload = () => {
-        win = object.contentDocument.defaultView;
-        win.addEventListener('resize', fn);
-    };
-    if (/Trident/.test(navigator.userAgent)) {
-        element.appendChild(object);
-        object.data = 'about:blank';
+    return crossorigin;
+}
+function add_resize_listener(node, fn) {
+    const computed_style = getComputedStyle(node);
+    const z_index = (parseInt(computed_style.zIndex) || 0) - 1;
+    if (computed_style.position === 'static') {
+        node.style.position = 'relative';
+    }
+    const iframe = element('iframe');
+    iframe.setAttribute('style', `display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; ` +
+        `overflow: hidden; border: 0; opacity: 0; pointer-events: none; z-index: ${z_index};`);
+    iframe.setAttribute('aria-hidden', 'true');
+    iframe.tabIndex = -1;
+    let unsubscribe;
+    if (is_crossorigin()) {
+        iframe.src = `data:text/html,<script>onresize=function(){parent.postMessage(0,'*')}</script>`;
+        unsubscribe = listen(window, 'message', (event) => {
+            if (event.source === iframe.contentWindow)
+                fn();
+        });
     }
     else {
-        object.data = 'about:blank';
-        element.appendChild(object);
+        iframe.src = 'about:blank';
+        iframe.onload = () => {
+            unsubscribe = listen(iframe.contentWindow, 'resize', fn);
+        };
     }
-    return {
-        cancel: () => {
-            win && win.removeEventListener && win.removeEventListener('resize', fn);
-            element.removeChild(object);
-        }
+    append(node, iframe);
+    return () => {
+        detach(iframe);
+        if (unsubscribe)
+            unsubscribe();
     };
 }
 function toggle_class(element, name, toggle) {
@@ -232,6 +255,9 @@ function get_current_component() {
 }
 function onMount(fn) {
     get_current_component().$$.on_mount.push(fn);
+}
+function afterUpdate(fn) {
+    get_current_component().$$.after_update.push(fn);
 }
 function createEventDispatcher() {
     const component = get_current_component();
@@ -486,8 +512,10 @@ function init(component, options, instance, create_fragment, not_equal, props, d
     $$.fragment = create_fragment ? create_fragment($$.ctx) : false;
     if (options.target) {
         if (options.hydrate) {
+            const nodes = children(options.target);
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            $$.fragment && $$.fragment.l(children(options.target));
+            $$.fragment && $$.fragment.l(nodes);
+            nodes.forEach(detach);
         }
         else {
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -571,4 +599,4 @@ function writable(value, start = noop) {
     return { set, update, subscribe };
 }
 
-export { add_flush_callback as $, get_spread_update as A, get_spread_object as B, destroy_component as C, setContext as D, group_outros as E, check_outros as F, writable as G, action_destroyer as H, createEventDispatcher as I, binding_callbacks as J, getContext as K, toggle_class as L, listen as M, set_style as N, add_render_callback as O, add_resize_listener as P, onMount as Q, svg_element as R, SvelteComponent as S, run_all as T, destroy_each as U, subscribe as V, component_subscribe as W, set_store_value as X, set_input_value as Y, null_to_empty as Z, bind as _, space as a, HtmlTag as a0, claim_element as b, create_slot as c, children as d, element as e, claim_text as f, detach as g, claim_space as h, init as i, attr as j, insert as k, append as l, get_slot_context as m, get_slot_changes as n, transition_in as o, transition_out as p, set_data as q, empty as r, safe_not_equal as s, text as t, query_selector_all as u, noop as v, assign as w, create_component as x, claim_component as y, mount_component as z };
+export { bind as $, get_spread_update as A, get_spread_object as B, destroy_component as C, afterUpdate as D, setContext as E, group_outros as F, check_outros as G, writable as H, action_destroyer as I, createEventDispatcher as J, binding_callbacks as K, getContext as L, toggle_class as M, listen as N, set_style as O, add_render_callback as P, add_resize_listener as Q, onMount as R, SvelteComponent as S, svg_element as T, run_all as U, destroy_each as V, subscribe as W, component_subscribe as X, set_store_value as Y, set_input_value as Z, null_to_empty as _, space as a, add_flush_callback as a0, HtmlTag as a1, claim_element as b, create_slot as c, children as d, element as e, claim_text as f, detach as g, claim_space as h, init as i, attr as j, insert as k, append as l, get_slot_context as m, get_slot_changes as n, transition_in as o, transition_out as p, set_data as q, empty as r, safe_not_equal as s, text as t, query_selector_all as u, noop as v, assign as w, create_component as x, claim_component as y, mount_component as z };
