@@ -81,7 +81,7 @@ You can use *components* and a *logic* inside doc:
 
 # Options
 
-You can pass any [options](https://marked.js.org/#/USING_ADVANCED.md#options) that accepts [Marked](https://www.npmjs.com/package/marked).
+You can pass any [options](https://marked.js.org/#/USING_ADVANCED.md#options) that are accepted by [Marked](https://www.npmjs.com/package/marked).
 
 ```js
 ...
