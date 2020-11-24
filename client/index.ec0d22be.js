@@ -741,14 +741,14 @@ npm i -D svelte-preprocess-markdown</code></pre>
 
 const CODEBLOCK_2 = `<pre><code class="hljs language-js">
 <span class="hljs-comment">// 1. import package</span>
-<span class="hljs-keyword">const</span> &#123;markdown&#125; = <span class="hljs-built_in">require</span>(<span class="hljs-string">'svelte-preprocess-markdown'</span>);
+<span class="hljs-keyword">const</span> &#123;markdown&#125; = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;svelte-preprocess-markdown&#x27;</span>);
 
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;
   <span class="hljs-comment">// ...</span>
   <span class="hljs-attr">plugins</span>: [
     svelte(&#123;
-      <span class="hljs-comment">// 2. add '.md', to the extensions  </span>
-      <span class="hljs-attr">extensions</span>: [<span class="hljs-string">'.svelte'</span>,<span class="hljs-string">'.md'</span>],
+      <span class="hljs-comment">// 2. add &#x27;.md&#x27;, to the extensions  </span>
+      <span class="hljs-attr">extensions</span>: [<span class="hljs-string">&#x27;.svelte&#x27;</span>,<span class="hljs-string">&#x27;.md&#x27;</span>],
       <span class="hljs-comment">// 3. add markdown preprocessor</span>
       <span class="hljs-attr">preprocess</span>: markdown()
     &#125;)

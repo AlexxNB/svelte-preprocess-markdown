@@ -667,8 +667,8 @@ const ignore = [];
 
 const components = [
 	{
-		js: () => import('./index.9f6debae.js'),
-		css: ["index.9f6debae.css","Repl.51ebd217.css"]
+		js: () => import('./index.ec0d22be.js'),
+		css: ["index.ec0d22be.css","Repl.51ebd217.css"]
 	},
 	{
 		js: () => import('./index.8b3974fd.js'),
