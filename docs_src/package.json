@@ -12,7 +12,7 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
-    "codemirror": "^5.53.2",
+    "codemirror": "^5.58.2",
     "compression": "^1.7.4",
     "highlight.js": "^10.0.3",
     "path-browserify": "^1.0.1",
