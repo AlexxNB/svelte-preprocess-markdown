@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "front-matter": "^3.2.1",
-    "marked": "^1.0.0"
+    "marked": "^4.0.10"
   },
   "devDependencies": {
     "@detools/tap-diff": "^0.2.2",
